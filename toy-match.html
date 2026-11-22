@@ -290,8 +290,8 @@ body.ocean .modal{background:rgba(6,45,70,.6)}
 
   <footer>
     教材依據：僑務委員會《學華語向前走》第五冊（5A）第三課〈我要買新玩具〉，生詞與句型取自課本；量詞「本、張、隻、枝」和部分名詞是學生學過的常用詞，題目與例句為配合本課內容另行編寫。<br>
-    本檔為單一 HTML 檔，可直接放進 GitHub Pages 或用瀏覽器離線開啟；電腦、平板、手機都能玩。
-    連網時會載入字型、查詢 IP 位址（api.ipify.org），並把成績送到老師的 Google 試算表。
+    可用瀏覽器離線開啟；電腦、平板、手機都能玩。
+    連網時會載入字型，並把成績送到老師的 Google 試算表。
   </footer>
 </div>
 
@@ -1421,7 +1421,7 @@ function send(rec){
     .then(r => r.json()).then(o => { if(!o||!o.ok) throw new Error((o&&o.error)||"寫入失敗"); return o; });
 }
 function submit(rec){
-  if(!endpoint()){ setSync("成績沒有上傳：老師還沒有在遊戲館的 config.js 設定試算表網址（ENDPOINT）。","bad"); return; }
+  if(!endpoint()){ setSync("成績沒有上傳。","bad"); return; }
   setSync("成績上傳中…","");
   send(rec).then(() => setSync("成績已上傳到試算表。","ok"),
     () => { const q=getQueue(); q.push(rec); setQueue(q); setSync("上傳失敗，成績先存在這台裝置（待上傳 "+q.length+" 筆）。","bad"); });
