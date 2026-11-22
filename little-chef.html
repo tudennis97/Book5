@@ -288,8 +288,8 @@ footer{font-size:.78rem;color:var(--muted);line-height:1.8}
 
   <footer>
     教材依據：僑務委員會《學華語向前走》第五冊（5A）第六課〈成果發表會（複習一）〉，課文、短文、食譜與補充生詞取自課本。<br>
-    本檔為單一 HTML 檔，可直接放進 GitHub Pages，或下載到電腦用瀏覽器開啟。
-    連網時會載入字型、查詢 IP 位址（api.ipify.org），並把成績送到老師的 Google 試算表；離線也能玩。
+    可下載到電腦用瀏覽器開啟。
+    連網時會載入字型，並把成績送到老師的 Google 試算表；離線也能玩。
   </footer>
 </div>
 
@@ -964,7 +964,7 @@ function flushQueue(){
 }
 $("btn-flush").addEventListener("click", flushQueue);
 $("btn-test").addEventListener("click", function(){
-  if(!endpoint()){ setSync("尚未設定試算表網址：請老師在遊戲館的 config.js 填入 ENDPOINT。","bad"); return; }
+  if(!endpoint()){ setSync("尚未設定試算表網址。","bad"); return; }
   setSync("測試中…","busy");
   fetch(withToken(endpoint(),"top=1")).then(function(r){ return r.json(); }).then(function(o){
     if(o&&o.ok) setSync("連線成功，試算表裡目前有 "+o.count+" 筆紀錄。","ok");
