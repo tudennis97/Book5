@@ -257,7 +257,7 @@ td.ex{color:var(--muted)}
     </div>
   </section>
 
-  <p class="help">鍵盤用方向鍵或 WASD 移動，P 暫停。手機可在畫面上滑動，輕點一下往前跳。選項寫在題目下方和畫面最上方的荷花池裡，號碼和顏色一樣。跳錯答案會失去一條命，這題稍後還會再出現。紅殼烏龜會潛水，變淡時要快跳開。連網時會查詢 IP 位址（api.ipify.org），並把成績送到老師的 Google 試算表。</p>
+  <p class="help">鍵盤用方向鍵或 WASD 移動，P 暫停。手機可在畫面上滑動，輕點一下往前跳。選項寫在題目下方和畫面最上方的荷花池裡，號碼和顏色一樣。跳錯答案會失去一條命，這題稍後還會再出現。紅殼烏龜會潛水，變淡時要快跳開。連網時會把成績送到老師的 Google 試算表。</p>
 </main>
 
 <script>
@@ -1063,7 +1063,7 @@ function send(rec) {
     .then(r => r.json()).then(o => { if (!o || !o.ok) throw new Error((o && o.error) || '寫入失敗'); return o; });
 }
 function submit(rec) {
-  if (!endpoint()) { setSync('成績沒有上傳：老師還沒有在遊戲館的 config.js 設定試算表網址（ENDPOINT）。', 'bad'); return; }
+  if (!endpoint()) { setSync('成績沒有上傳。', 'bad'); return; }
   setSync('成績上傳中…', '');
   send(rec).then(() => setSync('成績已上傳到試算表。', 'ok'),
     () => { const q = getQueue(); q.push(rec); setQueue(q); setSync('上傳失敗，成績先存在這台裝置（待上傳 ' + q.length + ' 筆）。', 'bad'); });
@@ -1079,7 +1079,7 @@ $('btn-flush').addEventListener('click', () => {
   })();
 });
 $('btn-test').addEventListener('click', () => {
-  if (!endpoint()) { setSync('尚未設定試算表網址：請老師在遊戲館的 config.js 填入 ENDPOINT。', 'bad'); return; }
+  if (!endpoint()) { setSync('尚未設定試算表網址。', 'bad'); return; }
   setSync('測試中…', '');
   fetch(withToken(endpoint(), 'top=1')).then(r => r.json()).then(o => {
     if (o && o.ok) setSync('連線成功，試算表裡目前有 ' + o.count + ' 筆紀錄。', 'ok');
