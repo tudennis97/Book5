@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<!-- 8964習維尼中華民國臺獨　創作者：ㄉㄨˋㄕˋㄅㄧㄣ+Claude AI -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>廟埕對打｜籃球比賽</title>
+<meta name="description" content="配合《學華語向前走》第五冊第八課〈籃球比賽〉的華語練習遊戲：氣滿了就回答問題，答對才能發出必殺技，一路打到冠軍。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* 8964習維尼中華民國臺獨　創作者：ㄉㄨˋㄕˋㄅㄧㄣ+Claude AI */
+:root{
+  --bg:#efe6d3; --surface:#e4d6ba; --card:#fbf6ea; --ink:#2a2140; --muted:#675d80;
+  --lantern:#b92f25; --gold:#9a6a12; --rule:#cbb894; --ok:#2e7d43; --bad:#b23a22;
+  --kai:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB","STKaiti",serif;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--kai);font-size:17px;line-height:1.6;
+  padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}
+.wrap{max-width:1000px;margin:0 auto;padding:12px 14px 32px;display:flex;flex-direction:column;gap:10px}
+header h1{margin:0;font-size:clamp(1.6rem,6vw,2.2rem);letter-spacing:.12em;line-height:1.15}
+header h1 small{font-size:.5em;letter-spacing:.05em;color:var(--lantern);margin-left:.6em}
+header p{margin:2px 0 0;color:var(--muted);font-size:.95rem}
+button{font-family:inherit;color:var(--ink);cursor:pointer}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.who{display:grid;grid-template-columns:1.6fr .7fr 1fr;gap:8px}
+.who label{display:flex;flex-direction:column;gap:2px;font-size:.85rem;color:var(--muted)}
+.who input{font:inherit;width:100%;min-width:0;padding:6px 8px;border:1px solid var(--rule);border-radius:5px;background:var(--card);color:var(--ink)}
+@media (max-width:480px){.who{grid-template-columns:1fr 1fr}.who .school{grid-column:1/-1}}
+
+.setup{background:var(--surface);border:1px solid var(--rule);border-top:4px solid var(--lantern);border-radius:6px;padding:12px 14px 14px}
+.setup h2{margin:10px 0 6px;font-size:1.1rem;letter-spacing:.06em}
+.setup h2:first-child{margin-top:0}
+.setup p{margin:0 0 6px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{flex:1 1 90px;background:var(--card);border:2px solid var(--rule);border-radius:8px;padding:6px 8px;font-size:1.1rem;font-weight:700;line-height:1.25}
+.seg button small{display:block;font-size:.8rem;font-weight:400;color:var(--muted)}
+.seg button[aria-checked="true"]{border-color:var(--lantern);background:#fff;box-shadow:0 0 0 2px var(--lantern) inset}
+.chars{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.chars button{background:var(--card);border:2px solid var(--rule);border-radius:8px;padding:4px 4px 6px;display:flex;flex-direction:column;align-items:center;line-height:1.25;font-size:1.05rem;font-weight:700}
+.chars button canvas{width:100%;max-width:120px;height:auto;aspect-ratio:11/14}
+.chars button small{font-size:.8rem;font-weight:400;color:var(--muted)}
+.chars button[aria-checked="true"]{border-color:var(--lantern);background:#fff;box-shadow:0 0 0 2px var(--lantern) inset}
+@media (max-width:520px){.chars{grid-template-columns:repeat(2,1fr)}}
+.ddesc{color:var(--muted);font-size:.92rem;min-height:3.2em;margin:6px 0 0}
+.go{font-size:1.25rem;font-weight:700;letter-spacing:.08em;color:#2a1208;background:linear-gradient(#f7cf6a,#e29a2e);
+  border:2px solid #6e1d17;border-radius:8px;padding:9px 26px;box-shadow:0 4px 0 #6e1d17}
+.go:active{transform:translateY(3px);box-shadow:0 1px 0 #6e1d17}
+.plain{font-size:1.05rem;font-weight:700;background:var(--card);border:2px solid var(--rule);border-radius:8px;padding:8px 18px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+.warn{color:var(--bad);font-weight:700;min-height:1.5em;margin:6px 0 0}
+
+.bar{display:flex;justify-content:space-between;gap:10px;background:#2a2140;color:#f1e8d6;border-radius:6px;padding:6px 14px}
+.bar div{display:flex;flex-direction:column;line-height:1.2}
+.bar span{font-size:.75rem;letter-spacing:.2em;color:#b9aecb}
+.bar b{font-size:1.5rem;font-variant-numeric:tabular-nums}
+.bar .hi b{color:#f6c45a}
+.bar div:last-child{text-align:right}
+.qbar{background:var(--card);border-left:8px solid var(--gold);border-radius:4px;padding:8px 12px;font-size:1.1rem;font-weight:700;min-height:2.9em;display:flex;align-items:center}
+.qbar.ok{border-left-color:var(--ok);background:#e1f0d8}
+.qbar.bad{border-left-color:var(--bad);background:#f7ddd3}
+
+.stage{position:relative;width:100%;max-width:min(960px, calc((100dvh - 120px) * 16 / 9));margin:0 auto;aspect-ratio:16/9;
+  border-radius:6px;overflow:hidden;background:#141228;box-shadow:0 0 0 1px rgba(0,0,0,.25),0 18px 40px -18px rgba(20,10,40,.6);
+  touch-action:none;user-select:none;-webkit-user-select:none}
+.stage canvas{display:block;width:100%;height:100%}
+.touch{position:absolute;inset:auto 0 0 0;height:46%;pointer-events:none;display:none}
+body.has-touch.playing .touch{display:block}
+.pad,.acts{position:absolute;bottom:4%;pointer-events:none}
+.pad{left:2.5%;width:30%;aspect-ratio:1/1;max-width:190px}
+.acts{right:2.5%;display:grid;grid-template-columns:repeat(2,auto);gap:10px;align-items:end}
+.touch button{pointer-events:auto;touch-action:none;font-weight:700;color:#fff6e4;background:rgba(30,20,50,.45);
+  border:2px solid rgba(246,196,90,.6);border-radius:50%;font-size:clamp(.9rem,2.6vw,1.3rem);
+  width:clamp(46px,9vw,72px);height:clamp(46px,9vw,72px);-webkit-tap-highlight-color:transparent}
+.touch button.on{background:rgba(232,154,46,.7)}
+.pad button{position:absolute;width:34%;height:34%}
+.pad [data-t="u"]{left:33%;top:0}.pad [data-t="d"]{left:33%;bottom:0}
+.pad [data-t="l"]{left:0;top:33%}.pad [data-t="r"]{right:0;top:33%}
+.acts [data-t="sp"]{grid-column:span 2;justify-self:center;border-radius:999px;width:auto;padding:0 18px;height:clamp(40px,7vw,56px);border-color:rgba(224,73,58,.8)}
+.acts [data-t="sp"].full{background:rgba(246,196,90,.9);color:#3a1208;border-color:#fff}
+
+.under{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;font-size:.92rem;color:var(--muted)}
+kbd{font-family:ui-sans-serif,system-ui,sans-serif;font-size:.82em;background:var(--card);border:1px solid var(--rule);border-bottom-width:3px;border-radius:5px;padding:0 .45em;margin:0 .1em;white-space:nowrap}
+.under button{font-size:.95rem;background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:4px 14px}
+.sync{margin:0;min-height:1.5em;font-size:.9rem;color:var(--muted)}
+.sync.ok{color:var(--ok)}.sync.bad{color:var(--bad)}
+
+.modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:14px;background:rgba(16,11,30,.72)}
+.modal[hidden]{display:none}
+.card{width:min(560px,100%);max-height:calc(100dvh - 28px);overflow:auto;background:var(--card);border-top:6px solid var(--lantern);border-radius:8px;padding:16px 18px 18px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.card h2{margin:0 0 6px;font-size:1.6rem;letter-spacing:.08em}
+.card p{margin:0 0 8px}
+.card .who-ans{color:var(--lantern);font-weight:700}
+.qq{font-size:1.3rem;font-weight:700;line-height:1.5}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opts button{display:flex;align-items:center;gap:10px;text-align:left;font-size:1.2rem;font-weight:700;background:#fff;border:2px solid var(--rule);border-radius:8px;padding:8px 12px;line-height:1.4}
+.opts button:disabled{opacity:.5;cursor:default}
+.opts button.right{opacity:1;background:#e1f0d8;border-color:var(--ok)}
+.opts button.miss{opacity:1;background:#f7ddd3;border-color:var(--bad)}
+.num{display:inline-grid;place-items:center;flex:none;width:1.6em;height:1.6em;border-radius:50%;color:#fff;font-family:ui-sans-serif,system-ui,sans-serif;font-size:.9em;font-weight:900}
+.fb{font-weight:700;min-height:1.7em;margin-top:8px}
+.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.big{font-size:2.6rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.card table,details table{border-collapse:collapse;width:100%}
+.card td{padding:4px 2px;border-bottom:1px solid var(--rule)}
+.card td.n{text-align:right;font-weight:700}
+.wronglist{margin:0;padding-left:1.2em;font-size:.95rem}
+
+details{background:var(--surface);border:1px solid var(--rule);border-radius:6px}
+summary{cursor:pointer;padding:8px 12px;font-weight:700}
+details .body{padding:0 12px 12px}
+details th,details td{padding:4px 6px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top;font-size:.95rem}
+details td.w{font-weight:700;white-space:nowrap}
+details .sc{text-align:right;font-variant-numeric:tabular-nums}
+details ul,details ol{margin:0;padding-left:1.3em}
+details li span{display:block;color:var(--muted);font-size:.95rem}
+.hint{margin:0 0 8px;color:var(--muted);font-size:.95rem}
+.scroll{overflow-x:auto}
+footer{font-size:.85rem;color:var(--muted);border-top:1px solid var(--rule);padding-top:10px}
+[hidden]{display:none !important}
+
+/* ===== 手機版面：觸控裝置而且螢幕小的時候，比賽中改成全螢幕橫放 ===== */
+#btn-quit2,#rotate{display:none}
+body.phone.playing{overflow:hidden}
+body.phone.playing #arena{position:fixed;inset:0;z-index:10;background:#141228;display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:40px 1fr;
+  padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}
+body.phone.playing .bar{grid-column:1;grid-row:1;border-radius:0;background:none;padding:0 10px;gap:14px;align-items:center}
+body.phone.playing .bar div{flex-direction:row;align-items:baseline;gap:5px}
+body.phone.playing .bar span{letter-spacing:0;font-size:.8rem}
+body.phone.playing .bar b{font-size:1.15rem}
+body.phone.playing .bar .hi{display:none}
+body.phone.playing .qbar{grid-column:2;grid-row:1;margin:4px 6px !important;min-height:0;padding:0 10px;font-size:.92rem;border-left-width:5px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:32px}
+body.phone.playing #btn-quit2{display:block;grid-column:3;grid-row:1;align-self:center;margin-right:8px;font-size:.85rem;color:#f1e8d6;background:rgba(255,255,255,.08);
+  border:1px solid rgba(246,196,90,.5);border-radius:999px;padding:3px 12px;white-space:nowrap}
+body.phone.playing .stage{grid-column:1/-1;grid-row:2;align-self:center;justify-self:center;border-radius:0;max-width:none;box-shadow:none;
+  width:min(calc(100vw - 264px), calc((100dvh - 44px) * 16 / 9))}
+body.phone.playing .touch{position:fixed;inset:40px 0 0 0;height:auto;z-index:11}
+body.phone.playing .pad{left:calc(2px + env(safe-area-inset-left,0));bottom:12px;width:128px;max-width:none}
+body.phone.playing .acts{right:calc(6px + env(safe-area-inset-right,0));bottom:12px;gap:8px}
+body.phone.playing .touch button{width:56px;height:56px;font-size:1.1rem}
+body.phone.playing .pad button{width:34%;height:34%}
+body.phone.playing .acts [data-t="sp"]{width:auto;height:44px;padding:0 16px}
+@media (orientation:portrait){
+  body.phone.playing #rotate{display:grid;place-items:center;position:fixed;inset:0;z-index:15;background:#141228;color:#f6c45a;
+    font-size:1.5rem;font-weight:700;text-align:center;padding:24px;line-height:1.8}
+}
+@media (max-height:480px){
+  .modal{padding:8px}
+  .card{padding:10px 14px 12px;max-height:calc(100dvh - 16px);width:min(680px,100%)}
+  .card h2{font-size:1.2rem;margin:0}
+  .card p{margin:0 0 4px}
+  .qq{font-size:1.1rem}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .opts button{font-size:1.05rem;padding:6px 8px}
+  .fb{min-height:1.4em;margin-top:4px}
+  .row{margin-top:6px}
+  .go{font-size:1.05rem;padding:6px 20px}
+  .big{font-size:1.8rem}
+}
+</style>
+<script src="config.js"></script>
+</head>
+<body>
+<nav style="max-width:1000px;margin:0 auto;padding:6px 14px 0;font-size:15px;line-height:1.4"><a href="index.html#menu" style="color:inherit;opacity:.75;text-decoration:none">← 回第五冊遊戲館</a></nav>
+<div class="wrap">
+  <header>
+    <h1>廟埕對打<small>第八課　籃球比賽</small></h1>
+    <p>廟埕比武大賽開始了！氣滿了就回答問題，答對才能發出必殺技，一路打到冠軍。</p>
+  </header>
+
+  <section class="who" aria-label="玩家資料">
+    <label class="school" for="f-school">學校<input id="f-school" autocomplete="organization"></label>
+    <label for="f-class">班級<input id="f-class"></label>
+    <label for="f-name">姓名<input id="f-name" autocomplete="name" placeholder="請輸入姓名"></label>
+  </section>
+
+  <section class="setup" id="setup">
+    <h2>選角色</h2>
+    <div class="chars" id="chars1" role="radiogroup" aria-label="1P 角色"></div>
+    <div id="p2box" hidden>
+      <h2>2P 選角色</h2>
+      <div class="chars" id="chars2" role="radiogroup" aria-label="2P 角色"></div>
+    </div>
+    <h2>難易度</h2>
+    <div class="seg" id="diffs" role="radiogroup" aria-label="難易度"></div>
+    <p class="ddesc" id="ddesc"></p>
+    <div class="row">
+      <button class="go" id="btn-go" type="button">開始比賽</button>
+      <button class="plain" id="btn-2p" type="button">雙人同機對戰</button>
+    </div>
+    <p class="warn" id="go-msg"></p>
+  </section>
+
+  <div id="arena" hidden>
+    <div class="bar">
+      <div><span>分數</span><b id="sc">0</b></div>
+      <div class="hi"><span>最高分</span><b id="hi">0</b></div>
+      <div><span>答對</span><b id="rt">0/0</b></div>
+    </div>
+    <div class="qbar" id="qbar" aria-live="polite" style="margin:8px 0"></div>
+    <button id="btn-quit2" type="button">結束</button>
+    <div class="stage" id="stage">
+      <canvas id="game" width="960" height="540" aria-label="格鬥遊戲畫面"></canvas>
+      <div class="touch" aria-hidden="true">
+        <div class="pad">
+          <button data-t="u">▲</button><button data-t="l">◀</button><button data-t="r">▶</button><button data-t="d">▼</button>
+        </div>
+        <div class="acts">
+          <button data-t="sp" id="t-sp">必殺</button>
+          <button data-t="p">拳</button><button data-t="k">踢</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="under">
+    <span id="keys"><kbd>A</kbd><kbd>D</kbd> 或 <kbd>←</kbd><kbd>→</kbd> 移動（往後退＝防禦）　<kbd>W</kbd> 跳　<kbd>S</kbd> 蹲　<kbd>F</kbd> 拳　<kbd>G</kbd> 踢　<kbd>H</kbd> 必殺（氣滿才能用）</span>
+    <span><label><input type="checkbox" id="o-sfx" checked> 音效</label>　<button id="btn-quit" type="button" hidden>結束並送出成績</button></span>
+  </div>
+  <p class="sync" id="sync"></p>
+
+  <details>
+    <summary>怎麼玩、怎麼計分</summary>
+    <div class="body">
+      <ul>
+        <li>打中對手，或是被打中，「氣」都會增加。氣滿了就按「必殺」，畫面會停下來出一題。</li>
+        <li>答對：發出必殺技。答錯：對手馬上用必殺技反擊，要趕快防禦或跳開。</li>
+        <li>每一場比賽先贏兩個回合的人贏。每個回合結束有一題句型加分題，答對下一回合開始就有一半的氣。</li>
+        <li>單人比賽要連贏三場：初賽、準決賽、決賽。全部贏了就是冠軍。</li>
+        <li>雙人對戰時，2P 用方向鍵移動，<kbd>K</kbd> 拳、<kbd>L</kbd> 踢、<kbd>;</kbd> 必殺。雙人對戰不計分、不上傳。</li>
+      </ul>
+      <div class="scroll" style="margin-top:10px"><table>
+        <tr><th>項目</th><th class="sc">易 ×1</th><th class="sc">中 ×1.5</th><th class="sc">難 ×2</th></tr>
+        <tr><td>打中對手（每一點傷害）</td><td class="sc">10</td><td class="sc">15</td><td class="sc">20</td></tr>
+        <tr><td>必殺題答對</td><td class="sc">300</td><td class="sc">450</td><td class="sc">600</td></tr>
+        <tr><td>句型加分題答對</td><td class="sc">500</td><td class="sc">750</td><td class="sc">1000</td></tr>
+        <tr><td>贏一個回合（另加剩下的體力 ×5）</td><td class="sc">500</td><td class="sc">750</td><td class="sc">1000</td></tr>
+        <tr><td>贏一場比賽</td><td class="sc">1000</td><td class="sc">1500</td><td class="sc">2000</td></tr>
+        <tr><td>得到冠軍</td><td class="sc">3000</td><td class="sc">4500</td><td class="sc">6000</td></tr>
+      </table></div>
+    </div>
+  </details>
+  <details id="lb-box">
+    <summary>班級排行榜（讀取試算表）</summary>
+    <div class="body">
+      <p class="hint" id="lb-msg">展開後會從試算表讀取每個人的最高分。</p>
+      <div class="scroll"><table id="lb-table"></table></div>
+    </div>
+  </details>
+  <details>
+    <summary>成績上傳</summary>
+    <div class="body">
+      <p class="hint">單人比賽每次結束會自動把成績寫進老師的 Google 試算表。沒有網路時成績會先存在這台裝置，連上網後按「補傳待上傳成績」。</p>
+      <div class="row" style="margin-top:0"><button class="plain" id="btn-test" type="button">測試連線</button><button class="plain" id="btn-flush" type="button">補傳待上傳成績</button></div>
+    </div>
+  </details>
+  <details>
+    <summary>生詞／短語（21）</summary>
+    <div class="body"><div class="scroll"><table id="vocab-table"></table></div></div>
+  </details>
+  <details>
+    <summary>句型</summary>
+    <div class="body">
+      <ol>
+        <li><b>第</b> No. (ordinal number prefix)<span>這是我第一次參加比賽。　我們隊得了第二名。</span></li>
+        <li><b>極了</b> extremely<span>這場比賽精彩極了。　今天熱極了。</span></li>
+        <li><b>為了</b> in order to<span>為了得第一名，我們要更努力。</span></li>
+        <li><b>連……也……</b> even<span>他很努力，連星期天也練習。　連弟弟也會打籃球。</span></li>
+      </ol>
+    </div>
+  </details>
+
+  <footer>
+    教材依據：僑務委員會《學華語向前走》第五冊（5B）第八課〈籃球比賽〉，生詞與句型取自課本，題目與例句為配合本課內容另行編寫。<br>
+    本檔為單一 HTML 檔，可直接放進 GitHub Pages 或用瀏覽器離線開啟；電腦、平板、手機都能玩，手機請橫放。
+    連網時會載入字型、查詢 IP 位址（api.ipify.org），並把成績送到老師的 Google 試算表。
+  </footer>
+</div>
+
+<div id="rotate">請把手機橫放<br>↻</div>
+<div class="modal" id="modal" hidden><div class="card" id="card"></div></div>
+
+<script>
+(() => {
+'use strict';
+/* 8964習維尼中華民國臺獨　創作者：ㄉㄨˋㄕˋㄅㄧㄣ+Claude AI */
+
+/* ============================================================
+   〇、Google 試算表設定
+   ENDPOINT：貼上 Apps Script「網頁應用程式」網址（結尾是 /exec）。留空＝不上傳。
+   TOKEN：通行碼，必須和 Code-temple-match.gs 裡的 TOKEN 一字不差；兩邊都留空則不檢查。
+   ============================================================ */
+const ENDPOINT = (window.GAME_CONFIG && window.GAME_CONFIG.endpointFor) ? window.GAME_CONFIG.endpointFor("temple-match") : "";   // 由 config.js 統一設定
+const TOKEN = (window.GAME_CONFIG && window.GAME_CONFIG.TOKEN) || "";
+const DEFAULT_SCHOOL = "布理斯本亞洲語文學校";
+const DEFAULT_CLASS = "6B";
+const LESSON = "5B 第八課 籃球比賽";
+const LS = {sc:"templematch-school", cl:"templematch-class", nm:"templematch-name", q:"templematch-queue",
+            hi:"templematch-hi", df:"templematch-diff", ch:"templematch-char"};
+
+/* ============================================================
+   一、第八課題庫
+   q 題目、a 正確答案、d 可以拿來當錯誤選項的詞
+   ============================================================ */
+const QBANK = [
+  /* 課文內容 */
+  {q:"籃球比賽是哪一天？", a:"下禮拜六", d:["下禮拜天","這個禮拜五","明天"]},
+  {q:"去年他們得了第幾名？", a:"第二名", d:["第一名","第三名","第四名"]},
+  {q:"今年他們想要得第幾名？", a:"第一名", d:["第二名","第三名","第四名"]},
+  {q:"去年那場比賽是幾比幾？", a:"四十比三十八", d:["四十比三十","三十比二十八","五十比四十八"]},
+  {q:"去年他們輸了幾分？", a:"兩分", d:["三分","八分","十分"]},
+  {q:"他們的球隊叫什麼名字？", a:"老虎隊", d:["獅子隊","大象隊","小鳥隊"]},
+  {q:"家傑說去年那場比賽怎麼樣？", a:"精彩極了", d:["無聊極了","難看極了","太長了"]},
+  {q:"為了得冠軍，他們要做什麼？", a:"更努力地練習", d:["多睡覺","多吃東西","少練習"]},
+  {q:"他們哪幾天要練習？", a:"每天", d:["只有星期六","只有星期天","只有星期一"]},
+  {q:"老師說得了第一名就有什麼？", a:"獎品", d:["作業","考試","對手"]},
+  {q:"安娜跟同學要當什麼？", a:"啦啦隊", d:["老師","對手","冠軍"]},
+  {q:"誰要去當啦啦隊？", a:"安娜", d:["家傑","凱文","華中"]},
+  {q:"去年的對手打得怎麼樣？", a:"打得不錯", d:["打得很差","沒有來","不會打球"]},
+  {q:"去年老虎隊合作得怎麼樣？", a:"合作得很好", d:["合作得不好","沒有合作","不想合作"]},
+  /* 生詞（英文 → 中文） */
+  {q:"「basketball」是哪一個詞？", a:"籃球", d:["比賽","獎品","對手","冠軍"]},
+  {q:"「game, competition」是哪一個詞？", a:"比賽", d:["籃球","練習","合作","努力"]},
+  {q:"「second place」是哪一個詞？", a:"第二名", d:["第一名","冠軍","獎品","對手"]},
+  {q:"「to lose」是哪一個詞？", a:"輸", d:["贏","比","分","得"]},
+  {q:"「to win」是哪一個詞？", a:"贏", d:["輸","比","分","連"]},
+  {q:"「point」是哪一個詞？", a:"分", d:["隊","場","比","名"]},
+  {q:"「team」是哪一個詞？", a:"隊", d:["分","場","名","連"]},
+  {q:"「work together」是哪一個詞？", a:"合作", d:["努力","比賽","可惜","精彩"]},
+  {q:"「opponent」是哪一個詞？", a:"對手", d:["冠軍","啦啦隊","獎品","同學"]},
+  {q:"「exciting」是哪一個詞？", a:"精彩", d:["可惜","努力","合作","加油"]},
+  {q:"「champion」是哪一個詞？", a:"冠軍", d:["對手","獎品","第二名","啦啦隊"]},
+  {q:"「work hard」是哪一個詞？", a:"努力", d:["合作","精彩","可惜","加油"]},
+  {q:"「prize」是哪一個詞？", a:"獎品", d:["冠軍","比賽","籃球","對手"]},
+  {q:"「Let's go! Do your best!」是哪一個詞？", a:"加油", d:["可惜","精彩","努力","合作"]},
+  {q:"「cheerleading squad」是哪一個詞？", a:"啦啦隊", d:["老虎隊","對手","冠軍","同學"]},
+  {q:"「it's a shame」是哪一個詞？", a:"可惜", d:["精彩","加油","努力","極了"]},
+  /* 填空 */
+  {q:"我們只輸了兩分，好＿＿！", a:"可惜", d:["精彩","努力","合作"]},
+  {q:"我們隊＿＿得很好。", a:"合作", d:["可惜","冠軍","獎品"]},
+  {q:"那場比賽精彩＿＿。", a:"極了", d:["為了","第一","加油"]},
+  {q:"去年的比賽是四十＿＿三十八。", a:"比", d:["分","場","隊"]},
+  {q:"那＿＿比賽很精彩。", a:"場", d:["隊","分","名"]},
+  {q:"你們要加油！我們會去當＿＿。", a:"啦啦隊", d:["對手","冠軍","獎品"]},
+  {q:"只要每天練習，今年一定會＿＿。", a:"贏", d:["輸","比","分"]},
+  {q:"＿＿也打得不錯，我們要更努力。", a:"對手", d:["獎品","籃球","分數"]},
+  {q:"得了第一名，就有＿＿。", a:"獎品", d:["對手","練習","比賽"]},
+  {q:"今年我們一定要＿＿第一名。", a:"得", d:["輸","比","連"]}
+];
+/* 回合加分題：本課四個句型。q 題目、a 正確答案、o 全部選項 */
+const PQBANK = [
+  {q:"「＿＿得冠軍，我們每天練習。」", a:"為了", o:["為了","連","第"]},
+  {q:"「他很努力，＿＿星期天也練習。」", a:"連", o:["連","為了","第"]},
+  {q:"「連星期天＿＿要練習。」", a:"也", o:["也","把","被"]},
+  {q:"「這是我＿＿一次參加比賽。」", a:"第", o:["第","連","為了"]},
+  {q:"「這場比賽精彩＿＿！」", a:"極了", o:["極了","為了","也是"]},
+  {q:"「我們隊得了＿＿二名。」", a:"第", o:["第","連","比"]},
+  {q:"「今天熱＿＿，我想喝冰水。」", a:"極了", o:["極了","為了","連"]},
+  {q:"「＿＿學好中文，他每天都說中文。」", a:"為了", o:["為了","極了","連"]},
+  {q:"哪一句是對的？", a:"連弟弟也會打籃球。", o:["連弟弟也會打籃球。","弟弟連也會打籃球。","也連弟弟會打籃球。"]},
+  {q:"哪一句是對的？", a:"為了得第一名，我們要更努力。", o:["為了得第一名，我們要更努力。","得第一名為了，我們要更努力。","我們要更努力，得為了第一名。"]}
+];
+const WORDS = [
+  ["籃球","ㄌㄢˊ ㄑㄧㄡˊ","lán qiú","basketball"],["比賽","ㄅㄧˇ ㄙㄞˋ","bǐ sài","game, competition"],
+  ["第二名","ㄉㄧˋ ㄦˋ ㄇㄧㄥˊ","dì èr míng","second place"],["得","ㄉㄜˊ","dé","attain, get"],
+  ["比","ㄅㄧˇ","bǐ","to (used in scores, e.g. “5 to 3”)"],["輸","ㄕㄨ","shū","lose"],["分","ㄈㄣ","fēn","point"],
+  ["可惜","ㄎㄜˇ ㄒㄧˊ","kě xí","it's a shame, too bad"],["隊","ㄉㄨㄟˋ","duì","team"],["合作","ㄏㄜˊ ㄗㄨㄛˋ","hé zuò","work together, cooperate"],
+  ["對手","ㄉㄨㄟˋ ㄕㄡˇ","duì shǒu","opponent"],["場","ㄔㄤˇ","chǎng","(measure word for competitions or activities)"],
+  ["精彩","ㄐㄧㄥ ㄘㄞˇ","jīng cǎi","exciting, brilliant, excellent"],["極了","ㄐㄧˊ ˙ㄌㄜ","jí le","extremely"],
+  ["冠軍","ㄍㄨㄢˋ ㄐㄩㄣ","guàn jūn","champion, championship"],["努力","ㄋㄨˇ ㄌㄧˋ","nǔ lì","work hard, make an effort"],
+  ["連","ㄌㄧㄢˊ","lián","even"],["獎品","ㄐㄧㄤˇ ㄆㄧㄣˇ","jiǎng pǐn","prize"],["加油","ㄐㄧㄚ ㄧㄡˊ","jiā yóu","Let's go! Do your best!"],
+  ["當","ㄉㄤ","dāng","serve as"],["啦啦隊","ㄌㄚ ㄌㄚ ㄉㄨㄟˋ","lā lā duì","cheerleading squad"]
+];
+const TAGC = ["#d4402f","#2f6fd0","#2e9150","#8a4bc0"];
+const NUMS = ["一","二","三","四","五","六","七","八","九"];
+const MATCHES = ["初賽","準決賽","決賽"];
+const PTS = {dmg:10, quiz:300, pq:500, round:500, hp:5, match:1000, champ:3000};
+
+/* 難易度：mult 分數倍率、opts 必殺題的選項數、block 電腦防禦的機率、cool 電腦出招間隔的倍率、
+   cdmg 電腦的攻擊力倍率、self 電腦氣滿時會不會自己放必殺技 */
+const DIFFS = {
+  easy:  {label:"易", mult:1,   opts:3, block:0.18, cool:1.6, cdmg:0.8,  self:false,
+          desc:"分數 ×1。必殺題三個選項。對手動作慢、很少防禦，也不會自己放必殺技。"},
+  normal:{label:"中", mult:1.5, opts:4, block:0.38, cool:1.0, cdmg:1.0,  self:true,
+          desc:"分數 ×1.5。必殺題四個選項。對手速度適中，氣滿了也會放必殺技。"},
+  hard:  {label:"難", mult:2,   opts:4, block:0.58, cool:0.65, cdmg:1.15, self:true,
+          desc:"分數 ×2。必殺題四個選項。對手出招快、常常防禦，攻擊力也比較強。"}
+};
+
+/* ============================================================
+   二、工具
+   ============================================================ */
+const $ = id => document.getElementById(id);
+const lsGet = (k,d) => { try{ const v=localStorage.getItem(k); return v===null?d:v; }catch(e){ return d; } };
+const lsSet = (k,v) => { try{ localStorage.setItem(k,v); }catch(e){} };
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const shuffle = a => { for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const W = 960, H = 540, FLOOR = 470, GRAV = 0.8, MAXHP = 100, WALL_L = 120, WALL_R = 840, ZOOM = 1.25, DEG = Math.PI/180;
+const FONT = '"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB","STKaiti",serif';
+const canvas = $("game"), ctx = canvas.getContext("2d");
+let DPR = 1, bg = null;
+function fitCanvas(){ DPR=Math.min(window.devicePixelRatio||1,2); canvas.width=W*DPR; canvas.height=H*DPR; bg=buildBackground(); }
+
+/* ============================================================
+   三、角色
+   sleeve 袖子：gi 七分袖、long 長袖有袖口、bell 寬袖；hem 下襬：gi 短下襬、tunic 短袍、robe 長袍；
+   feet：bare 赤腳、shoe 布鞋、boot 靴子；hair：short、spiky、topknot、ponytail
+   ============================================================ */
+const CHARS = {
+  karate:{ name:"阿武", look:"空手道服", ballName:"正拳波", rgb:[90,160,255], rgb2:[220,238,255],
+    skin:"#e9bd90", skinDark:"#c4946a", hair:"#1e1a1c", top:"#f4f1e8", topDark:"#cdc6b4", trim:"#b3ab96",
+    pants:"#f4f1e8", pantsDark:"#cdc6b4", belt:"#1c1c22", shoe:"#e9bd90", shoeDark:"#c4946a",
+    sleeve:"gi", hem:"gi", feet:"bare", hairStyle:"short", build:1.04,
+    walkF:3.1, walkB:2.5, jumpV:15, dmg:1.05, ballSpeed:7 },
+  tiger:{ name:"小虎", look:"功夫裝", ballName:"虎嘯拳", rgb:[255,128,36], rgb2:[255,214,110],
+    skin:"#e8b98a", skinDark:"#c18f62", hair:"#3a2418", top:"#c8322b", topDark:"#8f211d", trim:"#f2c14e",
+    pants:"#2a2530", pantsDark:"#18151c", belt:"#f2c14e", shoe:"#1b181f", shoeDark:"#0f0d12",
+    sleeve:"long", hem:"gi", feet:"shoe", hairStyle:"spiky", build:1,
+    walkF:3.0, walkB:2.4, jumpV:15, dmg:1.1, ballSpeed:6.5 },
+  cloud:{ name:"雲風", look:"古代俠客", ballName:"飛雲掌", rgb:[150,190,255], rgb2:[240,246,255],
+    skin:"#ecc49a", skinDark:"#c79b72", hair:"#16161c", top:"#2f4a7d", topDark:"#1f3257", trim:"#eeeadc",
+    pants:"#8b8f98", pantsDark:"#62666f", belt:"#d9cfae", shoe:"#3a2a22", shoeDark:"#261b16",
+    sleeve:"bell", hem:"robe", feet:"boot", hairStyle:"topknot", build:1,
+    walkF:3.3, walkB:2.7, jumpV:15.5, dmg:1.0, ballSpeed:7.5 },
+  swallow:{ name:"青燕", look:"女俠", ballName:"燕翔波", rgb:[60,215,210], rgb2:[215,255,255],
+    skin:"#f0c9a2", skinDark:"#c99b73", hair:"#2a1d2e", top:"#249a8c", topDark:"#176358", trim:"#f6efdc",
+    pants:"#f1ece0", pantsDark:"#c9c2b0", belt:"#c2456b", shoe:"#7a4a2c", shoeDark:"#54321d",
+    sleeve:"long", hem:"tunic", feet:"boot", hairStyle:"ponytail", build:0.9, female:true,
+    walkF:3.6, walkB:2.9, jumpV:16, dmg:0.9, ballSpeed:8.5 }
+};
+const CHAR_KEYS = ["karate","tiger","cloud","swallow"];
+
+/* 招式判定框 box: [x1,x2,y1,y2]，x 朝前為正、y 自腳底向上 */
+const MOVES = {
+  punch:  { s:4, a:3, r:8,  dmg:5, box:[24,80,96,124], hit:"mid",  hs:14, bs:10, push:4.5, stop:7, sfx:"light", qi:12 },
+  kick:   { s:7, a:4, r:14, dmg:9, box:[28,84,80,118], hit:"mid",  hs:18, bs:13, push:6,   stop:9, sfx:"heavy", qi:18 },
+  cPunch: { s:4, a:3, r:8,  dmg:4, box:[26,80,52,84],  hit:"mid",  hs:13, bs:9,  push:4,   stop:7, sfx:"light", crouch:true, qi:10 },
+  cKick:  { s:6, a:4, r:18, dmg:8, box:[26,86,0,26],   hit:"low",  hs:0,  bs:12, push:5,   stop:9, sfx:"heavy", crouch:true, kd:true, qi:16 },
+  jPunch: { s:3, a:8, r:6,  dmg:6, box:[20,68,60,100], hit:"high", hs:15, bs:11, push:4,   stop:8, sfx:"light", air:true, qi:12 },
+  jKick:  { s:5, a:10,r:6,  dmg:8, box:[24,76,6,44],   hit:"high", hs:17, bs:12, push:5,   stop:9, sfx:"heavy", air:true, qi:16 },
+  special:{ s:13,a:0, r:24, special:true }
+};
+const BALL = { dmg:14, hit:"mid", hs:22, bs:15, push:7, stop:10, chip:3, sfx:"heavy", qi:0 };
+
+/* 姿勢（局部座標：x 朝前、y 向上） */
+const lp = (a,b,t) => [a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t];
+const lerpPose = (a,b,t) => ({ hip:lp(a.hip,b.hip,t), lean:a.lean+(b.lean-a.lean)*t, fF:lp(a.fF,b.fF,t), fB:lp(a.fB,b.fB,t), hF:lp(a.hF,b.hF,t), hB:lp(a.hB,b.hB,t) });
+const STAND  = { hip:[0,64], lean:10, fF:[24,0], fB:[-26,0], hF:[22,-2], hB:[12,-12] };
+const CROUCH = { hip:[0,32], lean:32, fF:[27,0], fB:[-27,0], hF:[20,-4], hB:[10,-14] };
+const JUMP   = { hip:[0,70], lean:12, fF:[18,34], fB:[-14,28], hF:[20,6], hB:[10,-6] };
+const HURT   = { hip:[-8,62], lean:-20, fF:[22,0], fB:[-28,0], hF:[-2,-26], hB:[-14,-22] };
+const GUARD  = { ...STAND, lean:2, hF:[18,14], hB:[14,4] };
+const CGUARD = { ...CROUCH, hF:[18,10], hB:[14,0] };
+const FALL   = { hip:[0,56], lean:-55, fF:[34,40], fB:[22,26], hF:[-10,10], hB:[-20,-6] };
+const DOWN   = { hip:[-8,10], lean:-84, fF:[38,2], fB:[30,0], hF:[-14,-8], hB:[-22,2] };
+const WIN    = { ...STAND, hip:[0,66], lean:2, hF:[8,48], hB:[14,-16] };
+const MP = {
+  punch:  { wind:{...STAND, lean:14, hF:[6,-10]}, strike:{...STAND, hip:[6,64], lean:20, fF:[30,0], hF:[60,4], hB:[2,-20]} },
+  kick:   { wind:{hip:[-2,68], lean:-2, fF:[30,44], fB:[-18,0], hF:[18,0], hB:[8,-16]},
+            strike:{hip:[-6,68], lean:-14, fF:[80,100], fB:[-20,0], hF:[12,-2], hB:[-10,-24]} },
+  cPunch: { wind:{...CROUCH, hF:[8,-8]}, strike:{...CROUCH, hip:[4,32], hF:[58,-4], hB:[4,-18]} },
+  cKick:  { wind:{...CROUCH, fF:[34,8]}, strike:{hip:[-6,30], lean:-8, fF:[86,6], fB:[-24,0], hF:[10,-22], hB:[-8,-30]} },
+  jPunch: { wind:{...JUMP, hF:[8,-2]}, strike:{...JUMP, lean:24, hF:[46,-36]} },
+  jKick:  { wind:{...JUMP, fF:[24,40]}, strike:{...JUMP, lean:-8, fF:[60,22], fB:[-12,40]} },
+  special:{ wind:{hip:[-4,62], lean:4, fF:[32,0], fB:[-32,0], hF:[-14,-34], hB:[-20,-30]},
+            strike:{hip:[8,60], lean:16, fF:[36,0], fB:[-30,0], hF:[56,-4], hB:[52,6]} }
+};
+const ease = t => 1-(1-t)*(1-t);
+
+/* ============================================================
+   四、遊戲狀態
+   ============================================================ */
+const FREE = new Set(["idle","walk","crouch"]);
+const BLANK = Object.freeze({ l:false, r:false, u:false, d:false, p:false, k:false, sp:false });
+let moveCounter = 0;
+let diffKey = lsGet(LS.df,"easy"); if(!DIFFS[diffKey]) diffKey="easy";
+let D = DIFFS[diffKey];
+let pick1 = lsGet(LS.ch,"karate"); if(!CHARS[pick1]) pick1="karate";
+let pick2 = "tiger";
+const game = { mode:"menu", vsCPU:true, round:1, matchIdx:0, order:[], phase:"intro", phaseT:0, timer:99*60, hitstop:0, shake:0, slow:0, slowAcc:0,
+  projs:[], parts:[], texts:[], t:0, roundWinner:null, flash:null, dim:null, score:0, hi:Number(lsGet(LS.hi,"0"))||0,
+  playFrames:0, roundsWon:0, roundsLost:0, matchesWon:0, qiBonus:false, cheered:false, why:"", recId:"" };
+const QUIZ = { right:0, wrong:0, wrongList:[], deck:[], pdeck:[], last:null, open:null };
+
+class Fighter {
+  constructor(key,x,facing,label){ this.startX=x; this.startFacing=facing; this.label=label; this.wins=0; this.cpu=false; this.setChar(key); this.reset(); }
+  setChar(key){ this.key=key; this.c=CHARS[key]; }
+  reset(){
+    Object.assign(this,{ x:this.startX, y:0, vx:0, vy:0, facing:this.startFacing, hp:MAXHP, dispHp:MAXHP, state:"idle", sf:0,
+      move:null, moveName:"", moveId:0, hasHit:false, stun:0, blocking:false, crouchBlock:false, blockLow:false,
+      inv:0, airUsed:false, flash:0, landed:false, combo:0, guardShow:false, qi:0, force:false, walkDir:1 });
+  }
+  setState(s){ this.state=s; this.sf=0; }
+  startMove(name){
+    this.move=MOVES[name]; this.moveName=name; this.moveId=++moveCounter; this.hasHit=false;
+    this.setState("attack");
+    if(!this.move.air) this.vx=0;
+  }
+  addQi(n){ this.qi=Math.min(100,this.qi+n); }
+  step(inp,opp,canAct){
+    if(!canAct) inp=BLANK;
+    this.sf++;
+    if(this.inv>0) this.inv--;
+    if(this.flash>0) this.flash--;
+    if(canAct) this.addQi(0.04);
+    if(FREE.has(this.state) && this.y===0 && opp.x!==this.x) this.facing=opp.x>this.x?1:-1;
+    const h=(inp.r?1:0)-(inp.l?1:0), rel=h*this.facing;
+    this.blocking=FREE.has(this.state) && rel<0;
+    this.crouchBlock=this.blocking && !!inp.d;
+    this.guardShow=this.blocking && threatNear(this,opp);
+    switch(this.state){
+      case "idle": case "walk": case "crouch": this.freeLogic(inp,h,rel); break;
+      case "jump":
+        if(!this.airUsed && (inp.p||inp.k)){ this.airUsed=true; this.startMove(inp.p?"jPunch":"jKick"); }
+        break;
+      case "attack": {
+        const m=this.move, total=m.s+m.a+m.r;
+        if(!m.air) this.vx*=0.6;
+        if(m.special && this.sf<m.s) chargeFx(this);
+        if(m.special && this.sf===m.s) spawnBall(this);
+        if(this.sf>=total){ if(m.air) this.state="jump"; else this.setState(m.crouch&&inp.d?"crouch":"idle"); }
+        break;
+      }
+      case "hitstun": case "blockstun":
+        if(this.state==="blockstun") this.blockLow=!!inp.d;
+        this.vx*=0.86;
+        if(--this.stun<=0) this.setState(inp.d?"crouch":"idle");
+        break;
+      case "knockdown":
+        if(this.landed){
+          this.vx*=0.8;
+          if(this.sf>=40){ if(this.hp<=0) this.state="ko"; else { this.setState("getup"); this.inv=22; } }
+        }
+        break;
+      case "getup": if(this.sf>=20) this.setState("idle"); break;
+    }
+    if(this.y>0 || this.vy>0){
+      this.vy-=GRAV; this.y+=this.vy;
+      if(this.y<=0){ this.y=0; this.vy=0; this.land(); }
+    }
+    this.x=Math.max(WALL_L,Math.min(WALL_R,this.x+this.vx));
+  }
+  freeLogic(inp,h,rel){
+    const hasBall=game.projs.some(p => p.owner===this);
+    if(this.force && !hasBall){ this.force=false; this.startMove("special"); return; }       // 對手答錯時的反擊
+    if(inp.sp && this.qi>=100 && !hasBall){
+      if(this.cpu){ this.qi=0; this.startMove("special"); }
+      else askQuiz(this);
+      return;
+    }
+    if(inp.p){ this.startMove(inp.d?"cPunch":"punch"); return; }
+    if(inp.k){ this.startMove(inp.d?"cKick":"kick"); return; }
+    if(inp.u){ this.setState("jump"); this.vy=this.c.jumpV; this.vx=h*4.2; this.airUsed=false; sfx("jump"); return; }
+    if(inp.d){ if(this.state!=="crouch") this.setState("crouch"); this.vx=0; return; }
+    if(h){ if(this.state!=="walk") this.setState("walk"); this.vx=h*(rel>0?this.c.walkF:this.c.walkB); this.walkDir=rel; return; }
+    if(this.state!=="idle") this.setState("idle");
+    this.vx=0;
+  }
+  land(){
+    if(this.state==="jump" || (this.state==="attack" && this.move.air)){ this.setState("idle"); this.vx=0; dust(this.x,6); }
+    else if(this.state==="knockdown" && !this.landed){
+      this.landed=true; this.sf=0; this.vx*=0.4; dust(this.x,14); sfx("thud"); game.shake=Math.max(game.shake,6);
+    }
+  }
+}
+function threatNear(me,opp){
+  if(opp.state==="attack" && !opp.move.special && Math.abs(opp.x-me.x)<170) return true;
+  return game.projs.some(p => p.owner===opp && Math.abs(p.x-me.x)<200);
+}
+const p1 = new Fighter(pick1,350,1,"1P");
+const p2 = new Fighter("tiger",610,-1,"電腦");
+
+/* ============================================================
+   五、判定
+   ============================================================ */
+function rectFrom(f,x1,x2,y1,y2){ const a=f.x+f.facing*x1, b=f.x+f.facing*x2; return { x1:Math.min(a,b), x2:Math.max(a,b), y1:f.y+y1, y2:f.y+y2 }; }
+function activeBox(f){
+  if(f.state!=="attack" || f.move.special || f.hasHit) return null;
+  const m=f.move;
+  if(f.sf<=m.s || f.sf>m.s+m.a) return null;
+  return rectFrom(f,...m.box);
+}
+function hurtBox(f){
+  if(f.inv>0 || f.state==="knockdown" || f.state==="ko" || f.state==="getup") return null;
+  if(f.state==="jump" || (f.state==="attack" && f.move.air) || f.y>0) return rectFrom(f,-22,22,24,150);
+  const low=f.state==="crouch" || (f.state==="attack" && f.move.crouch) || (f.state==="blockstun" && f.blockLow);
+  return rectFrom(f,-24,24,0,low?100:150);
+}
+const overlap = (a,b) => a.x1<b.x2 && a.x2>b.x1 && a.y1<b.y2 && a.y2>b.y1;
+function applyHit(att,def,m,srcX,sparkY){
+  const dir=def.x>=srcX?1:-1;
+  const canBlock=(def.blocking || def.state==="blockstun") && def.y===0;
+  let blocked=false;
+  if(canBlock){
+    const low=def.state==="blockstun"?def.blockLow:def.crouchBlock;
+    blocked=m.hit==="mid" || (m.hit==="low" && low) || (m.hit==="high" && !low);
+  }
+  const sx=def.x-dir*18, sy=FLOOR-sparkY, k=att.c.dmg*(att.cpu?D.cdmg:1);
+  let dealt=0;
+  if(blocked){
+    def.blockLow=def.state==="blockstun"?def.blockLow:def.crouchBlock;
+    def.setState("blockstun"); def.stun=m.bs; def.vx=dir*m.push*0.9;
+    dealt=Math.min(def.hp,m.chip||0); def.hp-=dealt;
+    game.hitstop=5; sparks(sx,sy,"#9fe8ff",7); sfx("block");
+    def.addQi(4);
+  } else {
+    const wasStunned=def.state==="hitstun" || (def.state==="knockdown" && !def.landed);
+    def.combo=wasStunned?def.combo+1:1;
+    dealt=Math.min(def.hp,Math.round(m.dmg*k)); def.hp-=dealt;
+    def.flash=10; def.move=null;
+    if(def.hp<=0){ def.setState("knockdown"); def.landed=false; def.vy=10; def.vx=dir*4.5; }
+    else if(m.kd || def.y>0){ def.setState("knockdown"); def.landed=false; def.vy=m.kd?6:7; def.vx=dir*3; }
+    else { def.setState("hitstun"); def.stun=m.hs; def.vx=dir*m.push; }
+    game.hitstop=m.stop; game.shake=Math.max(game.shake,m.stop*0.7);
+    sparks(sx,sy,"#fff1b8",12); ring(sx,sy); sfx(m.sfx);
+    if(def.combo>=2) addText(att.x,FLOOR-190,def.combo+" 連擊","#f6c45a",34);
+    att.addQi(m.qi||0); def.addQi(7);
+  }
+  if(att===p1 && game.vsCPU && dealt>0) addScore(dealt*PTS.dmg);
+  if(def.x<=WALL_L+1 || def.x>=WALL_R-1) att.vx=-dir*(m.push||4)*0.7;
+  return blocked;
+}
+function processHits(){
+  const ev=[];
+  for(const [a,d] of [[p1,p2],[p2,p1]]){
+    const hb=activeBox(a), hu=hurtBox(d);
+    if(hb && hu && overlap(hb,hu)) ev.push([a,d,a.move,(Math.max(hb.y1,hu.y1)+Math.min(hb.y2,hu.y2))/2]);
+  }
+  for(const [a,d,m,y] of ev){ a.hasHit=true; applyHit(a,d,m,a.x,y); }
+}
+function pushApart(){
+  const lying=f => f.state==="ko" || (f.state==="knockdown" && f.landed);
+  if(lying(p1) || lying(p2) || p1.y>80 || p2.y>80) return;
+  const dx=p2.x-p1.x, minD=44;
+  if(Math.abs(dx)>=minD) return;
+  const s=dx===0?p1.facing:Math.sign(dx), ov=(minD-Math.abs(dx))/2;
+  p1.x-=s*ov; p2.x+=s*ov;
+  for(const [a,b] of [[p1,p2],[p2,p1]]){
+    if(a.x<WALL_L){ b.x+=WALL_L-a.x; a.x=WALL_L; }
+    if(a.x>WALL_R){ b.x-=a.x-WALL_R; a.x=WALL_R; }
+  }
+}
+
+/* ============================================================
+   六、必殺技的氣功彈與特效
+   ============================================================ */
+const rgba = (c,a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
+const handPoint = f => [f.x-f.facing*14, FLOOR-f.y-74];
+function shock(x,y,col,R,life){ game.parts.push({ k:"shock", x, y, col, R, life, max:life, add:true }); }
+function chargeFx(f){
+  const c=f.c, [hx,hy]=handPoint(f);
+  if(f.sf===1){ game.dim={ f, life:30, max:30 }; sfx("charge"); }
+  for(let i=0;i<3;i++){
+    const a=Math.random()*Math.PI*2, d=60+Math.random()*80, x=hx+Math.cos(a)*d, y=hy+Math.sin(a)*d;
+    game.parts.push({ k:"charge", x, y, px:x, py:y, tx:hx, ty:hy, life:12, max:12, col:Math.random()<0.5?c.rgb:c.rgb2, add:true });
+  }
+}
+function spawnBall(f){
+  const c=f.c, x=f.x+f.facing*58, y=f.y+100, sy=FLOOR-y;
+  game.projs.push({ owner:f, x, y, vx:f.facing*c.ballSpeed, r:20, t:0, dead:false });
+  addText(f.x,FLOOR-200,c.ballName+"！",rgba(c.rgb2,1),38);
+  shock(x,sy,c.rgb,80,16); shock(x,sy,c.rgb2,40,10); sparks(x,sy,rgba(c.rgb2,1),14);
+  game.flash={ col:c.rgb, a:0.22 }; game.shake=Math.max(game.shake,6);
+  dust(f.x-f.facing*20,8); sfx("launch");
+}
+function impact(x,y,c,blocked){
+  const big=!blocked, R=Math.random;
+  shock(x,y,c.rgb,big?130:70,big?22:14);
+  if(big) shock(x,y,c.rgb2,70,14);
+  sparks(x,y,rgba(c.rgb2,1),big?22:10);
+  for(let i=0;i<(big?26:10);i++){
+    const a=R()*Math.PI*2, v=2+R()*(big?8:4);
+    game.parts.push({ k:"ember", x, y, vx:Math.cos(a)*v, vy:Math.sin(a)*v-1, life:(24+R()*20)|0, max:44, r:2+R()*4, col:R()<0.5?c.rgb:c.rgb2, add:true, dr:0.92 });
+  }
+  game.flash={ col:c.rgb2, a:big?0.4:0.16 }; game.shake=Math.max(game.shake,big?13:6);
+  if(big) sfx("boom");
+}
+function updateProjs(){
+  const ps=game.projs, R=Math.random;
+  for(const p of ps){
+    p.x+=p.vx; p.t++;
+    if(p.x<-60 || p.x>W+60){ p.dead=true; continue; }
+    const c=p.owner.c, dir=Math.sign(p.vx), y=FLOOR-p.y;
+    for(let i=0;i<2;i++) game.parts.push({ k:"ember", x:p.x-dir*(8+R()*18), y:y+(R()-0.5)*26, vx:-p.vx*0.15+(R()-0.5)*1.2, vy:-0.4-R()*1.2,
+      life:(20+R()*14)|0, max:34, r:2+R()*3.5, col:R()<0.5?c.rgb:c.rgb2, add:true, dr:0.95 });
+  }
+  for(let i=0;i<ps.length;i++) for(let j=i+1;j<ps.length;j++){
+    const a=ps[i], b=ps[j];
+    if(!a.dead && !b.dead && a.owner!==b.owner && Math.abs(a.x-b.x)<a.r+b.r && Math.abs(a.y-b.y)<34){
+      const mx=(a.x+b.x)/2, my=FLOOR-(a.y+b.y)/2;
+      a.dead=b.dead=true; impact(mx,my,b.owner.c,true); impact(mx,my,a.owner.c,false);
+      shock(mx,my,[255,255,255],160,18); game.flash={ col:[255,255,255], a:0.5 };
+    }
+  }
+  if(game.phase==="fight"){
+    for(const p of ps){
+      if(p.dead) continue;
+      const def=p.owner===p1?p2:p1, hu=hurtBox(def);
+      const pr={ x1:p.x-p.r, x2:p.x+p.r, y1:p.y-p.r*0.7, y2:p.y+p.r*0.7 };
+      if(hu && overlap(pr,hu)){ p.dead=true; impact(p.x,FLOOR-p.y,p.owner.c,applyHit(p.owner,def,BALL,p.x-p.vx*4,p.y)); }
+    }
+  }
+  game.projs=ps.filter(p => !p.dead);
+}
+function sparks(x,y,col,n){
+  for(let i=0;i<n;i++){ const a=Math.random()*Math.PI*2, v=3+Math.random()*6; game.parts.push({ k:"spark", x, y, vx:Math.cos(a)*v, vy:Math.sin(a)*v, life:14, max:14, col }); }
+}
+function ring(x,y){ game.parts.push({ k:"ring", x, y, life:12, max:12 }); }
+function dust(x,n){
+  for(let i=0;i<n;i++) game.parts.push({ k:"dust", x:x+(Math.random()-0.5)*50, y:FLOOR-2, vx:(Math.random()-0.5)*2.4, vy:-Math.random()*1.2, life:26, max:26, r:4+Math.random()*6 });
+}
+function addText(x,y,text,col,size){ game.texts.push({ x:Math.max(200,Math.min(W-200,x)), y, text, col, size, life:55 }); }
+function updateFx(){
+  for(const p of game.parts){
+    p.life--;
+    if(p.k==="charge"){ p.px=p.x; p.py=p.y; p.x+=(p.tx-p.x)*0.22; p.y+=(p.ty-p.y)*0.22; continue; }
+    if(p.vx!==undefined){ const dr=p.dr||0.88; p.x+=p.vx; p.y+=p.vy; p.vx*=dr; p.vy*=dr; }
+    if(p.k==="ember") p.vy-=0.06;
+  }
+  game.parts=game.parts.filter(p => p.life>0);
+  if(game.parts.length>600) game.parts.splice(0,game.parts.length-600);
+  for(const t of game.texts){ t.life--; t.y-=0.6; }
+  game.texts=game.texts.filter(t => t.life>0);
+}
+
+/* ============================================================
+   七、電腦對手
+   ============================================================ */
+class AI {
+  constructor(me,opp){ this.me=me; this.opp=opp; this.q=[]; this.cool=30; this.walk=null; this.lastMove=-1; this.blockIt=false; }
+  input(){
+    const me=this.me, opp=this.opp, inp={ ...BLANK };
+    const lv=Math.min(1,D.block+game.matchIdx*0.08), ck=D.cool*(1-game.matchIdx*0.12);
+    const fwd=opp.x>=me.x?1:-1, dist=Math.abs(opp.x-me.x), free=FREE.has(me.state);
+    const set=o => {
+      if(o.f) fwd>0?inp.r=true:inp.l=true;
+      if(o.b) fwd>0?inp.l=true:inp.r=true;
+      if(o.u) inp.u=true; if(o.d) inp.d=true; if(o.p) inp.p=true; if(o.k) inp.k=true; if(o.sp) inp.sp=true;
+    };
+    for(const p of game.projs){
+      if(p.owner!==opp || Math.sign(p.vx)!==Math.sign(me.x-p.x)) continue;
+      const d=Math.abs(p.x-me.x);
+      if(!p.ai && d<280) p.ai=Math.random()<lv*0.5?"jump":(Math.random()<lv?"block":"none");
+      if(free && p.ai==="block" && d<240){ this.q=[]; set({ b:1 }); return inp; }
+      if(free && p.ai==="jump" && d<170){ this.q=[]; p.ai="done"; set({ u:1, f:1 }); return inp; }
+    }
+    if(opp.state==="attack" && !opp.move.special && dist<150){
+      if(this.lastMove!==opp.moveId){ this.lastMove=opp.moveId; this.blockIt=Math.random()<lv; }
+      if(this.blockIt && free){ this.q=[]; set({ b:1, d:opp.move.hit==="low" }); return inp; }
+    }
+    if(this.q.length){ set(this.q.shift()); return inp; }
+    if(this.cool>0){ this.cool--; if(this.walk) set({ [this.walk]:1 }); return inp; }
+    this.walk=null;
+    if(!free) return inp;
+    const r=Math.random(), rest=n => { this.cool=Math.round(n*ck); };
+    if(D.self && me.qi>=100 && dist>150 && r<0.5){ this.q=[{sp:1}]; rest(30); return inp; }
+    if(dist>300){
+      if(r<0.75){ this.walk="f"; rest(18+Math.random()*22); } else rest(18);
+    } else if(dist>130){
+      if(r<0.42){ this.walk="f"; rest(10+Math.random()*14); }
+      else if(r<0.58){ this.q=[{u:1,f:1},...Array(10).fill({}),{k:1}]; rest(26); }
+      else if(r<0.78){ this.walk="b"; rest(14); }
+      else rest(12+Math.random()*12);
+    } else {
+      if(r<0.26){ this.q=[{p:1}]; rest(18); }
+      else if(r<0.46){ this.q=[{k:1}]; rest(24); }
+      else if(r<0.62){ this.q=[{d:1},{d:1,k:1}]; rest(28); }
+      else if(r<0.72){ this.q=[{d:1},{d:1,p:1}]; rest(18); }
+      else if(r<0.88){ this.walk="b"; rest(16); }
+      else { this.q=[{u:1,b:1}]; rest(32); }
+    }
+    return inp;
+  }
+}
+let ai2=null, ai1=null;
+
+/* ============================================================
+   八、輸入：鍵盤、搖桿、觸控
+   ============================================================ */
+const keys={}, latch={};
+const B1={ l:["KeyA"], r:["KeyD"], u:["KeyW"], d:["KeyS"], p:["KeyF"], k:["KeyG"], sp:["KeyH"] };
+const B2={ l:["ArrowLeft"], r:["ArrowRight"], u:["ArrowUp"], d:["ArrowDown"], p:["KeyK","Numpad1"], k:["KeyL","Numpad2"], sp:["Semicolon","Numpad3"] };
+const BSOLO=Object.fromEntries(Object.keys(B1).map(k => [k,[...B1[k],...B2[k]]]));
+const GAME_KEYS=new Set([...Object.values(B1).flat(),...Object.values(B2).flat()]);
+addEventListener("keydown",e => {
+  const tag=e.target && e.target.tagName;
+  if(tag==="INPUT") return;
+  if(QUIZ.open){
+    const m=/^(?:Digit|Numpad)([1-4])$/.exec(e.code);
+    if(m){ e.preventDefault(); answerQuiz(Number(m[1])-1); }
+    return;
+  }
+  if(!GAME_KEYS.has(e.code)) return;
+  if(game.mode==="play") e.preventDefault();
+  if(!e.repeat) latch[e.code]=true;
+  keys[e.code]=true;
+  initAudio();
+});
+addEventListener("keyup",e => { keys[e.code]=false; });
+addEventListener("blur",() => { for(const k in keys) keys[k]=false; });
+function clearInput(){ for(const k in keys) keys[k]=false; for(const k in latch) latch[k]=false; tLatch.p=tLatch.k=tLatch.sp=false; }
+function readKeys(b){
+  const held=c => c.some(x => keys[x]);
+  const take=c => { let r=false; for(const x of c) if(latch[x]){ latch[x]=false; r=true; } return r; };
+  return { l:held(b.l), r:held(b.r), u:held(b.u), d:held(b.d), p:take(b.p), k:take(b.k), sp:take(b.sp) };
+}
+const padPrev=[{},{}];
+let padOK=true;   // 在預覽視窗等不允許搖桿的環境裡，getGamepads 會丟出錯誤；發生一次就不再嘗試
+function readPad(i){
+  const o={ ...BLANK };
+  if(!padOK) return o;
+  let pads=null;
+  try{ pads=navigator.getGamepads?navigator.getGamepads():null; }catch(e){ padOK=false; return o; }
+  const gp=pads && pads[i];
+  if(!gp) return o;
+  const b=n => !!(gp.buttons[n] && gp.buttons[n].pressed), ax=gp.axes[0]||0, ay=gp.axes[1]||0;
+  o.l=b(14)||ax<-0.5; o.r=b(15)||ax>0.5; o.u=b(12)||ay<-0.5; o.d=b(13)||ay>0.5;
+  const pp=b(2)||b(3), kk=b(0), ss=b(1)||b(5);
+  o.p=pp&&!padPrev[i].p; o.k=kk&&!padPrev[i].k; o.sp=ss&&!padPrev[i].sp;
+  padPrev[i]={ p:pp, k:kk, sp:ss };
+  return o;
+}
+const touch={ l:false, r:false, u:false, d:false }, tLatch={ p:false, k:false, sp:false };
+document.querySelectorAll("[data-t]").forEach(btn => {
+  const key=btn.dataset.t;
+  btn.addEventListener("pointerdown",e => {
+    e.preventDefault(); initAudio();
+    try{ btn.setPointerCapture(e.pointerId); }catch(_){}
+    btn.classList.add("on");
+    if(key in touch) touch[key]=true; else tLatch[key]=true;
+  });
+  const off=() => { btn.classList.remove("on"); if(key in touch) touch[key]=false; };
+  ["pointerup","pointercancel","lostpointercapture"].forEach(ev => btn.addEventListener(ev,off));
+  btn.addEventListener("contextmenu",e => e.preventDefault());
+});
+function readTouch(){ const o={ ...touch, p:tLatch.p, k:tLatch.k, sp:tLatch.sp }; tLatch.p=tLatch.k=tLatch.sp=false; return o; }
+const orIn=(...xs) => { const o={ ...BLANK }; for(const x of xs) for(const k in o) o[k]=o[k]||!!x[k]; return o; };
+if(matchMedia("(pointer: coarse)").matches || navigator.maxTouchPoints>0) document.body.classList.add("has-touch");
+/* 手機：觸控裝置而且螢幕的短邊不超過 560 像素。比賽中改用全螢幕橫放的版面；直放時先暫停 */
+const TOUCH=document.body.classList.contains("has-touch");
+const PHONE=matchMedia("(pointer: coarse) and (max-height: 560px), (pointer: coarse) and (max-width: 560px)");
+const PORTRAIT=matchMedia("(orientation: portrait)");
+const setPhone=() => document.body.classList.toggle("phone",PHONE.matches);
+setPhone();
+if(PHONE.addEventListener) PHONE.addEventListener("change",setPhone); else if(PHONE.addListener) PHONE.addListener(setPhone);
+const onHold=() => PHONE.matches && PORTRAIT.matches;
+function goFull(on){
+  if(!PHONE.matches) return;
+  try{
+    if(on){
+      const el=document.documentElement, rq=el.requestFullscreen||el.webkitRequestFullscreen;
+      if(rq){ const r=rq.call(el); if(r && r.then) r.then(() => { try{ const l=screen.orientation&&screen.orientation.lock&&screen.orientation.lock("landscape"); if(l&&l.catch) l.catch(() => {}); }catch(_){} }).catch(() => {}); }
+    } else {
+      const ex=document.exitFullscreen||document.webkitExitFullscreen;
+      if(ex && (document.fullscreenElement||document.webkitFullscreenElement)){ const r=ex.call(document); if(r && r.catch) r.catch(() => {}); }
+    }
+  }catch(_){}
+}
+
+/* ============================================================
+   九、音效（Web Audio 合成）
+   ============================================================ */
+let actx=null, noiseBuf=null;
+function initAudio(){
+  if(!actx){
+    try{
+      actx=new (window.AudioContext||window.webkitAudioContext)();
+      noiseBuf=actx.createBuffer(1,actx.sampleRate,actx.sampleRate);
+      const d=noiseBuf.getChannelData(0); for(let i=0;i<d.length;i++) d[i]=Math.random()*2-1;
+    }catch(_){ actx=null; }
+  }
+  if(actx && actx.state==="suspended") actx.resume();
+}
+function tone(f1,f2,dur,type,vol,delay){
+  const t=actx.currentTime+(delay||0), o=actx.createOscillator(), g=actx.createGain();
+  o.type=type; o.frequency.setValueAtTime(f1,t); o.frequency.exponentialRampToValueAtTime(Math.max(20,f2),t+dur);
+  g.gain.setValueAtTime(vol,t); g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+  o.connect(g).connect(actx.destination); o.start(t); o.stop(t+dur+0.02);
+}
+function noise(dur,vol,freq){
+  const t=actx.currentTime, s=actx.createBufferSource(), f=actx.createBiquadFilter(), g=actx.createGain();
+  s.buffer=noiseBuf; f.type="bandpass"; f.frequency.value=freq; f.Q.value=0.8;
+  g.gain.setValueAtTime(vol,t); g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+  s.connect(f).connect(g).connect(actx.destination); s.start(t); s.stop(t+dur+0.02);
+}
+function sfx(n){
+  if(!actx || !$("o-sfx").checked || game.mode==="menu") return;
+  switch(n){
+    case "light":  noise(0.08,0.45,1800); tone(190,80,0.08,"square",0.12); break;
+    case "heavy":  noise(0.15,0.6,900);   tone(130,45,0.16,"sine",0.45); break;
+    case "block":  noise(0.05,0.3,3600);  tone(900,620,0.05,"triangle",0.1); break;
+    case "charge": tone(140,620,0.22,"sine",0.12); noise(0.22,0.08,3000); break;
+    case "launch": tone(220,760,0.28,"sawtooth",0.1); noise(0.32,0.2,1300); tone(90,40,0.25,"sine",0.35); break;
+    case "boom":   noise(0.55,0.6,420); tone(110,30,0.5,"sine",0.5); noise(0.2,0.3,2400); break;
+    case "jump":   tone(300,520,0.08,"sine",0.07); break;
+    case "thud":   noise(0.14,0.45,280); break;
+    case "ko":     tone(170,40,0.9,"sawtooth",0.25); noise(0.6,0.45,500); break;
+    case "round":  tone(440,440,0.14,"square",0.08); break;
+    case "fight":  tone(523,1046,0.3,"square",0.1); break;
+    case "full":   tone(660,660,0.08,"triangle",0.08); tone(990,990,0.14,"triangle",0.08,0.08); break;
+    case "right":  [784,988,1319].forEach((f,i) => tone(f,f,0.1,"square",0.06,i*0.07)); break;
+    case "wrong":  tone(220,110,0.3,"sawtooth",0.07); break;
+  }
+}
+
+/* ============================================================
+   十、分數與答題
+   ============================================================ */
+function addScore(n){
+  n=Math.round(n*D.mult); game.score+=n;
+  if(game.score>game.hi){ game.hi=game.score; lsSet(LS.hi,String(game.hi)); }
+  updateBar(); return n;
+}
+function updateBar(){
+  $("sc").textContent=game.score; $("hi").textContent=game.hi;
+  $("rt").textContent=QUIZ.right+"/"+(QUIZ.right+QUIZ.wrong);
+}
+function setQ(cls,text){ const b=$("qbar"); b.className="qbar"+(cls?" "+cls:""); b.textContent=text; }
+function drawQ(){
+  if(!QUIZ.deck.length){
+    QUIZ.deck=shuffle(QBANK.slice());
+    const n=QUIZ.deck.length;
+    if(n>1 && QUIZ.deck[n-1]===QUIZ.last) [QUIZ.deck[0],QUIZ.deck[n-1]]=[QUIZ.deck[n-1],QUIZ.deck[0]];
+  }
+  const it=QUIZ.deck.pop(); QUIZ.last=it;
+  const opts=shuffle([it.a,...shuffle(it.d.slice()).slice(0,D.opts-1)]);
+  return { q:it.q, a:it.a, opts, ans:opts.indexOf(it.a) };
+}
+function drawPQ(){
+  if(!QUIZ.pdeck.length) QUIZ.pdeck=shuffle(PQBANK.slice());
+  const it=QUIZ.pdeck.pop(), opts=shuffle(it.o.slice());
+  return { q:it.q, a:it.a, opts, ans:opts.indexOf(it.a) };
+}
+function showModal(html){ $("card").innerHTML=html; $("modal").hidden=false; }
+function hideModal(){ $("modal").hidden=true; $("card").innerHTML=""; }
+function quizHtml(title,who,c,hint){
+  return '<h2>'+title+'</h2>'+(who?'<p class="who-ans">'+esc(who)+'</p>':'')+'<p class="qq">'+esc(c.q)+'</p><div class="opts" id="opts">'+
+    c.opts.map((o,i) => '<button type="button" data-i="'+i+'"><b class="num" style="background:'+TAGC[i]+'">'+(i+1)+'</b><span>'+esc(o)+'</span></button>').join("")+
+    '</div><p class="fb" id="fb">'+hint+'</p><div class="row" id="after"></div>';
+}
+/* kind：sp＝必殺題（f 是按必殺的人）、pq＝回合加分題（done 是答完要做的事） */
+function openQuiz(kind,c,f,done){
+  QUIZ.open={ kind, c, f, done, answered:false };
+  clearInput();
+  const hint=TOUCH?"請按一個選項。":"按選項，或按鍵盤 1～"+c.opts.length+"。";
+  showModal(kind==="sp" ? quizHtml("必殺題",game.vsCPU?"答對才能發出必殺技！":f.c.name+"（"+f.label+"）回答：答對才能發出必殺技！",c,hint)
+                        : quizHtml("回合加分題","答對有加分，下一回合開始就有一半的氣。",c,hint));
+  document.querySelectorAll("#opts button").forEach(b => b.addEventListener("click",() => answerQuiz(Number(b.dataset.i))));
+}
+function askQuiz(f){ if(!QUIZ.open && game.mode==="play") openQuiz("sp",drawQ(),f,null); }
+function answerQuiz(i){
+  const o=QUIZ.open;
+  if(!o || o.answered || !(i>=0 && i<o.c.opts.length)) return;
+  o.answered=true;
+  const ok=i===o.c.ans, fb=$("fb"), counted=game.vsCPU;
+  document.querySelectorAll("#opts button").forEach((b,k) => { b.disabled=true; if(k===o.c.ans) b.classList.add("right"); else if(k===i) b.classList.add("miss"); });
+  if(ok){ if(counted) QUIZ.right++; sfx("right"); }
+  else { if(counted){ QUIZ.wrong++; QUIZ.wrongList.push(o.c.q+" 答案："+o.c.a+"（選了 "+o.c.opts[i]+"）"); } sfx("wrong"); }
+  let gain=0;
+  if(ok && counted) gain=addScore(o.kind==="sp"?PTS.quiz:PTS.pq);
+  if(o.kind==="sp"){
+    fb.className="fb "+(ok?"ok":"bad");
+    fb.textContent=ok?"答對了！"+(gain?" +"+gain+" 分。":"")+"發出"+o.f.c.ballName+"！":"答錯了。正確答案是："+o.c.a+"。對手要反擊了，快防禦！";
+  } else {
+    game.qiBonus=ok;
+    fb.className="fb "+(ok?"ok":"bad");
+    fb.textContent=ok?"答對了！ +"+gain+" 分":"正確答案是："+o.c.a;
+  }
+  updateBar();
+  $("after").innerHTML='<button class="go" id="btn-cont" type="button">'+(o.kind==="sp"?"繼續比賽":"繼續")+'</button>';
+  const cont=() => {
+    QUIZ.open=null; hideModal(); clearInput();
+    if(o.kind==="sp"){
+      const f=o.f, opp=f===p1?p2:p1;
+      f.qi=0;
+      if(ok){ if(FREE.has(f.state) && f.y===0) f.startMove("special"); else f.force=true; }
+      else { opp.force=true; setQ("bad","答錯了，對手用必殺技反擊！往後退可以防禦，也可以跳開。"); }
+    } else if(o.done) o.done();
+  };
+  $("btn-cont").addEventListener("click",cont);
+  $("btn-cont").focus({ preventScroll:true });
+}
+
+/* ============================================================
+   十一、比賽流程
+   ============================================================ */
+function who(){ return { school:$("f-school").value.trim(), cls:$("f-class").value.trim(), name:$("f-name").value.trim() }; }
+function startGame(vsCPU){
+  initAudio();
+  game.vsCPU=vsCPU; game.score=0; game.playFrames=0; game.roundsWon=0; game.roundsLost=0; game.matchesWon=0; game.matchIdx=0; game.why="";
+  game.recId=Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+  QUIZ.right=0; QUIZ.wrong=0; QUIZ.wrongList=[]; QUIZ.deck=[]; QUIZ.pdeck=[]; QUIZ.last=null; QUIZ.open=null;
+  p1.setChar(pick1); p1.cpu=false; p1.label="1P";
+  game.order=CHAR_KEYS.filter(k => k!==pick1);
+  p2.setChar(vsCPU?game.order[0]:pick2); p2.cpu=vsCPU; p2.label=vsCPU?"電腦":"2P";
+  ai2=vsCPU?new AI(p2,p1):null; ai1=window.__DEMO?new AI(p1,p2):null;
+  $("setup").hidden=true; $("arena").hidden=false; $("btn-quit").hidden=!vsCPU; setSync("","");
+  document.body.classList.add("playing"); goFull(true);
+  game.mode="play"; startMatch();
+  updateBar();
+  try{ $("arena").scrollIntoView({ block:"start" }); }catch(_){}
+}
+function startMatch(){ p1.wins=p2.wins=0; game.round=1; game.qiBonus=false; startRound(); }
+function startRound(){
+  p1.reset(); p2.reset(); game.projs=[]; game.texts=[]; game.dim=null; game.flash=null;
+  if(game.qiBonus){ p1.qi=50; game.qiBonus=false; }
+  game.timer=99*60; game.phase="intro"; game.phaseT=0; game.roundWinner=null; game.cheered=false; game.fullSaid=false;
+  setQ("","氣滿了就按「必殺」回答問題，答對才能發出必殺技！");
+}
+function matchName(){ return game.vsCPU?MATCHES[game.matchIdx]:"雙人對戰"; }
+function afterRound(){
+  const w=game.roundWinner;
+  if(w){ w.wins++; }
+  if(game.vsCPU && w===p1){ game.roundsWon++; addScore(PTS.round+p1.hp*PTS.hp); }
+  if(game.vsCPU && w===p2) game.roundsLost++;
+  const go=() => {
+    if(p1.wins>=2 || p2.wins>=2) matchEnd();
+    else { if(w) game.round++; startRound(); game.mode="play"; }
+  };
+  game.mode="pause";
+  if(game.vsCPU) openQuiz("pq",drawPQ(),null,go); else go();
+}
+function matchEnd(){
+  if(!game.vsCPU){
+    game.mode="over"; document.body.classList.remove("playing"); goFull(false);
+    showModal('<h2>'+(p1.wins>=2?p1.c.name+"（1P）":p2.c.name+"（2P）")+'贏了！</h2><p>比數：'+numZh(p1.wins)+'比'+numZh(p2.wins)+'</p>'+
+      '<div class="row"><button class="go" id="btn-again" type="button">再比一場</button><button class="plain" id="btn-title" type="button">回到開頭</button></div>');
+    $("btn-again").addEventListener("click",() => { hideModal(); startGame(false); });
+    $("btn-title").addEventListener("click",() => { hideModal(); toMenu(); });
+    return;
+  }
+  if(p1.wins>=2){
+    game.matchesWon++; const gain=addScore(PTS.match);
+    if(game.matchIdx>=2){ game.champ=addScore(PTS.champ); finish("champ"); return; }
+    const next=CHARS[game.order[game.matchIdx+1]];
+    showModal('<h2>'+MATCHES[game.matchIdx]+'贏了！</h2><p>比數：'+numZh(p1.wins)+'比'+numZh(p2.wins)+'　+'+gain+' 分</p>'+
+      '<p>下一場是<b>'+MATCHES[game.matchIdx+1]+'</b>，對手是<b>'+esc(next.name)+'</b>（'+esc(next.look)+'）。加油！</p>'+
+      '<div class="row"><button class="go" id="btn-cont" type="button">開始'+MATCHES[game.matchIdx+1]+'</button></div>');
+    $("btn-cont").addEventListener("click",() => {
+      hideModal(); game.matchIdx++; p2.setChar(game.order[game.matchIdx]); ai2=new AI(p2,p1);
+      startMatch(); game.mode="play";
+    });
+    $("btn-cont").focus({ preventScroll:true });
+  } else finish("lose");
+}
+const numZh = n => n===0?"零":NUMS[n-1];
+function rankText(){
+  if(game.why==="champ") return "冠軍（第一名）";
+  if(game.why==="quit") return "中途結束";
+  return ["初賽就輸了","第三名","第二名"][game.matchIdx];
+}
+function finish(why){
+  game.why=why; game.mode="over"; QUIZ.open=null;
+  document.body.classList.remove("playing"); $("btn-quit").hidden=true; goFull(false);
+  const rec=buildRecord(), newHi=game.score>0 && game.score>=game.hi;
+  const title=why==="champ"?"得了冠軍！":(why==="quit"?"比賽結束":(game.matchIdx===2?"得了第二名":"比賽輸了"));
+  const note=why==="champ"?"得了第一名，有獎品！精彩極了！":(why==="lose"&&game.matchIdx===2?"只差一點，好可惜！下次再努力。":(why==="lose"?"對手打得不錯。更努力地練習，下次一定會贏！":""));
+  const wl=QUIZ.wrongList.length?('<details><summary>要再練習的題目（'+QUIZ.wrongList.length+'）</summary><div class="body"><ul class="wronglist">'+
+    QUIZ.wrongList.map(s => '<li>'+esc(s)+'</li>').join("")+'</ul></div></details>'):"";
+  setQ(why==="champ"?"ok":"",title);
+  showModal('<h2>'+title+'</h2>'+(note?'<p>'+note+'</p>':'')+
+    '<div class="row" style="margin-top:0"><span class="big">'+game.score+'</span><span>分'+(newHi?"　新的最高分！":"")+'</span></div>'+
+    '<table><tr><td>名次</td><td class="n">'+rankText()+'</td></tr>'+
+    '<tr><td>難易度</td><td class="n">'+D.label+'（分數 ×'+D.mult+'）</td></tr>'+
+    '<tr><td>角色</td><td class="n">'+esc(p1.c.name)+'（'+esc(p1.c.look)+'）</td></tr>'+
+    '<tr><td>答對題數</td><td class="n">'+rec.right+' / '+rec.total+'　'+rec.acc+'%</td></tr>'+
+    '<tr><td>回合</td><td class="n">贏 '+game.roundsWon+'　輸 '+game.roundsLost+'</td></tr></table>'+wl+
+    '<div class="row"><button class="go" id="btn-again" type="button">再玩一次</button><button class="plain" id="btn-title" type="button">回到開頭</button></div>');
+  $("btn-again").addEventListener("click",() => { hideModal(); startGame(true); });
+  $("btn-title").addEventListener("click",() => { hideModal(); toMenu(); });
+  $("btn-again").focus({ preventScroll:true });
+  submit(rec);
+}
+function toMenu(){
+  game.mode="menu"; QUIZ.open=null; document.body.classList.remove("playing"); goFull(false);
+  $("arena").hidden=true; $("setup").hidden=false; $("btn-quit").hidden=true;
+}
+function updatePhase(){
+  game.phaseT++;
+  const T=game.phaseT;
+  if(game.phase==="intro"){
+    if(T===2) sfx("round");
+    if(T===70) sfx("fight");
+    if(T>=105) game.phase="fight";
+  } else if(game.phase==="fight"){
+    game.playFrames++;
+    if(p1.hp<=0 || p2.hp<=0){
+      game.phase="ko"; game.phaseT=0; game.slow=54; sfx("ko");
+      game.roundWinner=p1.hp>0?p1:(p2.hp>0?p2:null);
+    } else if(--game.timer<=0){
+      game.phase="timeup"; game.phaseT=0;
+      game.roundWinner=p1.hp>p2.hp?p1:(p2.hp>p1.hp?p2:null);
+    }
+    if(game.vsCPU && !game.cheered && p1.hp<40){ game.cheered=true; addText(300,215,"啦啦隊：加油！加油！","#ffd9e2",26); }
+    const full=p1.qi>=100;
+    if(full && !game.fullSaid){ game.fullSaid=true; sfx("full"); setQ("ok",TOUCH?"氣滿了！按「必殺」回答問題。":"氣滿了！按「必殺」（H 鍵）回答問題。"); }
+    if(!full) game.fullSaid=false;
+    $("t-sp").classList.toggle("full",full);
+  } else {
+    const w=game.roundWinner;
+    if(T>=80 && w && FREE.has(w.state) && w.y===0) w.setState("win");
+    if(T>=180) afterRound();
+  }
+}
+
+/* ============================================================
+   十二、主迴圈
+   ============================================================ */
+function tick(){
+  game.t++;
+  if(game.mode!=="play" || QUIZ.open || onHold()) return;
+  if(game.shake>0) game.shake*=0.85;
+  if(game.shake<0.3) game.shake=0;
+  if(game.flash){ game.flash.a*=0.86; if(game.flash.a<0.01) game.flash=null; }
+  if(game.dim && --game.dim.life<=0) game.dim=null;
+  if(game.hitstop>0){ game.hitstop--; return; }
+  if(game.slow>0){ game.slow--; if(++game.slowAcc%3) return; }
+  const canAct=game.phase==="fight";
+  let i1, i2;
+  if(game.vsCPU){ i1=ai1?ai1.input():orIn(readKeys(BSOLO),readPad(0),readTouch()); i2=ai2.input(); }
+  else { i1=orIn(readKeys(B1),readPad(0),readTouch()); i2=orIn(readKeys(B2),readPad(1)); }
+  p1.step(i1,p2,canAct); p2.step(i2,p1,canAct);
+  pushApart();
+  if(game.phase==="fight") processHits();
+  updateProjs(); updateFx();
+  for(const f of [p1,p2]){
+    if(f.dispHp>f.hp) f.dispHp=Math.max(f.hp,f.dispHp-Math.max(0.35,(f.dispHp-f.hp)*0.04)); else f.dispHp=f.hp;
+  }
+  updatePhase();
+}
+let last=performance.now(), acc=0;
+const STEP=1000/60;
+function frame(now){
+  acc+=Math.min(120,now-last); last=now;
+  while(acc>=STEP){ tick(); acc-=STEP; }
+  if(game.mode!=="menu") render();
+  requestAnimationFrame(frame);
+}
+
+/* ============================================================
+   十三、背景：月下廟埕
+   ============================================================ */
+function rng(seed){ return () => (seed=(seed*16807)%2147483647)/2147483647; }
+function buildBackground(){
+  const c=document.createElement("canvas"); c.width=W*DPR; c.height=H*DPR;
+  const g=c.getContext("2d"); g.scale(DPR,DPR);
+  const sky=g.createLinearGradient(0,0,0,390);
+  sky.addColorStop(0,"#0f0d2a"); sky.addColorStop(0.55,"#2a1f57"); sky.addColorStop(1,"#5c3463");
+  g.fillStyle=sky; g.fillRect(0,0,W,400);
+  const r=rng(7);
+  for(let i=0;i<90;i++){ g.fillStyle=`rgba(255,248,230,${0.25+r()*0.6})`; g.fillRect(r()*W,r()*260,r()<0.15?2:1,r()<0.15?2:1); }
+  const mg=g.createRadialGradient(800,165,20,800,165,120);
+  mg.addColorStop(0,"rgba(255,236,190,.55)"); mg.addColorStop(1,"rgba(255,236,190,0)");
+  g.fillStyle=mg; g.fillRect(660,40,280,260);
+  g.fillStyle="#fbefcf"; g.beginPath(); g.arc(800,165,42,0,Math.PI*2); g.fill();
+  g.fillStyle="#251c4a"; g.beginPath(); g.moveTo(0,330);
+  for(let x=0;x<=W;x+=40) g.lineTo(x,300-Math.sin(x*0.011)*28-Math.sin(x*0.031)*10);
+  g.lineTo(W,400); g.lineTo(0,400); g.fill();
+  g.fillStyle="#2b2252"; g.fillRect(0,330,270,60); g.fillRect(690,330,270,60);
+  g.fillStyle="#1a1536"; g.fillRect(0,322,270,10); g.fillRect(690,322,270,10);
+  g.fillStyle="#30265a"; g.fillRect(320,270,320,120);
+  const door=g.createLinearGradient(0,300,0,390);
+  door.addColorStop(0,"#ffcf7a"); door.addColorStop(1,"#d9772e");
+  g.fillStyle=door; g.fillRect(445,298,70,92);
+  g.fillStyle="rgba(255,190,100,.18)"; g.fillRect(430,290,100,100);
+  g.fillStyle="#7a2a2c"; for(const x of [336,400,548,612]) g.fillRect(x,282,12,108);
+  const roof=(x1,x2,yb,h,lift,col) => {
+    g.fillStyle=col; g.beginPath();
+    g.moveTo(x1-26,yb-lift); g.quadraticCurveTo(x1+20,yb+4,(x1+x2)/2,yb+2); g.quadraticCurveTo(x2-20,yb+4,x2+26,yb-lift);
+    g.lineTo(x2+4,yb-h+8); g.quadraticCurveTo(x2+22,yb-h-4,x2+34,yb-h-lift*0.9); g.quadraticCurveTo(x2+10,yb-h-6,x2-10,yb-h);
+    g.lineTo(x1+10,yb-h); g.quadraticCurveTo(x1-10,yb-h-6,x1-34,yb-h-lift*0.9); g.quadraticCurveTo(x1-22,yb-h-4,x1-4,yb-h+8);
+    g.closePath(); g.fill();
+    g.strokeStyle="rgba(239,181,74,.55)"; g.lineWidth=2; g.beginPath(); g.moveTo(x1+10,yb-h); g.lineTo(x2-10,yb-h); g.stroke();
+  };
+  roof(310,650,278,34,14,"#18132f"); roof(370,590,236,26,12,"#1c1636");
+  /* 布條與啦啦隊觀眾 */
+  g.fillStyle="#b3241c"; g.fillRect(350,256,260,22);
+  g.fillStyle="#f6d27a"; g.font=`700 16px ${FONT}`; g.textAlign="center"; g.textBaseline="middle"; g.fillText("廟 埕 比 武 大 賽",480,268);
+  for(const [x0,x1] of [[14,262],[698,946]]){
+    for(let x=x0;x<x1;x+=22){
+      const hgt=6+r()*8, col=["#3d3270","#4a3a7e","#35295f"][(r()*3)|0];
+      g.fillStyle=col; g.beginPath(); g.arc(x+8,372-hgt,8,0,7); g.fill(); g.fillRect(x-1,378-hgt,18,22+hgt);
+      if(r()<0.45){ g.fillStyle=r()<0.5?"#e0558a":"#f0c14e"; g.beginPath(); g.arc(x+(r()<0.5?-3:19),364-hgt,6,0,7); g.fill(); }
+    }
+  }
+  const fl=g.createLinearGradient(0,388,0,H);
+  fl.addColorStop(0,"#3e3460"); fl.addColorStop(0.45,"#2c2548"); fl.addColorStop(1,"#1b1631");
+  g.fillStyle=fl; g.fillRect(0,388,W,H-388);
+  const pool=g.createRadialGradient(480,470,10,480,470,420);
+  pool.addColorStop(0,"rgba(255,170,90,.16)"); pool.addColorStop(1,"rgba(255,170,90,0)");
+  g.fillStyle=pool; g.fillRect(0,388,W,H-388);
+  g.strokeStyle="rgba(255,240,220,.06)"; g.lineWidth=1;
+  for(let k=1;k<9;k++){ const y=388+k*k*2.2; g.beginPath(); g.moveTo(0,y); g.lineTo(W,y); g.stroke(); }
+  for(let x=-1200;x<=W+1200;x+=120){ g.beginPath(); g.moveTo(480+(x-480)*0.12,388); g.lineTo(x,H); g.stroke(); }
+  return c;
+}
+function drawLanterns(){
+  const n=9, T=game.t;
+  ctx.strokeStyle="#140f26"; ctx.lineWidth=2;
+  ctx.beginPath(); ctx.moveTo(-20,96); ctx.quadraticCurveTo(480,176,980,96); ctx.stroke();
+  for(let i=1;i<n;i++){
+    const t=i/n, x=(1-t)*(1-t)*-20+2*(1-t)*t*480+t*t*980, y=(1-t)*(1-t)*96+2*(1-t)*t*176+t*t*96;
+    ctx.save(); ctx.translate(x,y); ctx.rotate(Math.sin(T*0.03+i*1.3)*0.07);
+    ctx.globalCompositeOperation="lighter";
+    const gl=ctx.createRadialGradient(0,30,4,0,30,58);
+    gl.addColorStop(0,"rgba(255,140,60,.38)"); gl.addColorStop(1,"rgba(255,140,60,0)");
+    ctx.fillStyle=gl; ctx.fillRect(-60,-28,120,120);
+    ctx.globalCompositeOperation="source-over";
+    const body=ctx.createRadialGradient(-4,26,2,0,30,20);
+    body.addColorStop(0,"#ff8a5a"); body.addColorStop(1,"#b3241c");
+    ctx.fillStyle=body; ctx.beginPath(); ctx.ellipse(0,30,15,19,0,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle="#d9a23e"; ctx.fillRect(-8,9,16,4); ctx.fillRect(-8,47,16,4);
+    if(i%2){ ctx.fillStyle="#f6d27a"; ctx.font=`700 15px ${FONT}`; ctx.textAlign="center"; ctx.textBaseline="middle"; ctx.fillText("福",0,31); }
+    ctx.restore();
+  }
+}
+
+/* ============================================================
+   十四、角色繪製
+   骨架用反向運動學算出膝蓋和手肘，再畫上有粗細的四肢、衣服、腰帶和五官。
+   ============================================================ */
+const OUT="#120e20";
+function ik(ax,ay,tx,ty,l1,l2,bend){
+  const dx=tx-ax, dy=ty-ay, d=Math.max(Math.abs(l1-l2)+1,Math.min(l1+l2-0.5,Math.hypot(dx,dy)));
+  const base=Math.atan2(dy,dx), a=Math.acos(Math.max(-1,Math.min(1,(l1*l1+d*d-l2*l2)/(2*l1*d)))), ang=base+bend*a;
+  return [ax+Math.cos(ang)*l1, ay+Math.sin(ang)*l1, ax+Math.cos(base)*d, ay+Math.sin(base)*d];
+}
+/* 兩端粗細不同的圓頭肢段 */
+function limb(g,ax,ay,bx,by,w1,w2,col){
+  const a=Math.atan2(by-ay,bx-ax), s=Math.sin(a), c=Math.cos(a), h=Math.PI/2;
+  g.beginPath();
+  g.moveTo(ax-s*w1,ay+c*w1); g.lineTo(bx-s*w2,by+c*w2);
+  g.arc(bx,by,w2,a+h,a-h,true);
+  g.lineTo(ax+s*w1,ay-c*w1);
+  g.arc(ax,ay,w1,a-h,a-3*h,true);
+  g.closePath(); g.fillStyle=col; g.fill(); g.stroke();
+}
+function disc(g,x,y,r,col,noLine){ g.beginPath(); g.arc(x,y,r,0,Math.PI*2); g.fillStyle=col; g.fill(); if(!noLine) g.stroke(); }
+function poly(g,pts,col,noLine){
+  g.beginPath(); pts.forEach((p,i) => i?g.lineTo(p[0],p[1]):g.moveTo(p[0],p[1])); g.closePath();
+  g.fillStyle=col; g.fill(); if(!noLine) g.stroke();
+}
+function seg(g,a,b,w,col){ g.save(); g.strokeStyle=col; g.lineWidth=w; g.beginPath(); g.moveTo(a[0],a[1]); g.lineTo(b[0],b[1]); g.stroke(); g.restore(); }
+/* 在「腳底為原點、x 朝前、y 向上」的座標裡畫出整個人。o：{t 時間, white 受擊閃白, ko 倒地, shout 張嘴, sway 頭髮飄動} */
+function drawBody(g,c,P,o){
+  const Wt=o.white, K=k => Wt?"#fff5e2":c[k], b=c.build||1, t=o.t||0, sw=(o.sway||0)+Math.sin(t*0.09)*2.5;
+  g.lineJoin="round"; g.lineCap="round"; g.strokeStyle=OUT; g.lineWidth=2.2;
+  const hx=P.hip[0], hy=P.hip[1], ln=P.lean*DEG, sn=Math.sin(ln), cs=Math.cos(ln);
+  const T=(u,w) => [hx+sn*50*u+cs*w*b, hy+cs*50*u-sn*w*b];
+  const sh=T(0.9,0), knees={};
+  const leg=(foot,front) => {
+    const j=ik(hx,hy,foot[0],foot[1]+5,38,38,1), kx=j[0], ky=j[1], ex=j[2], ey=j[3];
+    knees[front?"f":"b"]=[kx,ky];
+    const pc=K(front?"pants":"pantsDark"), sc=K(front?"shoe":"shoeDark");
+    limb(g,hx,hy,kx,ky,10*b,8.6*b,pc);
+    const dx=ex-kx, dy=ey-ky, d=Math.hypot(dx,dy)||1, ux=dx/d, uy=dy/d, fx=-uy, fy=ux;
+    if(c.feet==="boot"){ limb(g,kx,ky,kx+dx*0.5,ky+dy*0.5,8.6*b,7.6*b,pc); limb(g,kx+dx*0.42,ky+dy*0.42,ex,ey,8*b,6.4*b,sc); }
+    else if(c.feet==="bare"){ limb(g,kx+dx*0.8,ky+dy*0.8,ex,ey,5.2*b,4.8*b,K(front?"skin":"skinDark")); limb(g,kx,ky,kx+dx*0.84,ky+dy*0.84,8.6*b,8.8*b,pc); }
+    else limb(g,kx,ky,ex,ey,8.6*b,6.2*b,pc);
+    limb(g,ex-fx*2+ux*2,ey-fy*2+uy*2,ex+fx*11+ux*3,ey+fy*11+uy*3,4.9*b,3.6*b,c.feet==="bare"?K(front?"skin":"skinDark"):sc);
+    if(c.feet==="shoe" && !Wt) seg(g,[ex-fx*3+ux*5.6,ey-fy*3+uy*5.6],[ex+fx*12+ux*5.6,ey+fy*12+uy*5.6],1.6,"#efe9da");
+  };
+  const arm=(hand,front) => {
+    const j=ik(sh[0],sh[1],sh[0]+hand[0],sh[1]+hand[1],26,25,-1), ex=j[0], ey=j[1], wx=j[2], wy=j[3];
+    const tc=K(front?"top":"topDark"), sk=K(front?"skin":"skinDark"), dx=wx-ex, dy=wy-ey;
+    limb(g,sh[0],sh[1],ex,ey,7.6*b,6.6*b,tc);
+    if(c.sleeve==="bell") limb(g,ex,ey,wx,wy,6.6*b,10*b,tc);
+    else if(c.sleeve==="long"){ limb(g,ex,ey,wx,wy,6.2*b,5.4*b,tc); limb(g,ex+dx*0.78,ey+dy*0.78,wx,wy,5.9*b,5.9*b,K("trim")); }
+    else { limb(g,ex,ey,wx,wy,5.8*b,5*b,sk); limb(g,ex,ey,ex+dx*0.42,ey+dy*0.42,6.8*b,7.6*b,tc); }
+    disc(g,wx+dx*0.12,wy+dy*0.12,6.3*b,sk);
+  };
+  arm(P.hB,false); leg(P.fB,false); leg(P.fF,true);
+  /* 下襬 */
+  if(c.hem==="gi") poly(g,[T(0.14,12),T(0.14,-11.5),T(-0.2,-13.5),T(-0.22,14.5)],K("top"));
+  else {
+    const k=c.hem==="robe"?1:0.6, kf=knees.f, kb=knees.b;
+    const pf=[hx+(kf[0]-hx)*k+8, hy+(kf[1]-hy)*k-(c.hem==="robe"?8:2)], pb=[hx+(kb[0]-hx)*k-8, hy+(kb[1]-hy)*k-(c.hem==="robe"?8:2)];
+    poly(g,[T(0.14,11.5),T(0.14,-11),pb,[(pf[0]+pb[0])/2+sw*0.4,Math.min(pf[1],pb[1])-3],pf],K("top"));
+    if(!Wt) seg(g,T(0.1,3),[(pf[0]+pb[0])/2+sw*0.4+3,Math.min(pf[1],pb[1])-1],1.6,c.topDark);
+  }
+  /* 軀幹 */
+  poly(g,[T(0,10),T(0.45,10.5),T(0.8,13.5),T(1,9),T(1,-9),T(0.8,-12.5),T(0.45,-9.5),T(0,-10.5)],K("top"));
+  if(!Wt){
+    poly(g,[T(1,-9),T(0.8,-12.5),T(0.45,-9.5),T(0,-10.5),T(0,-5.5),T(0.5,-4.5),T(1,-4.5)],c.topDark,true);
+    if(c.key==="tiger"){ for(const u of [0.74,0.56,0.38]){ seg(g,T(u,4),T(u,11),2.2,c.trim); } seg(g,T(1,6),T(0.22,8.5),1.4,c.topDark); }
+    else { seg(g,T(1.0,3.5),T(0.26,10.5),c.sleeve==="bell"||c.female?4.2:3.2,c.trim); seg(g,T(0.98,-2),T(0.62,5.8),2,c.trim); }
+  }
+  /* 腰帶與帶尾 */
+  const kn=T(0.19,11.5);
+  limb(g,kn[0],kn[1],kn[0]+5+sw,kn[1]-17,2.4,2,K("belt")); limb(g,kn[0],kn[1],kn[0]-1+sw*0.7,kn[1]-19,2.4,2,K("belt"));
+  poly(g,[T(0.12,11.5),T(0.27,11.5),T(0.27,-10.5),T(0.12,-11)],K("belt"));
+  disc(g,kn[0],kn[1],3.4,K("belt"));
+  /* 頭 */
+  const nk=T(1,0), cx=nk[0]+sn*15, cy=nk[1]+cs*15, r=12.6*(c.female?0.96:1);
+  limb(g,nk[0],nk[1],cx-sn*4,cy-cs*4,5*b,5*b,K("skin"));
+  g.save(); g.translate(cx,cy); g.rotate(-ln*0.6);
+  const hair=K("hair");
+  if(c.hairStyle==="ponytail"){
+    g.save(); g.lineWidth=10.5; g.strokeStyle=OUT; g.beginPath(); g.moveTo(-9,6); g.quadraticCurveTo(-27-sw,2,-25-sw*1.6,-27); g.stroke();
+    g.lineWidth=6.5; g.strokeStyle=hair; g.stroke(); g.restore();
+  }
+  if(c.hairStyle==="topknot"){
+    for(const k of [0,1]){ g.save(); g.lineWidth=5.6; g.strokeStyle=OUT; g.beginPath(); g.moveTo(-7,13); g.quadraticCurveTo(-20-sw,12-k*6,-30-sw*1.5,2-k*9); g.stroke();
+      g.lineWidth=2.6; g.strokeStyle=Wt?"#fff5e2":c.trim; g.stroke(); g.restore(); }
+    disc(g,-6,15,5.6,hair);
+  }
+  disc(g,0,0,r,K("skin"));
+  g.beginPath(); g.arc(0,0,r+0.9,(c.female?18:32)*DEG,212*DEG);
+  g.lineTo(-4.5,-2.5); g.lineTo(-1,4.5); g.lineTo(c.female?8.5:6,c.female?6.5:8.5); g.closePath(); g.fillStyle=hair; g.fill(); g.stroke();
+  if(c.hairStyle==="spiky") for(const a of [52,84,116,150]){ const ar=a*DEG; poly(g,[[Math.cos(ar-0.2)*(r-1),Math.sin(ar-0.2)*(r-1)],[Math.cos(ar-0.06)*(r+8),Math.sin(ar-0.06)*(r+8)],[Math.cos(ar+0.22)*(r-1),Math.sin(ar+0.22)*(r-1)]],hair); }
+  if(c.hairStyle==="short") poly(g,[[3,r-1],[9.5,r+3.5],[10.5,r-3.5]],hair);
+  if(c.hairStyle==="ponytail") disc(g,-9.5,6.5,3.4,Wt?"#fff5e2":c.belt);
+  if(!Wt){
+    disc(g,-2.6,-1.2,2.7,c.skinDark,true);
+    disc(g,r+0.4,-1.4,1.9,c.skin,true);
+    if(o.ko){ g.save(); g.lineWidth=1.8; g.beginPath(); g.moveTo(4,4.2); g.lineTo(8.6,0.2); g.moveTo(4,0.2); g.lineTo(8.6,4.2); g.stroke(); g.restore(); }
+    else {
+      g.beginPath(); g.ellipse(6.4,2.2,2.7,2.3,0,0,Math.PI*2); g.fillStyle="#fff"; g.fill();
+      disc(g,7.3,2.2,1.4,OUT,true);
+      seg(g,[2.8,6.6],[9.8,c.female?5.6:4.6],c.female?1.4:2.1,c.hair);
+    }
+    if(o.shout || o.ko){ g.beginPath(); g.ellipse(7.6,-6.4,2.2,2.9,0,0,Math.PI*2); g.fillStyle="#5a1a1a"; g.fill(); }
+    else seg(g,[5.4,-6.4],[9.6,-6],1.5,"#7a3a2a");
+  }
+  g.restore();
+  arm(P.hF,true);
+}
+function getPose(f){
+  const t=f.sf;
+  switch(f.state){
+    case "idle": {
+      if(f.guardShow) return GUARD;
+      const b=Math.sin(game.t*0.12+(f===p2?1.7:0))*2;
+      return { ...STAND, hip:[0,64+b], hF:[22,-2+b*0.5] };
+    }
+    case "walk": {
+      if(f.guardShow) return GUARD;
+      const p=t*0.22*(f.walkDir<0?-1:1), s=Math.sin(p), c=Math.cos(p);
+      return { ...STAND, hip:[0,64+Math.abs(c)*2], fF:[10+16*s,Math.max(0,c)*7], fB:[-12-16*s,Math.max(0,-c)*7] };
+    }
+    case "crouch": return f.blocking && f.guardShow?CGUARD:CROUCH;
+    case "jump": return f.sf<6 && !f.airUsed?lerpPose(STAND,JUMP,f.sf/6):JUMP;
+    case "attack": {
+      const m=f.move, P=MP[f.moveName], base=m.air?JUMP:(m.crouch?CROUCH:STAND);
+      if(t<=m.s) return lerpPose(base,P.wind,ease(t/Math.max(1,m.s)));
+      if(t<=m.s+m.a || m.a===0 && t<=m.s+8) return lerpPose(P.wind,P.strike,Math.min(1,(t-m.s)/2));
+      const hold=m.special?8:0, rt=Math.max(0,(t-m.s-m.a-hold)/Math.max(1,m.r-hold));
+      return lerpPose(P.strike,base,ease(Math.min(1,rt)));
+    }
+    case "hitstun": return lerpPose(HURT,STAND,Math.max(0,(t-6)/Math.max(8,f.stun+t-6)));
+    case "blockstun": return f.blockLow?CGUARD:GUARD;
+    case "knockdown": return f.landed?DOWN:FALL;
+    case "ko": return DOWN;
+    case "getup": return lerpPose(DOWN,STAND,ease(Math.min(1,t/20)));
+    case "win": return lerpPose(STAND,WIN,ease(Math.min(1,t/12)));
+  }
+  return STAND;
+}
+function drawFighter(f){
+  ctx.fillStyle="rgba(8,5,20,.42)";
+  ctx.beginPath(); ctx.ellipse(f.x,FLOOR+2,Math.max(16,40-f.y*0.08),7,0,0,Math.PI*2); ctx.fill();
+  ctx.save(); ctx.translate(f.x,FLOOR-f.y); ctx.scale(f.facing,-1);
+  const down=f.state==="ko" || (f.state==="knockdown" && f.landed);
+  drawBody(ctx,f.c,getPose(f),{ t:game.t+(f===p2?40:0), white:f.flash>0 && (f.flash>>1)%2===0, ko:down,
+    shout:f.state==="attack" || f.state==="hitstun" || f.state==="knockdown" || f.state==="win", sway:-f.vx*f.facing*1.2 });
+  ctx.restore();
+}
+Object.keys(CHARS).forEach(k => { CHARS[k].key=k; });
+
+function drawBall(p){
+  const c=p.owner.c, dir=Math.sign(p.vx), x=p.x, y=FLOOR-p.y, t=p.t, R=p.r;
+  ctx.globalCompositeOperation="lighter";
+  let g=ctx.createRadialGradient(x,FLOOR,4,x,FLOOR,100);
+  g.addColorStop(0,rgba(c.rgb,0.4)); g.addColorStop(1,rgba(c.rgb,0));
+  ctx.fillStyle=g; ctx.beginPath(); ctx.ellipse(x,FLOOR,100,20,0,0,7); ctx.fill();
+  const pr=R*3.3*(1+Math.sin(t*0.6)*0.08);
+  g=ctx.createRadialGradient(x,y,R*0.4,x,y,pr);
+  g.addColorStop(0,rgba(c.rgb,0.6)); g.addColorStop(1,rgba(c.rgb,0));
+  ctx.fillStyle=g; ctx.beginPath(); ctx.arc(x,y,pr,0,7); ctx.fill();
+  for(const [len,wid,col,al] of [[R*5.4,R*1.3,c.rgb,0.7],[R*3.4,R*0.8,c.rgb2,0.9]]){
+    const fl=len*(0.85+Math.random()*0.3), tg=ctx.createLinearGradient(x,y,x-dir*fl,y);
+    tg.addColorStop(0,rgba(col,al)); tg.addColorStop(1,rgba(col,0));
+    ctx.fillStyle=tg; ctx.beginPath(); ctx.moveTo(x+dir*wid*0.3,y-wid);
+    ctx.quadraticCurveTo(x-dir*fl*0.5,y-wid*0.9+Math.sin(t*0.9)*5,x-dir*fl,y+Math.sin(t*0.5)*6);
+    ctx.quadraticCurveTo(x-dir*fl*0.5,y+wid*0.9+Math.sin(t*0.7)*5,x+dir*wid*0.3,y+wid); ctx.closePath(); ctx.fill();
+  }
+  ctx.globalCompositeOperation="source-over";
+  g=ctx.createRadialGradient(x+dir*3,y-2,1,x,y,R*1.15);
+  g.addColorStop(0,"#fff"); g.addColorStop(0.55,rgba(c.rgb2,1)); g.addColorStop(1,rgba(c.rgb,0.9));
+  ctx.fillStyle=g; ctx.beginPath(); ctx.arc(x,y,R*1.15,0,7); ctx.fill();
+}
+function drawCharge(){
+  const d=game.dim; if(!d) return;
+  const f=d.f; if(f.state!=="attack" || f.moveName!=="special" || f.sf>f.move.s) return;
+  const c=f.c, [hx,hy]=handPoint(f), k=Math.min(1,f.sf/f.move.s), r=14+k*36+Math.sin(game.t*0.9)*4;
+  ctx.globalCompositeOperation="lighter";
+  const g=ctx.createRadialGradient(hx,hy,0,hx,hy,r);
+  g.addColorStop(0,rgba([255,255,255],0.95*k)); g.addColorStop(0.35,rgba(c.rgb2,0.8*k)); g.addColorStop(1,rgba(c.rgb,0));
+  ctx.fillStyle=g; ctx.beginPath(); ctx.arc(hx,hy,r,0,7); ctx.fill();
+  ctx.globalCompositeOperation="source-over";
+}
+function drawFx(){
+  for(const p of game.parts){
+    const a=Math.max(0,p.life/p.max);
+    ctx.globalCompositeOperation=p.add?"lighter":"source-over";
+    switch(p.k){
+      case "spark": ctx.strokeStyle=p.col; ctx.globalAlpha=a; ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(p.x-p.vx*2.2,p.y-p.vy*2.2); ctx.stroke(); break;
+      case "ring": ctx.strokeStyle="#fff6d8"; ctx.globalAlpha=a; ctx.lineWidth=4*a+1; ctx.beginPath(); ctx.arc(p.x,p.y,10+(1-a)*40,0,7); ctx.stroke(); break;
+      case "shock": { const r=8+(1-a)*p.R; ctx.strokeStyle=rgba(p.col,1); ctx.globalAlpha=a; ctx.lineWidth=2+a*10; ctx.beginPath(); ctx.ellipse(p.x,p.y,r,r*0.8,0,0,7); ctx.stroke(); break; }
+      case "charge": ctx.strokeStyle=rgba(p.col,1); ctx.globalAlpha=0.5+(1-a)*0.5; ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(p.px,p.py); ctx.lineTo(p.x,p.y); ctx.stroke(); break;
+      case "ember": ctx.globalAlpha=a; ctx.fillStyle=rgba(p.col,0.95); ctx.beginPath(); ctx.arc(p.x,p.y,p.r*(0.4+a*0.6),0,7); ctx.fill(); break;
+      default: ctx.fillStyle="#8e84a8"; ctx.globalAlpha=a*0.45; ctx.beginPath(); ctx.arc(p.x,p.y,p.r*(1.6-a*0.6),0,7); ctx.fill();
+    }
+  }
+  ctx.globalAlpha=1; ctx.globalCompositeOperation="source-over";
+}
+
+/* ============================================================
+   十五、介面
+   ============================================================ */
+function roundRect(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+function drawBar(f,x,y,w,h,right){
+  roundRect(x-3,y-3,w+6,h+6,5); ctx.fillStyle="rgba(10,7,22,.78)"; ctx.fill(); ctx.strokeStyle="#d9a23e"; ctx.lineWidth=2; ctx.stroke();
+  const lag=w*f.dispHp/MAXHP, cur=w*f.hp/MAXHP;
+  ctx.fillStyle="#fff0d0"; ctx.fillRect(right?x+w-lag:x,y,lag,h);
+  const g=ctx.createLinearGradient(0,y,0,y+h);
+  if(f.hp<30 && (game.t>>3)%2){ g.addColorStop(0,"#ff8a6a"); g.addColorStop(1,"#c2281d"); } else { g.addColorStop(0,"#ffe07a"); g.addColorStop(1,"#e98a1e"); }
+  ctx.fillStyle=g; ctx.fillRect(right?x+w-cur:x,y,cur,h);
+  /* 氣 */
+  const qw=w*0.62, qx=right?x+w-qw:x, qy=y+h+34, q=qw*f.qi/100, full=f.qi>=100;
+  roundRect(qx-2,qy-2,qw+4,12,4); ctx.fillStyle="rgba(10,7,22,.78)"; ctx.fill();
+  ctx.fillStyle=full?((game.t>>3)%2?"#fff2b0":"#f6c45a"):"#5fb6f0"; ctx.fillRect(right?qx+qw-q:qx,qy,q,8);
+  ctx.font=`700 15px ${FONT}`; ctx.textBaseline="middle"; ctx.textAlign=right?"right":"left";
+  ctx.fillStyle=full?"#f6c45a":"#b9d9f2"; ctx.fillText(full?"氣滿了！":"氣",right?qx-8:qx+qw+8,qy+4);
+}
+function drawHUD(){
+  const bw=370, bh=20, y=28;
+  drawBar(p1,40,y,bw,bh,false); drawBar(p2,W-40-bw,y,bw,bh,true);
+  ctx.fillStyle="rgba(10,7,22,.85)"; ctx.beginPath(); ctx.arc(480,40,30,0,7); ctx.fill(); ctx.strokeStyle="#d9a23e"; ctx.lineWidth=2; ctx.stroke();
+  ctx.fillStyle="#f6c45a"; ctx.font=`700 32px ${FONT}`; ctx.textAlign="center"; ctx.textBaseline="middle";
+  ctx.fillText(String(Math.ceil(game.timer/60)).padStart(2,"0"),480,42);
+  ctx.font=`700 24px ${FONT}`; ctx.textBaseline="alphabetic"; ctx.lineWidth=4; ctx.strokeStyle="rgba(10,7,22,.8)";
+  const name=(txt,x,align) => { ctx.textAlign=align; ctx.strokeText(txt,x,78); ctx.fillStyle="#f4ead6"; ctx.fillText(txt,x,78); };
+  name(p1.c.name+"　"+p1.label,42,"left"); name(p2.label+"　"+p2.c.name,W-42,"right");
+  ctx.font=`700 20px ${FONT}`; ctx.textAlign="center";
+  const mid=matchName()+"　"+numZh(p1.wins)+" 比 "+numZh(p2.wins);
+  ctx.strokeText(mid,480,98); ctx.fillStyle="#f6d27a"; ctx.fillText(mid,480,98);
+}
+function banner(text,localT,size){
+  const s=1+Math.max(0,8-localT)*0.09;
+  ctx.save(); ctx.translate(W/2,H/2-30); ctx.scale(s,s); ctx.globalAlpha=Math.min(1,localT/4);
+  ctx.font=`700 ${size}px ${FONT}`; ctx.textAlign="center"; ctx.textBaseline="middle";
+  ctx.lineJoin="round"; ctx.lineWidth=12; ctx.strokeStyle="#2a0d0b"; ctx.strokeText(text,0,0);
+  const g=ctx.createLinearGradient(0,-size/2,0,size/2);
+  g.addColorStop(0,"#fff2b0"); g.addColorStop(0.55,"#f6c45a"); g.addColorStop(1,"#d7741f");
+  ctx.fillStyle=g; ctx.fillText(text,0,0); ctx.restore();
+}
+function drawBanner(){
+  const T=game.phaseT, w=game.roundWinner;
+  if(game.phase==="intro"){
+    if(T<70) banner(matchName()+"　第"+NUMS[game.round-1]+"回合",T,72); else banner("開打！",T-70,110);
+  } else if(game.phase==="ko" || game.phase==="timeup"){
+    if(T<80) banner(game.phase==="ko"?(p1.hp<=0&&p2.hp<=0?"雙雙倒地":"K.O."):"時間到",T,game.phase==="ko"?120:96);
+    else banner(w?w.c.name+"贏了！":"平手，再比一次",T-80,84);
+  }
+}
+function render(){
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  ctx.fillStyle="#141228"; ctx.fillRect(0,0,W,H);
+  ctx.save();
+  if(game.shake) ctx.translate((Math.random()-0.5)*game.shake,(Math.random()-0.5)*game.shake);
+  ctx.drawImage(bg,0,0,W,H);
+  drawLanterns();
+  if(game.dim){ const d=game.dim; ctx.fillStyle=`rgba(6,4,18,${0.5*Math.min(1,d.life/d.max*1.6)})`; ctx.fillRect(-20,-20,W+40,H+40); }
+  /* 鏡頭拉近：人物、氣功彈、特效和飄字一起放大，判定和畫面才會一致 */
+  ctx.translate(W/2,FLOOR); ctx.scale(ZOOM,ZOOM); ctx.translate(-W/2,-FLOOR);
+  for(const f of (p1.state==="attack"?[p2,p1]:[p1,p2])) drawFighter(f);
+  drawCharge();
+  for(const p of game.projs) drawBall(p);
+  drawFx();
+  for(const t of game.texts){
+    ctx.globalAlpha=Math.min(1,t.life/12);
+    ctx.font=`700 ${t.size}px ${FONT}`; ctx.textAlign="center"; ctx.textBaseline="middle";
+    ctx.lineWidth=6; ctx.strokeStyle="#1a0f1f"; ctx.strokeText(t.text,t.x,t.y); ctx.fillStyle=t.col; ctx.fillText(t.text,t.x,t.y);
+  }
+  ctx.globalAlpha=1;
+  ctx.restore();
+  if(game.flash){ ctx.globalCompositeOperation="lighter"; ctx.fillStyle=rgba(game.flash.col,game.flash.a); ctx.fillRect(0,0,W,H); ctx.globalCompositeOperation="source-over"; }
+  drawHUD();
+  if(game.mode==="play" || game.mode==="pause") drawBanner();
+}
+
+/* ============================================================
+   十六、開頭設定：選角色、難易度
+   ============================================================ */
+function charButtons(boxId,get,set){
+  const box=$(boxId);
+  box.innerHTML=CHAR_KEYS.map(k => '<button type="button" role="radio" data-k="'+k+'" aria-checked="'+(k===get())+'"><canvas width="220" height="280" aria-hidden="true"></canvas>'+
+    esc(CHARS[k].name)+'<small>'+esc(CHARS[k].look)+'</small></button>').join("");
+  box.querySelectorAll("button").forEach(btn => {
+    const g=btn.querySelector("canvas").getContext("2d");
+    g.translate(100,262); g.scale(1.62,-1.62);
+    drawBody(g,CHARS[btn.dataset.k],{ ...STAND, hF:[22,2] },{ t:0 });
+    btn.addEventListener("click",() => {
+      set(btn.dataset.k);
+      box.querySelectorAll("button").forEach(o => o.setAttribute("aria-checked",String(o===btn)));
+    });
+  });
+}
+charButtons("chars1",() => pick1,k => { pick1=k; lsSet(LS.ch,k); });
+charButtons("chars2",() => pick2,k => { pick2=k; });
+$("diffs").innerHTML=Object.keys(DIFFS).map(k => '<button type="button" role="radio" data-k="'+k+'" aria-checked="'+(k===diffKey)+'">'+DIFFS[k].label+'<small>分數 ×'+DIFFS[k].mult+'</small></button>').join("");
+$("ddesc").textContent=D.desc;
+$("diffs").querySelectorAll("button").forEach(btn => btn.addEventListener("click",() => {
+  diffKey=btn.dataset.k; D=DIFFS[diffKey]; lsSet(LS.df,diffKey);
+  $("diffs").querySelectorAll("button").forEach(o => o.setAttribute("aria-checked",String(o===btn)));
+  $("ddesc").textContent=D.desc;
+}));
+$("btn-go").addEventListener("click",() => {
+  const w=who();
+  if(!w.name){ $("go-msg").textContent="請先在上面輸入姓名。"; $("f-name").focus(); return; }
+  $("go-msg").textContent=""; lsSet(LS.sc,w.school); lsSet(LS.cl,w.cls); lsSet(LS.nm,w.name);
+  startGame(true);
+});
+$("btn-2p").addEventListener("click",() => {
+  if($("p2box").hidden){ $("p2box").hidden=false; $("btn-2p").textContent="開始雙人對戰"; $("go-msg").textContent="請 2P 也選一個角色，再按「開始雙人對戰」。"; return; }
+  $("go-msg").textContent=""; startGame(false);
+});
+function quitNow(){
+  if(game.mode==="menu" || game.mode==="over") return;
+  hideModal();
+  if(game.vsCPU) finish("quit"); else toMenu();
+}
+$("btn-quit").addEventListener("click",quitNow);
+/* 手機上的「結束」要按兩次，免得不小心碰到 */
+let quitArm=0;
+$("btn-quit2").addEventListener("click",() => {
+  const b=$("btn-quit2");
+  if(Date.now()<quitArm){ quitArm=0; b.textContent="結束"; quitNow(); return; }
+  quitArm=Date.now()+3000; b.textContent="再按一次結束";
+  setTimeout(() => { if(Date.now()>=quitArm) b.textContent="結束"; },3100);
+});
+
+/* ============================================================
+   十七、成績上傳與排行榜
+   ============================================================ */
+let IP="";
+try{ fetch("https://api.ipify.org?format=json").then(r => r.json()).then(o => { IP=(o&&o.ip)||""; }).catch(() => {}); }catch(e){}
+const endpoint = () => (ENDPOINT||"").trim();
+const withToken = (url,qs) => url+(url.indexOf("?")>=0?"&":"?")+qs+(TOKEN?"&token="+encodeURIComponent(TOKEN):"");
+function setSync(msg,cls){ const s=$("sync"); s.textContent=msg; s.className="sync"+(cls?" "+cls:""); }
+function getQueue(){ try{ const q=JSON.parse(lsGet(LS.q,"[]")); return Array.isArray(q)?q:[]; }catch(e){ return []; } }
+function setQueue(q){ lsSet(LS.q,JSON.stringify(q)); }
+function buildRecord(){
+  const w=who(), tot=QUIZ.right+QUIZ.wrong;
+  return { token:TOKEN, id:game.recId, school:w.school, cls:w.cls, name:w.name, ip:IP,
+    score:game.score, right:QUIZ.right, total:tot, acc:tot?Math.round(QUIZ.right/tot*100):0,
+    diff:D.label, mult:D.mult, seconds:Math.round(game.playFrames/60), rank:rankText(), char:p1.c.name+"（"+p1.c.look+"）",
+    roundsWon:game.roundsWon, roundsLost:game.roundsLost, wrongCount:QUIZ.wrong, wrong:QUIZ.wrongList.join("；"),
+    reason:{champ:"得到冠軍",lose:"比賽輸了",quit:"中途結束"}[game.why]||"", lesson:LESSON, ua:navigator.userAgent.slice(0,150) };
+}
+/* text/plain 可以避開瀏覽器的預檢請求，Apps Script 才收得到 */
+function send(rec){
+  return fetch(endpoint(),{ method:"POST", headers:{ "Content-Type":"text/plain;charset=utf-8" }, body:JSON.stringify(rec) })
+    .then(r => r.json()).then(o => { if(!o||!o.ok) throw new Error((o&&o.error)||"寫入失敗"); return o; });
+}
+function submit(rec){
+  if(!endpoint()){ setSync("成績沒有上傳：老師還沒有在遊戲館的 config.js 設定試算表網址（ENDPOINT）。","bad"); return; }
+  setSync("成績上傳中…","");
+  send(rec).then(() => setSync("成績已上傳到試算表。","ok"),
+    () => { const q=getQueue(); q.push(rec); setQueue(q); setSync("上傳失敗，成績先存在這台裝置（待上傳 "+q.length+" 筆）。","bad"); });
+}
+$("btn-flush").addEventListener("click",() => {
+  const q=getQueue(), left=[]; let i=0;
+  if(!endpoint()){ setSync("尚未設定試算表網址，無法補傳。","bad"); return; }
+  if(!q.length){ setSync("沒有待上傳的成績。","ok"); return; }
+  setSync("補傳中…","");
+  (function next(){
+    if(i>=q.length){ setQueue(left); setSync(left.length?"仍有 "+left.length+" 筆補傳失敗。":"待上傳成績已全部補傳完成。",left.length?"bad":"ok"); return; }
+    const rec=q[i++]; send(rec).then(next,() => { left.push(rec); next(); });
+  })();
+});
+$("btn-test").addEventListener("click",() => {
+  if(!endpoint()){ setSync("尚未設定試算表網址：請老師在遊戲館的 config.js 填入 ENDPOINT。","bad"); return; }
+  setSync("測試中…","");
+  fetch(withToken(endpoint(),"top=1")).then(r => r.json()).then(o => {
+    if(o&&o.ok) setSync("連線成功，試算表裡目前有 "+o.count+" 筆紀錄。","ok");
+    else setSync("連上了，但試算表回覆："+((o&&o.error)||"未知錯誤"),"bad");
+  }).catch(() => setSync("連不上試算表。請確認網址正確，且部署時「誰可以存取」設為「任何人」。","bad"));
+});
+$("lb-box").addEventListener("toggle",() => {
+  if(!$("lb-box").open) return;
+  const url=endpoint(), msg=$("lb-msg"), tb=$("lb-table"); tb.innerHTML="";
+  if(!url){ msg.textContent="尚未設定試算表網址，無法讀取排行榜。"; return; }
+  msg.textContent="讀取中…";
+  fetch(withToken(url,"top=15")).then(r => r.json()).then(o => {
+    if(!o||!o.ok||!o.list) throw new Error("bad");
+    if(!o.list.length){ msg.textContent="試算表裡還沒有成績。"; return; }
+    msg.textContent="共 "+o.count+" 筆紀錄，以下為每個人的最高分。";
+    tb.innerHTML="<tr><th></th><th>姓名</th><th>班級</th><th>難度</th><th>名次</th><th class='sc'>最高分</th><th class='sc'>答對</th></tr>"+
+      o.list.map((x,i) => "<tr><td>"+(i+1)+"</td><td>"+esc(x.name||"")+"</td><td>"+esc(x.cls||"")+"</td><td>"+esc(x.diff||"")+"</td><td>"+esc(x.rank||"")+
+        "</td><td class='sc'>"+x.score+"</td><td class='sc'>"+x.right+"/"+x.total+"</td></tr>").join("");
+  }).catch(() => { msg.textContent="讀不到排行榜。請確認網址正確，且部署時「誰可以存取」設為「任何人」。"; });
+});
+
+/* ============================================================
+   十八、啟動
+   ============================================================ */
+$("f-school").value=lsGet(LS.sc,DEFAULT_SCHOOL)||DEFAULT_SCHOOL;
+$("f-class").value=lsGet(LS.cl,DEFAULT_CLASS)||DEFAULT_CLASS;
+$("f-name").value=lsGet(LS.nm,"");
+$("vocab-table").innerHTML="<tr><th></th><th>生詞</th><th>注音</th><th>拼音</th><th>英譯</th></tr>"+
+  WORDS.map((o,i) => "<tr><td>"+(i+1)+"</td><td class='w'>"+esc(o[0])+"</td><td>"+esc(o[1])+"</td><td>"+esc(o[2])+"</td><td>"+esc(o[3])+"</td></tr>").join("");
+fitCanvas();
+addEventListener("resize",() => { if(Math.min(window.devicePixelRatio||1,2)!==DPR) fitCanvas(); });
+if(document.fonts && document.fonts.load) document.fonts.load('700 40px "LXGW WenKai TC"').catch(() => {});
+updateBar();
+window.__fight={ game, QUIZ, p1, p2, get D(){ return D; }, answer:answerQuiz, CHARS };   // 測試用
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

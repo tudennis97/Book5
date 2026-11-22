@@ -1,0 +1,2140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<!-- 8964習維尼中華民國臺獨　創作者：ㄉㄨˋㄕˋㄅㄧㄣ+Claude AI -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>長尾山娘回巢記｜臺灣文化單元</title>
+<meta name="description" content="配合《學華語向前走》5B 臺灣文化單元〈臺灣藍鵲〉的華語練習遊戲：橫向捲軸跳台遊戲，扮演臺灣藍鵲，撞樹洞答題、滑翔過山谷、撿垃圾，把食物帶回巢裡餵雛鳥。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* 8964習維尼中華民國臺獨　創作者：ㄉㄨˋㄕˋㄅㄧㄣ+Claude AI */
+:root{
+  --bg:#e7f1e4; --surface:rgba(250,253,248,.94); --card:#fbfdf9; --ink:#1d2a3a; --muted:#566476;
+  --blue:#2457b8; --deep:#173d86; --red:#d9442f; --gold:#e0a623; --rule:#c4d4c0; --ok:#2e7d43; --bad:#b23a22; --warn:#a2610b; --leaf:#3f8a3a;
+  --kai:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB","STKaiti",serif;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);font-family:var(--kai);font-size:17px;line-height:1.6;
+  background:
+    radial-gradient(circle at 10% 6%, rgba(255,240,170,.55), rgba(255,240,170,0) 38%),
+    radial-gradient(circle at 92% 2%, rgba(120,170,240,.35), rgba(120,170,240,0) 40%),
+    linear-gradient(#eef6ea, #dcebd6) fixed;
+  background-color:var(--bg);
+  padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}
+.wrap{max-width:1000px;margin:0 auto;padding:12px 14px 32px;display:flex;flex-direction:column;gap:10px}
+header{background:linear-gradient(135deg,#123170,#2457b8 55%,#3f7fd6);color:#f3f7ff;border-radius:14px;padding:10px 16px 14px;
+  box-shadow:0 8px 20px -10px rgba(10,30,80,.6);position:relative;overflow:hidden}
+header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;
+  background:repeating-linear-gradient(90deg,#2f63c9 0 26px,#111 26px 32px,#fff 32px 44px)}
+header h1{margin:0;font-size:clamp(1.6rem,6vw,2.3rem);letter-spacing:.12em;line-height:1.15;text-shadow:0 2px 0 rgba(0,0,0,.25)}
+header h1 small{font-size:.48em;letter-spacing:.05em;color:#ffd98a;margin-left:.6em}
+header p{margin:4px 0 6px;color:#dfe9ff;font-size:.95rem}
+button{font-family:inherit;color:var(--ink);cursor:pointer}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.who{display:grid;grid-template-columns:1.6fr .7fr 1fr;gap:8px;background:var(--surface);border-radius:10px;padding:8px 10px}
+.who label{display:flex;flex-direction:column;gap:2px;font-size:.85rem;color:var(--muted)}
+.who input{font:inherit;width:100%;min-width:0;padding:6px 8px;border:1px solid var(--rule);border-radius:5px;background:var(--card);color:var(--ink)}
+@media (max-width:480px){.who{grid-template-columns:1fr 1fr}.who .school{grid-column:1/-1}}
+
+.setup{background:var(--surface);border:1px solid var(--rule);border-top:5px solid var(--blue);border-radius:12px;padding:12px 14px 14px}
+.setup h2{margin:10px 0 6px;font-size:1.1rem;letter-spacing:.06em}
+.setup h2:first-child{margin-top:0}
+.hero{display:grid;grid-template-columns:240px 1fr;gap:12px;align-items:center}
+.hero canvas{width:240px;height:150px;border-radius:10px;background:linear-gradient(#bfe3f7,#e9f6ee)}
+.hero ul{margin:0;padding-left:1.2em}
+@media (max-width:560px){.hero{grid-template-columns:1fr}.hero canvas{margin:0 auto}}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{flex:1 1 90px;background:var(--card);border:2px solid var(--rule);border-radius:8px;padding:6px 8px;font-size:1.1rem;font-weight:700;line-height:1.25}
+.seg button small{display:block;font-size:.8rem;font-weight:400;color:var(--muted)}
+.seg button[aria-checked="true"]{border-color:var(--blue);background:#e6eefc;box-shadow:0 0 0 2px var(--blue) inset}
+.ddesc{color:var(--muted);font-size:.92rem;min-height:3.2em;margin:6px 0 0}
+.go{font-size:1.25rem;font-weight:700;letter-spacing:.08em;color:#fff;background:linear-gradient(#4d86e6,#1f4fb0);
+  border:2px solid #102c66;border-radius:8px;padding:9px 26px;box-shadow:0 4px 0 #102c66}
+.go:active{transform:translateY(3px);box-shadow:0 1px 0 #102c66}
+.plain{font-size:1.05rem;font-weight:700;background:var(--card);border:2px solid var(--rule);border-radius:8px;padding:8px 18px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+.warnmsg{color:var(--bad);font-weight:700;min-height:1.5em;margin:6px 0 0}
+
+.bar{display:flex;justify-content:space-between;gap:10px;background:linear-gradient(135deg,#132f6b,#2457b8 60%,#2f7d6d);color:#f3f7ff;border-radius:12px;padding:6px 14px;box-shadow:0 6px 16px -8px rgba(10,30,80,.5)}
+.bar div{display:flex;flex-direction:column;line-height:1.2}
+.bar span{font-size:.75rem;letter-spacing:.2em;color:#cfe0ff}
+.bar b{font-size:1.45rem;font-variant-numeric:tabular-nums}
+.bar .hi b{color:#ffd166}
+.bar div:last-child{text-align:right}
+.qbar{background:var(--surface);border-left:8px solid var(--blue);border-radius:10px;padding:6px 12px;font-size:1.05rem;font-weight:700;min-height:2.9em;display:flex;align-items:center;margin:8px 0}
+.qbar.ok{border-left-color:var(--ok);background:#e6f2dc}
+.qbar.warn{border-left-color:var(--warn);background:#fbecd2}
+
+.stage{position:relative;width:100%;max-width:min(100%, calc((100dvh - 250px) * 16 / 9));margin:0 auto;aspect-ratio:16/9;
+  border-radius:14px;overflow:hidden;background:#bfe3f7;box-shadow:0 0 0 3px #f2f6ff,0 0 0 6px #173d86,0 18px 40px -16px rgba(10,30,60,.6);
+  touch-action:none;user-select:none;-webkit-user-select:none}
+.stage canvas{display:block;width:100%;height:100%;touch-action:none}
+
+.pad{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;user-select:none;-webkit-user-select:none}
+.pad .mv{display:flex;gap:10px}
+.pad button{touch-action:none;-webkit-tap-highlight-color:transparent;border-radius:14px;background:var(--card);border:2px solid var(--rule);font-weight:700}
+.pad .mv button{width:74px;height:62px;font-size:1.6rem}
+.pad .jp{min-width:150px;height:62px;font-size:1.2rem;color:#fff;background:linear-gradient(#4d86e6,#1f4fb0);border-color:#102c66;box-shadow:0 4px 0 #102c66}
+.pad button.on{filter:brightness(.88);transform:translateY(2px)}
+.pad .tip{flex:1;text-align:center;color:var(--muted);font-size:.9rem;line-height:1.3}
+@media (max-width:560px){.pad .tip{display:none}.pad .mv button{width:64px}}
+.play{position:relative}
+/* 手機橫放：畫面放大，按鈕疊在畫面上 */
+@media (max-height:520px) and (orientation:landscape){
+  .bar{padding:2px 12px}.bar b{font-size:1.05rem}.bar span{font-size:.62rem}
+  .qbar{min-height:0;padding:2px 10px;font-size:.88rem;margin:4px 0}
+  .stage{max-width:min(100%, calc((100dvh - 70px) * 16 / 9))}
+  .pad{position:absolute;left:0;right:0;bottom:6px;margin:0;padding:0 10px;pointer-events:none}
+  .pad .tip{display:none}
+  .pad button{pointer-events:auto;opacity:.72}
+  .pad .mv button{width:62px;height:52px}
+  .pad .jp{min-width:120px;height:56px;font-size:1rem}
+}
+
+.under{background:var(--surface);border-radius:10px;padding:4px 10px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;font-size:.92rem;color:var(--muted)}
+.under button{font-size:.95rem;background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:4px 14px}
+.sync{margin:0;min-height:1.5em;font-size:.9rem;color:var(--muted)}
+.sync.ok{color:var(--ok)}.sync.bad{color:var(--bad)}
+
+.modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:14px;background:rgba(10,24,50,.6)}
+.modal[hidden]{display:none}
+.card{width:min(600px,100%);max-height:calc(100dvh - 28px);overflow:auto;background:var(--card) linear-gradient(180deg,#dfe9fb,rgba(250,253,249,0) 90px);
+  border-top:6px solid var(--blue);border-radius:14px;padding:16px 18px 18px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.card h2{margin:0 0 6px;font-size:1.6rem;letter-spacing:.08em}
+.card p{margin:0 0 8px}
+.card .sub{color:var(--blue);font-weight:700}
+.tag{display:inline-block;border-radius:999px;padding:0 10px;font-size:.85rem;font-weight:700;background:#e3ecfb;color:#1f4fb0;margin-right:6px}
+.qq{font-size:1.3rem;font-weight:700;line-height:1.5}
+.zy{font-size:1rem;color:var(--muted);font-weight:400}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opts button{display:flex;align-items:center;gap:10px;text-align:left;font-size:1.2rem;font-weight:700;background:#fff;border:2px solid var(--rule);border-radius:8px;padding:8px 12px;line-height:1.4}
+.opts button:disabled{opacity:.5;cursor:default}
+.opts button.right{opacity:1;background:#e1f0d8;border-color:var(--ok)}
+.opts button.miss{opacity:1;background:#f7ddd3;border-color:var(--bad)}
+.num{display:inline-grid;place-items:center;flex:none;width:1.6em;height:1.6em;border-radius:50%;color:#fff;font-family:ui-sans-serif,system-ui,sans-serif;font-size:.9em;font-weight:900}
+.card .fb{font-weight:700;min-height:1.7em;margin-top:8px}
+.card .fb.ok{color:var(--ok)}.card .fb.bad{color:var(--bad)}
+.big{font-size:2.6rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.card table,details table{border-collapse:collapse;width:100%}
+.card td{padding:4px 2px;border-bottom:1px solid var(--rule)}
+.card td:first-child{white-space:nowrap;padding-right:10px}
+.card td.n{text-align:right;font-weight:700}
+.wronglist{margin:0;padding-left:1.2em;font-size:.95rem}
+.culture{background:#eef4ff;border-left:5px solid var(--blue);border-radius:8px;padding:6px 10px;margin:8px 0}
+.chicks{display:flex;gap:10px;justify-content:center;margin:4px 0 8px}
+.chicks canvas{width:84px;height:66px}
+
+details{background:var(--surface);border:1px solid var(--rule);border-radius:10px}
+summary{cursor:pointer;padding:8px 12px;font-weight:700}
+details .body{padding:0 12px 12px}
+details th,details td{padding:4px 6px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top;font-size:.95rem}
+details td.w{font-weight:700;white-space:nowrap}
+details td.lv{white-space:nowrap;color:var(--muted)}
+details .sc{text-align:right;font-variant-numeric:tabular-nums}
+details ul,details ol{margin:0;padding-left:1.3em}
+.hint{margin:0 0 8px;color:var(--muted);font-size:.95rem}
+.scroll{overflow-x:auto}
+footer{font-size:.85rem;color:var(--muted);background:var(--surface);border-radius:10px;padding:10px 12px}
+[hidden]{display:none !important}
+@media (max-height:480px){
+  .modal{padding:8px}
+  .card{padding:10px 14px 12px;max-height:calc(100dvh - 16px);width:min(720px,100%)}
+  .card h2{font-size:1.2rem;margin:0}
+  .qq{font-size:1.1rem}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .opts button{font-size:1.05rem;padding:6px 8px}
+}
+</style>
+<script src="config.js"></script>
+</head>
+<body>
+<nav style="max-width:1000px;margin:0 auto;padding:6px 14px 0;font-size:15px;line-height:1.4"><a href="index.html#menu" style="color:inherit;opacity:.75;text-decoration:none">← 回第五冊遊戲館</a></nav>
+<div class="wrap">
+  <header>
+    <h1>長尾山娘回巢記<small>臺灣文化單元　臺灣藍鵲</small></h1>
+    <p>你是一隻臺灣藍鵲！跳過樹枝、滑翔過山谷、撿起亂丟的垃圾，撞開樹洞答題請哥哥姊姊來幫忙，最後把食物帶回巢裡餵雛鳥。</p>
+  </header>
+
+  <section class="who" aria-label="玩家資料">
+    <label class="school" for="f-school">學校<input id="f-school" autocomplete="organization"></label>
+    <label for="f-class">班級<input id="f-class"></label>
+    <label for="f-name">姓名<input id="f-name" autocomplete="name" placeholder="請輸入姓名"></label>
+  </section>
+
+  <section class="setup" id="setup">
+    <div class="hero">
+      <canvas id="hero" width="480" height="300" aria-hidden="true"></canvas>
+      <ul>
+        <li><b>撞樹洞</b>：從下面往上撞，會跳出一題。答對了，哥哥姊姊會飛來幫忙（被碰到時替你擋一次）。</li>
+        <li><b>滑翔</b>：跳起來以後一直按住跳躍鍵，就能張開翅膀慢慢滑過山谷。</li>
+        <li><b>撿垃圾</b>：從上面踩空罐和塑膠袋，就把它撿起來了；小心捕鳥網！</li>
+        <li><b>回巢</b>：飛到最後的鳥巢，答題餵飽三隻雛鳥。</li>
+      </ul>
+    </div>
+    <h2>難易度</h2>
+    <div class="seg" id="diffs" role="radiogroup" aria-label="難易度"></div>
+    <p class="ddesc" id="ddesc"></p>
+    <div class="row">
+      <button class="go" id="btn-go" type="button">開始飛吧</button>
+    </div>
+    <p class="warnmsg" id="go-msg"></p>
+  </section>
+
+  <div id="arena" hidden>
+    <div class="bar">
+      <div><span>分數</span><b id="sc">0</b></div>
+      <div class="hi"><span>最高分</span><b id="hi">0</b></div>
+      <div><span>關卡</span><b id="st">1/4</b></div>
+      <div><span>答對</span><b id="rt">0/0</b></div>
+      <div><span>食物</span><b id="fd">0</b></div>
+    </div>
+    <div class="qbar" id="qbar" aria-live="polite"></div>
+    <div class="play">
+    <div class="stage" id="stage">
+      <canvas id="game" width="960" height="540" aria-label="藍鵲遊戲畫面"></canvas>
+    </div>
+    <div class="pad" id="pad">
+      <div class="mv">
+        <button type="button" id="b-l" aria-label="往左">◀</button>
+        <button type="button" id="b-r" aria-label="往右">▶</button>
+      </div>
+      <div class="tip" id="keys"></div>
+      <button type="button" class="jp" id="b-j" aria-label="跳／按住滑翔">跳／按住滑翔</button>
+    </div>
+    </div>
+  </div>
+
+  <div class="under">
+    <span><label><input type="checkbox" id="o-sfx" checked> 音效</label>　<label><input type="checkbox" id="o-amb" checked> 環境音（風聲、鳥叫）</label>　<label><input type="checkbox" id="o-say" checked> 讀音</label></span>
+    <span><button id="btn-pause" type="button" hidden>暫停</button> <button id="btn-quit" type="button" hidden>結束並送出成績</button></span>
+  </div>
+  <p class="sync" id="sync"></p>
+
+  <details>
+    <summary>怎麼玩、怎麼計分</summary>
+    <div class="body">
+      <ul>
+        <li>電腦：← → 或 A D 移動；空白鍵、↑、W 或 Z 跳；<b>跳起來以後按住不放</b>就會滑翔，滑翔力用完會往下掉，落地後會慢慢補回來。答題時按 1～4。P 或 Esc 暫停。</li>
+        <li>平板、手機：用畫面下方的 ◀ ▶ 和「跳／按住滑翔」。</li>
+        <li><b>樹洞</b>（有「？」的木頭）：從下面往上撞會出一題。答對了，一隻哥哥或姊姊會飛來跟在你後面；答錯只會看到正確答案，不會扣命。</li>
+        <li>哥哥姊姊最多四隻，加上你就是五隻藍鵲排成一列的「長尾陣」！第一次排成長尾陣有獎勵。</li>
+        <li>被垃圾或捕鳥網碰到，或掉到山谷裡：有哥哥姊姊的話，會有一隻替你擋下來；沒有的話就少一條命，從休息站重新出發。</li>
+        <li>從上面踩空罐和塑膠袋，就把垃圾撿起來了。捕鳥網不能踩，要跳過去。</li>
+        <li>飛到鳥巢以後，答三題餵三隻雛鳥。答錯也能過關，只是少了獎勵分數。</li>
+        <li>「易」題目三個選項、命比較多、滑翔比較久；「難」垃圾比較多、捕鳥網比較多、滑翔時間比較短，分數也比較高。</li>
+      </ul>
+      <div class="scroll" style="margin-top:10px"><table>
+        <tr><th>項目</th><th class="sc">易 ×1</th><th class="sc">中 ×1.5</th><th class="sc">難 ×2</th></tr>
+        <tr><td>樹洞答對一題</td><td class="sc">150</td><td class="sc">225</td><td class="sc">300</td></tr>
+        <tr><td>餵飽一隻雛鳥（鳥巢答對一題）</td><td class="sc">200</td><td class="sc">300</td><td class="sc">400</td></tr>
+        <tr><td>撿起一個垃圾</td><td class="sc">50</td><td class="sc">75</td><td class="sc">100</td></tr>
+        <tr><td>吃到一份食物</td><td class="sc">10</td><td class="sc">15</td><td class="sc">20</td></tr>
+        <tr><td>排成長尾陣（每關一次）</td><td class="sc">300</td><td class="sc">450</td><td class="sc">600</td></tr>
+        <tr><td>回到巢裡（另有時間獎勵，最多 300）</td><td class="sc">500</td><td class="sc">750</td><td class="sc">1000</td></tr>
+        <tr><td>四關全過</td><td class="sc">1500</td><td class="sc">2250</td><td class="sc">3000</td></tr>
+      </table></div>
+    </div>
+  </details>
+  <details>
+    <summary>生詞（取自課文）</summary>
+    <div class="body"><p class="hint">課本這四頁沒有附生詞表，下面是從課文裡挑出來的詞語，注音、拼音依課本標示。</p>
+      <div class="scroll"><table id="vocab-table"></table></div></div>
+  </details>
+  <details id="lb-box">
+    <summary>班級排行榜（讀取試算表）</summary>
+    <div class="body">
+      <p class="hint" id="lb-msg">展開後會從試算表讀取每個人的最高分。</p>
+      <div class="scroll"><table id="lb-table"></table></div>
+    </div>
+  </details>
+  <details>
+    <summary>成績上傳</summary>
+    <div class="body">
+      <p class="hint">每次遊戲結束會自動把成績寫進老師的 Google 試算表。沒有網路時成績會先存在這台裝置，連上網後按「補傳待上傳成績」。</p>
+      <div class="row" style="margin-top:0"><button class="plain" id="btn-test" type="button">測試連線</button><button class="plain" id="btn-flush" type="button">補傳待上傳成績</button></div>
+    </div>
+  </details>
+
+  <footer>
+    教材依據：僑務委員會《學華語向前走》5B 臺灣文化單元〈臺灣藍鵲〉（撰文／王翠華，第 116～119 頁），生詞與題目取自課文內容。
+    遊戲裡的藍鵲、藍腹鷴、五色鳥都是程式畫的插圖。<br>
+    本檔為單一 HTML 檔，可直接放進 GitHub Pages 或用瀏覽器離線開啟；電腦、平板、手機都能玩。
+    連網時會載入字型、查詢 IP 位址（api.ipify.org），並把成績送到老師的 Google 試算表。
+  </footer>
+</div>
+
+<div class="modal" id="modal" hidden><div class="card" id="card"></div></div>
+
+<script>
+(() => {
+'use strict';
+/* 8964習維尼中華民國臺獨　創作者：ㄉㄨˋㄕˋㄅㄧㄣ+Claude AI */
+
+/* ============================================================
+   〇、Google 試算表設定
+   ENDPOINT：貼上 Apps Script「網頁應用程式」網址（結尾是 /exec）。留空＝不上傳。
+   TOKEN：通行碼，必須和 Code-magpie-nest.gs 裡的 TOKEN 一字不差；兩邊都留空則不檢查。
+   ============================================================ */
+const ENDPOINT = (window.GAME_CONFIG && window.GAME_CONFIG.endpointFor) ? window.GAME_CONFIG.endpointFor("magpie-nest") : "";   // 由 config.js 統一設定
+const TOKEN = (window.GAME_CONFIG && window.GAME_CONFIG.TOKEN) || "";
+const DEFAULT_SCHOOL = "布理斯本亞洲語文學校";
+const DEFAULT_CLASS = "6B";
+const LESSON = "5B 臺灣文化單元 臺灣藍鵲";
+const LS = { sc:"magpie-school", cl:"magpie-class", nm:"magpie-name", q:"magpie-queue",
+             hi:"magpie-hi-", df:"magpie-diff", sfx:"magpie-sfx", say:"magpie-say", amb:"magpie-amb" };
+
+/* ============================================================
+   一、生詞（注音、拼音依課本標示）
+   [詞, 注音, 拼音, 英譯, 群組, 關卡]。群組相同＝意思相近，不會一起出現在同一題的選項裡。
+   ============================================================ */
+const WORDS = [
+  ["臺灣藍鵲","ㄊㄞˊ ㄨㄢ ㄌㄢˊ ㄑㄩㄝˋ","tái wān lán què","Formosan blue magpie","magpie",1],
+  ["長尾山娘","ㄔㄤˊ ㄨㄟˇ ㄕㄢ ㄋㄧㄤˊ","cháng wěi shān niáng","\"long-tailed mountain lady\" (nickname of the blue magpie)","magpie",1],
+  ["棲息","ㄑㄧ ㄒㄧˊ","qī xí","to live, to dwell (of animals)","dwell",1],
+  ["海拔","ㄏㄞˇ ㄅㄚˊ","hǎi bá","altitude, elevation","alt",1],
+  ["闊葉林","ㄎㄨㄛˋ ㄧㄝˋ ㄌㄧㄣˊ","kuò yè lín","broad-leaved forest","forest",1],
+  ["偶爾","ㄡˇ ㄦˇ","ǒu ěr","occasionally, once in a while","often",1],
+  ["市區","ㄕˋ ㄑㄩ","shì qū","city area, downtown","city",1],
+  ["公園","ㄍㄨㄥ ㄩㄢˊ","gōng yuán","park","park",1],
+  ["成群結隊","ㄔㄥˊ ㄑㄩㄣˊ ㄐㄧㄝˊ ㄉㄨㄟˋ","chéng qún jié duì","in flocks, in groups","group",1],
+  ["山坡","ㄕㄢ ㄆㄛ","shān pō","hillside, mountain slope","slope",1],
+  ["山谷","ㄕㄢ ㄍㄨˇ","shān gǔ","valley","valley",1],
+  ["滑翔","ㄏㄨㄚˊ ㄒㄧㄤˊ","huá xiáng","to glide","fly",1],
+  ["隊伍","ㄉㄨㄟˋ ㄨˇ","duì wǔ","line, procession","line",1],
+  ["稱呼","ㄔㄥ ㄏㄨ","chēng hū","name, what something is called","name",1],
+  ["愛家","ㄞˋ ㄐㄧㄚ","ài jiā","family-loving","family",2],
+  ["群居","ㄑㄩㄣˊ ㄐㄩ","qún jū","to live in groups","group",2],
+  ["彼此","ㄅㄧˇ ㄘˇ","bǐ cǐ","each other","mutual",2],
+  ["互相","ㄏㄨˋ ㄒㄧㄤ","hù xiāng","mutually, each other","mutual",2],
+  ["繁殖期","ㄈㄢˊ ㄓˊ ㄑㄧˊ","fán zhí qí","breeding season","breed",2],
+  ["幫手","ㄅㄤ ㄕㄡˇ","bāng shǒu","helper","helper",2],
+  ["輪流","ㄌㄨㄣˊ ㄌㄧㄡˊ","lún liú","to take turns","turns",2],
+  ["昆蟲","ㄎㄨㄣ ㄔㄨㄥˊ","kūn chóng","insect","insect",2],
+  ["老鼠","ㄌㄠˇ ㄕㄨˇ","lǎo shǔ","mouse, rat","mouse",2],
+  ["蜥蜴","ㄒㄧ ㄧˋ","xī yì","lizard","lizard",2],
+  ["青蛙","ㄑㄧㄥ ㄨㄚ","qīng wā","frog","frog",2],
+  ["餵食","ㄨㄟˋ ㄕˊ","wèi shí","to feed","feed",2],
+  ["雛鳥","ㄔㄨˊ ㄋㄧㄠˇ","chú niǎo","baby bird, nestling","chick",2],
+  ["習性","ㄒㄧˊ ㄒㄧㄥˋ","xí xìng","habit, behavior (of an animal)","habit",2],
+  ["特有種","ㄊㄜˋ ㄧㄡˇ ㄓㄨㄥˇ","tè yǒu zhǒng","endemic species (found only here)","endemic",3],
+  ["鮮紅色","ㄒㄧㄢ ㄏㄨㄥˊ ㄙㄜˋ","xiān hóng sè","bright red","red",3],
+  ["嘴","ㄗㄨㄟˇ","zuǐ","mouth, beak","beak",3],
+  ["爪子","ㄓㄨㄚˇ ˙ㄗ","zhuǎ zi","claw, foot (of a bird)","claw",3],
+  ["眼睛","ㄧㄢˇ ㄐㄧㄥ","yǎn jīng","eye","eye",3],
+  ["碧藍色","ㄅㄧˋ ㄌㄢˊ ㄙㄜˋ","bì lán sè","azure, bright blue","blue",3],
+  ["羽毛","ㄩˇ ㄇㄠˊ","yǔ máo","feather","feather",3],
+  ["華麗","ㄏㄨㄚˊ ㄌㄧˋ","huá lì","gorgeous, splendid","pretty",3],
+  ["尾巴","ㄨㄟˇ ˙ㄅㄚ","wěi ba","tail","tail",3],
+  ["留白","ㄌㄧㄡˊ ㄅㄞˊ","liú bái","white part (left white)","white",3],
+  ["展翅","ㄓㄢˇ ㄔˋ","zhǎn chì","to spread the wings","wings",3],
+  ["焦點","ㄐㄧㄠ ㄉㄧㄢˇ","jiāo diǎn","focus, center of attention","focus",3],
+  ["找尋","ㄓㄠˇ ㄒㄩㄣˊ","zhǎo xún","to look for, to search","seek",3],
+  ["蹤影","ㄗㄨㄥ ㄧㄥˇ","zōng yǐng","trace, sight (of something)","trace",3],
+  ["珍貴","ㄓㄣ ㄍㄨㄟˋ","zhēn guì","precious, valuable","rare",4],
+  ["稀有","ㄒㄧ ㄧㄡˇ","xī yǒu","rare","rare",4],
+  ["保育類","ㄅㄠˇ ㄩˋ ㄌㄟˋ","bǎo yù lèi","protected (species)","protect",4],
+  ["雌鳥","ㄘ ㄋㄧㄠˇ","cī niǎo","female bird","sex",4],
+  ["雄鳥","ㄒㄩㄥˊ ㄋㄧㄠˇ","xióng niǎo","male bird","sex",4],
+  ["光澤","ㄍㄨㄤ ㄗㄜˊ","guāng zé","sheen, luster","shine",4],
+  ["條紋","ㄊㄧㄠˊ ㄨㄣˊ","tiáo wén","stripes","stripe",4],
+  ["森林","ㄙㄣ ㄌㄧㄣˊ","sēn lín","forest","forest",4],
+  ["果實","ㄍㄨㄛˇ ㄕˊ","guǒ shí","fruit","fruit",4],
+  ["種子","ㄓㄨㄥˇ ㄗˇ","zhǒng zǐ","seed","seed",4],
+  ["主食","ㄓㄨˇ ㄕˊ","zhǔ shí","main food, staple diet","staple",4],
+  ["翠綠","ㄘㄨㄟˋ ㄌㄩˋ","cuì lǜ","emerald green","green",4],
+  ["喉部","ㄏㄡˊ ㄅㄨˋ","hóu bù","throat","throat",4],
+  ["彩衣","ㄘㄞˇ ㄧ","cǎi yī","colorful clothes","clothes",4],
+  ["茂密","ㄇㄠˋ ㄇㄧˋ","mào mì","dense, thick (of plants)","dense",4],
+  ["啄","ㄓㄨㄛˊ","zhuó","to peck","peck",4],
+  ["枯木","ㄎㄨ ㄇㄨˋ","kū mù","dead tree, dead wood","deadwood",4],
+  ["鑿","ㄗㄠˊ","záo","to chisel, to dig a hole","peck",4],
+  ["樹洞","ㄕㄨˋ ㄉㄨㄥˋ","shù dòng","tree hole","hole",4],
+  ["捕食","ㄅㄨˇ ㄕˊ","bǔ shí","to catch and eat (prey)","hunt",4],
+  ["藍腹鷴","ㄌㄢˊ ㄈㄨˋ ㄒㄧㄢˊ","lán fù xián","Swinhoe's pheasant","pheasant",4],
+  ["五色鳥","ㄨˇ ㄙㄜˋ ㄋㄧㄠˇ","wǔ sè niǎo","Taiwan barbet (\"five-colored bird\")","barbet",4]
+];
+
+/* 各關的課文、填空題：k 類別、q 題目、a 答案、d 錯誤選項 */
+const QBANK = [
+  [ /* 第一關：第 116 頁 */
+    { k:"課文", q:"臺灣藍鵲又被稱為什麼？", a:"長尾山娘", d:["短尾山娘","大嘴海鳥","花尾水鳥"] },
+    { k:"課文", q:"「山娘仔」說的是哪一種鳥？", a:"臺灣藍鵲", d:["五色鳥","藍腹鷴","麻雀"] },
+    { k:"課文", q:"臺灣藍鵲大概棲息在海拔多高的山區？", a:"300 到 1,200 公尺", d:["3,000 到 4,000 公尺","10 到 50 公尺","2,000 到 3,000 公尺"] },
+    { k:"課文", q:"臺灣藍鵲大概棲息在山區的什麼地方？", a:"闊葉林中", d:["海邊的沙灘上","高山的雪地上","大樓的頂樓"] },
+    { k:"課文", q:"除了山區，偶爾在哪裡也看得到臺灣藍鵲？", a:"市區公園", d:["大海中間","沙漠裡","百貨公司裡"] },
+    { k:"課文", q:"臺灣藍鵲喜歡從哪裡滑翔到哪裡？", a:"從山坡向山谷", d:["從山谷向山頂","從海邊向海底","從公園向學校"] },
+    { k:"課文", q:"臺灣藍鵲喜歡怎麼樣地滑翔？", a:"成群結隊地", d:["一隻一隻偷偷地","晚上自己","在地上走路"] },
+    { k:"課文", q:"在低海拔山區，常常可以看見幾隻藍鵲排成一列？", a:"3～5 隻", d:["1 隻","20～30 隻","100 隻"] },
+    { k:"課文", q:"藍鵲排成一列在樹林上空飛翔玩耍，所以也有什麼稱呼？", a:"長尾陣", d:["長頸隊","大嘴團","五色陣"] },
+    { k:"填空", q:"臺灣藍鵲的＿＿地大概在海拔 300 到 1,200 公尺高的山區。", a:"棲息", d:["滑翔","互相","餵食"] },
+    { k:"填空", q:"臺灣藍鵲＿＿在市區公園也看得到。", a:"偶爾", d:["輪流","彼此","互相"] },
+    { k:"填空", q:"牠們喜歡成群結隊地從山坡向山谷＿＿。", a:"滑翔", d:["棲息","餵食","稱呼"] },
+    { k:"填空", q:"3～5 隻藍鵲排成一列美麗的＿＿。", a:"隊伍", d:["山谷","羽毛","樹洞"] },
+    { k:"填空", q:"在樹林上空飛翔玩耍，所以也有「長尾陣」的＿＿。", a:"稱呼", d:["隊伍","山坡","焦點"] },
+    { k:"填空", q:"牠們喜歡＿＿地從山坡向山谷滑翔。", a:"成群結隊", d:["珍貴稀有","大吃一驚","一字一句"] },
+    { k:"量詞", q:"3～5 ＿＿藍鵲", a:"隻", d:["條","本","張"] },
+    { k:"量詞", q:"排成一＿＿美麗的隊伍", a:"列", d:["本","張","杯"] }
+  ],
+  [ /* 第二關：第 117 頁 */
+    { k:"課文", q:"臺灣藍鵲過著什麼樣的生活？", a:"群居生活", d:["一隻住在海邊","冬天一直睡覺","住在水裡"] },
+    { k:"課文", q:"課文說臺灣藍鵲非常愛什麼？", a:"愛家", d:["愛吵架","愛下雨","愛睡覺"] },
+    { k:"課文", q:"繁殖期間，除了鳥爸爸和鳥媽媽，誰也是好幫手？", a:"前一年出生的哥哥姊姊", d:["隔壁的五色鳥","公園裡的小朋友","山谷裡的青蛙"] },
+    { k:"課文", q:"哥哥姊姊會輪流帶什麼回來？", a:"昆蟲、老鼠、蜥蜴和青蛙", d:["米飯、麵包和牛奶","糖果、餅乾和蛋糕","石頭、樹葉和沙子"] },
+    { k:"課文", q:"哥哥姊姊帶食物回來，是要餵誰？", a:"剛出生的弟弟妹妹", d:["隔壁的小貓","鳥爺爺","山谷裡的魚"] },
+    { k:"課文", q:"藍鵲回到巢裡，會把嘴裡的食物怎麼樣？", a:"吐出一些給鳥媽媽", d:["全部自己吃掉","丟到山谷裡","藏在樹洞裡"] },
+    { k:"課文", q:"把食物吐出一些給鳥媽媽以後，再做什麼？", a:"和鳥媽媽一起餵食雛鳥", d:["自己飛去公園玩","馬上去睡覺","去找五色鳥"] },
+    { k:"課文", q:"「先把食物吐一些給鳥媽媽，再一起餵食雛鳥」是臺灣藍鵲的什麼？", a:"特有的習性", d:["華麗的尾巴","好聽的歌聲","美麗的隊伍"] },
+    { k:"填空", q:"牠們過著群居生活，＿＿互相幫忙。", a:"彼此", d:["偶爾","稱呼","滑翔"] },
+    { k:"填空", q:"前一年出生的哥哥姊姊也是好＿＿。", a:"幫手", d:["隊伍","山谷","羽毛"] },
+    { k:"填空", q:"牠們會＿＿帶著昆蟲、老鼠回來餵食弟弟妹妹。", a:"輪流", d:["彼此","滑翔","棲息"] },
+    { k:"填空", q:"＿＿期間，前一年出生的哥哥姊姊也是好幫手。", a:"繁殖", d:["滑翔","習性","稱呼"] },
+    { k:"填空", q:"然後和鳥媽媽一起＿＿雛鳥。", a:"餵食", d:["滑翔","棲息","稱呼"] },
+    { k:"填空", q:"這就是臺灣藍鵲特有的＿＿。", a:"習性", d:["隊伍","幫手","山谷"] },
+    { k:"填空", q:"把嘴裡的食物＿＿出一些給鳥媽媽。", a:"吐", d:["吃","喝","看"] },
+    { k:"填空", q:"臺灣藍鵲非常愛家，牠們過著＿＿生活。", a:"群居", d:["偶爾","輪流","滑翔"] }
+  ],
+  [ /* 第三關：第 118 頁 */
+    { k:"顏色", q:"臺灣藍鵲的嘴跟爪子是什麼顏色？", a:"鮮紅色", d:["黃色","碧藍色","白色"] },
+    { k:"顏色", q:"臺灣藍鵲的眼睛是什麼顏色？", a:"黃色", d:["鮮紅色","碧藍色","綠色"] },
+    { k:"顏色", q:"臺灣藍鵲的羽毛是什麼顏色？", a:"碧藍色", d:["鮮紅色","黃色","咖啡色"] },
+    { k:"課文", q:"臺灣藍鵲的尾巴大概占全身多長？", a:"將近三分之二", d:["大約十分之一","大約四分之一","一點點都沒有"] },
+    { k:"課文", q:"臺灣藍鵲尾羽的末端是什麼樣子？", a:"留白（白色的）", d:["鮮紅色的","黃色的","沒有羽毛"] },
+    { k:"課文", q:"臺灣藍鵲什麼時候會成為林間美麗的焦點？", a:"展翅飛翔的時候", d:["睡覺的時候","吃東西的時候","躲在巢裡的時候"] },
+    { k:"課文", q:"臺灣藍鵲是臺灣的什麼？", a:"特有種鳥類", d:["外國來的鳥","會游泳的魚","家裡養的雞"] },
+    { k:"課文", q:"臺灣藍鵲常見於哪裡？", a:"低海拔山區", d:["高山的山頂","大海的中間","沙漠裡"] },
+    { k:"課文", q:"課文說，下次到臺灣來，不要忘了做什麼？", a:"找尋牠美麗的蹤影", d:["帶一隻藍鵲回家","餵牠吃糖果","把牠關在籠子裡"] },
+    { k:"填空", q:"臺灣藍鵲是臺灣＿＿鳥類。", a:"特有種", d:["最小的","外國來的","會說話的"] },
+    { k:"填空", q:"有著＿＿色的嘴跟爪子。", a:"鮮紅", d:["碧藍","翠綠","土黃"] },
+    { k:"填空", q:"黃色的眼睛，以及＿＿色的羽毛。", a:"碧藍", d:["鮮紅","土黃","翠綠"] },
+    { k:"填空", q:"牠特有的＿＿尾巴占全身將近三分之二的長度。", a:"華麗", d:["茂密","稀有","彼此"] },
+    { k:"填空", q:"尾羽末端的＿＿，使牠在展翅飛翔時成為林間美麗的焦點。", a:"留白", d:["條紋","光澤","蹤影"] },
+    { k:"填空", q:"使牠在＿＿飛翔時成為林間美麗的焦點。", a:"展翅", d:["棲息","輪流","捕食"] },
+    { k:"填空", q:"成為林間美麗的＿＿。", a:"焦點", d:["蹤影","隊伍","樹洞"] },
+    { k:"填空", q:"不要忘了找尋牠美麗的＿＿喔！", a:"蹤影", d:["焦點","隊伍","習性"] },
+    { k:"量詞", q:"一＿＿華麗的尾巴", a:"條", d:["隻","張","本"] },
+    { k:"量詞", q:"一＿＿黃色的眼睛", a:"雙", d:["條","本","片"] }
+  ],
+  [ /* 第四關：第 119 頁 */
+    { k:"課文", q:"藍腹鷴在臺灣怎麼樣？", a:"相當珍貴稀有", d:["到處都看得到","只住在海裡","每家都有養"] },
+    { k:"課文", q:"藍腹鷴屬於什麼動物？", a:"保育類動物", d:["家裡養的寵物","海洋動物","昆蟲"] },
+    { k:"課文", q:"藍腹鷴是什麼樣的鳥類？", a:"地棲性鳥類", d:["住在水裡的鳥","只在晚上飛的鳥","住在城市裡的鳥"] },
+    { k:"課文", q:"藍腹鷴的雄鳥全身大多是什麼顏色？", a:"深藍色帶金屬光澤", d:["土黃跟黑色條紋","全身翠綠","鮮紅色"] },
+    { k:"課文", q:"藍腹鷴的雌鳥以什麼顏色為主？", a:"土黃跟黑色條紋", d:["深藍色帶金屬光澤","全身翠綠","全身白色"] },
+    { k:"課文", q:"藍腹鷴多以什麼為主食？", a:"植物的果實或種子", d:["小魚","老鼠和青蛙","石頭"] },
+    { k:"課文", q:"臺灣擬啄木鳥又名什麼？", a:"五色鳥", d:["長尾山娘","藍腹鷴","山娘仔"] },
+    { k:"顏色", q:"五色鳥全身是什麼顏色？", a:"翠綠", d:["碧藍","土黃","鮮紅"] },
+    { k:"課文", q:"五色鳥的頭、眼、喉部有哪四種顏色？", a:"黑、黃、紅、藍", d:["白、綠、紫、橘","金、銀、灰、粉紅","黑、白、灰、咖啡"] },
+    { k:"課文", q:"五色鳥看起來就像什麼？", a:"披著彩衣", d:["穿著黑衣","戴著帽子","拿著雨傘"] },
+    { k:"課文", q:"五色鳥怎麼做巢？", a:"啄枯木開鑿樹洞", d:["在地上挖洞","用泥土蓋房子","住在別的鳥的巢裡"] },
+    { k:"課文", q:"五色鳥平日以果實為主食，但也會捕食什麼？", a:"昆蟲", d:["青蛙","小魚","老鼠"] },
+    { k:"填空", q:"藍腹鷴在臺灣相當珍貴＿＿。", a:"稀有", d:["茂密","翠綠","華麗"] },
+    { k:"填空", q:"藍腹鷴屬於＿＿類動物。", a:"保育", d:["地棲","昆蟲","枯木"] },
+    { k:"填空", q:"＿＿、雄鳥顏色不同。", a:"雌", d:["雛","幫","枯"] },
+    { k:"填空", q:"雄鳥全身多為深藍色帶金屬＿＿的羽毛。", a:"光澤", d:["留白","條紋","蹤影"] },
+    { k:"填空", q:"雌鳥以土黃跟黑色＿＿為主。", a:"條紋", d:["光澤","留白","焦點"] },
+    { k:"填空", q:"五色鳥常棲息在林木＿＿的地方。", a:"茂密", d:["稀有","華麗","珍貴"] },
+    { k:"填空", q:"五色鳥會啄枯木開＿＿樹洞為巢。", a:"鑿", d:["吐","餵","披"] },
+    { k:"填空", q:"平日以果實為主食，但也會＿＿昆蟲。", a:"捕食", d:["餵食","棲息","滑翔"] },
+    { k:"填空", q:"看起來就像＿＿著彩衣。", a:"披", d:["吐","啄","鑿"] }
+  ]
+];
+
+/* 四個關卡 */
+const LEVELS = [
+  { name:"闊葉林", page:"第 116 頁", nest:"樹上的鳥巢",
+    intro:"臺灣藍鵲棲息在海拔 300 到 1,200 公尺高的山區闊葉林中。看到有「？」的樹洞，從下面往上撞，答對了，哥哥姊姊會飛來幫忙！",
+    clear:"3～5 隻藍鵲排成一列，在樹林上空飛翔玩耍，所以也有「長尾陣」的稱呼。" },
+  { name:"從山坡到山谷", page:"第 117 頁", nest:"山谷裡的鳥巢",
+    intro:"藍鵲喜歡成群結隊地從山坡向山谷滑翔。這一關的山谷很寬：跳起來以後一直按住跳躍鍵，就能張開翅膀滑過去！",
+    clear:"繁殖期間，前一年出生的哥哥姊姊也是好幫手，會輪流帶著昆蟲、老鼠、蜥蜴和青蛙回來餵食弟弟妹妹。" },
+  { name:"市區公園", page:"第 118 頁", nest:"公園大樹上的鳥巢",
+    intro:"偶爾在市區公園也看得到臺灣藍鵲。公園裡有人亂丟垃圾，從上面踩下去就能把垃圾撿起來；小心別掉進池塘！",
+    clear:"臺灣藍鵲有鮮紅色的嘴跟爪子、黃色的眼睛、碧藍色的羽毛。尾羽末端的留白，讓牠展翅飛翔時成為林間美麗的焦點。" },
+  { name:"山林深處", page:"第 119 頁", nest:"森林深處的鳥巢",
+    intro:"山林裡還住著藍腹鷴和五色鳥，牠們也是臺灣特有種鳥類。走近牠們，聽聽牠們怎麼介紹自己！",
+    clear:"藍腹鷴、五色鳥和臺灣藍鵲都是臺灣特有種鳥類。下次到臺灣來，不要忘了找尋牠們美麗的蹤影喔！" }
+];
+/* 地圖（每關 12 列）。# 地面　W 方塊　= 樹枝　? 樹洞　i m l f g 食物　c/C 空罐　p/P 塑膠袋　x/X 捕鳥網　K 休息站　E 鳥巢　S 起點　H 藍腹鷴　Y 五色鳥　> 滑翔提示牌（大寫 C、P 只在中、難出現，大寫 X 只在難出現） */
+const MAPS = [
+  [
+    "................................................................................................................................................................................",
+    "................................................................................................................................................................................",
+    "................................................................................................................................................................................",
+    ".....................................................................................?..........................................................................................",
+    "................................................................................................................................................................................",
+    "................................................................................................................................................................................",
+    ".........?....................iffi....?.............m..............?..............i..i....................?..........?..mm..........................?...........................",
+    "..............................====.................gW.............................======..........ff....................WW......................................................",
+    "..................................................gWW......................................p......==............................................................................",
+    "..S..i.i.....g.g.g..c......................C......WWW....l.l...x......g.g.P....K............................g.g.g.c..........C..X........i.l.f.x.......g.g..p.........E.........",
+    "#########################..####################.#####...#########################################.....###############################...########################################",
+    "#########################..####################.#####...#########################################.....###############################...########################################"
+  ],
+  [
+    "..........................................................................................................................................................................................",
+    "..........................................................................................................................................................................................",
+    ".........?............?...................................................................................................................................................................",
+    "..........................................?.....gggg......................................................................................................................................",
+    "................................................====................?...............?.....................................................................................................",
+    "..S..g.g....i.i..c........>.....................................................................................?...........?.............................................................",
+    "#############################..fff...m.m......C......>...iii........................................................................................?.....................................",
+    "#############################......####################.........K......l.l.x....p......g.g.gC...>.....ff................................ggg...............................................",
+    "#############################......####################.......#####################################...==....m.m.....c...X.....i.i..>......................................................",
+    "#############################......####################.......#####################################........###########################.........l.f.......P...i.i..x.............E.........",
+    "#############################......####################.......#####################################........###########################.......#############################################",
+    "#############################......####################.......#####################################........###########################.......#############################################"
+  ],
+  [
+    "....................................................................................................................................................................................",
+    "....................................................................................................................................................................................",
+    "....................................................................................................................................................................................",
+    "..........................................?.........................................................................................................................................",
+    "....................................................................................................................................................................................",
+    "............................................................................................ggg.....................................................................................",
+    "............?.....................?.....f.m.f...................?...........................===.....?..............?...........................?....................................",
+    "........................................=====..........................l..............iii...........................................................................................",
+    "............................iii................P......................gWg......p......===.............................mfm...p.............................P.........................",
+    "..S..g.g.c......p..C........WWW......c...................K...c....x...WWW...C...........................c..c...X......WWW.......C........g.i.g....c...x......l.l..........E.........",
+    "#######################...#########################....############################...............###################################...############################################",
+    "#######################...#########################....############################...............###################################...############################################"
+  ],
+  [
+    "..............................................................................................................................................................................................",
+    ".......................................?......................................................................................................................................................",
+    "..............................................................................................................................................................................................",
+    "..............Y......................iiii.....................................Y......................................Y........................................................................",
+    ".....................................====.....................................................................................................................................................",
+    "........................................................ggg...................................................................................................................................",
+    "..............?.........................................===...................?...........?.............l.iii........?.................?................?.....................................",
+    "................................====...............fff.......mmm........................................W.....................................................................................",
+    "...................................................===.......===...................p...................WW.......................................................p.............................",
+    "..S....H..g.g.......c...x.................C...X.....................K...H.............c......x........WWW........P.......g.f.gC...H.......X.......i.m.l.f...c.......x.............E...........",
+    "###########################...###################.................###############################...#####......##############################...##############################################",
+    "###########################...###################.................###############################...#####......##############################...##############################################"
+  ]
+];
+
+
+/* 難易度：mult 分數倍率、opts 選項數、lives 生命、glide 滑翔秒數、spd 垃圾移動速度 */
+const DIFFS = {
+  easy:  { label:"易", mult:1,   opts:3, lives:5, glide:1.9, spd:0.75,
+           desc:"分數 ×1。題目有三個選項；有 5 條命，滑翔時間最長，垃圾比較少、走得比較慢。" },
+  normal:{ label:"中", mult:1.5, opts:4, lives:4, glide:1.4, spd:1,
+           desc:"分數 ×1.5。題目有四個選項；有 4 條命，垃圾比較多。" },
+  hard:  { label:"難", mult:2,   opts:4, lives:3, glide:1.05, spd:1.3,
+           desc:"分數 ×2。題目有四個選項；只有 3 條命，滑翔時間短，還多了一些捕鳥網，垃圾也走得比較快。" }
+};
+const PTS = { food:10, trash:50, quiz:150, feed:200, line:300, nest:500, timePar:120, perSec:3, timeMax:300, all:1500, meet:20 };
+const TAGC = ["#d4402f","#2f6fd0","#2e9150","#8a4bc0"];
+const FOODS = { i:"昆蟲", m:"老鼠", l:"蜥蜴", f:"青蛙", g:"果實" };
+const NPC_SAY = {
+  H:["我是藍腹鷴，在臺灣相當珍貴稀有，屬於保育類動物。","我是地棲性鳥類，喜歡在山地森林裡散步。","我多以植物的果實或種子為主食。"],
+  Hf:["我是藍腹鷴的雌鳥，羽毛以土黃跟黑色條紋為主。","雌鳥、雄鳥的顏色不同喔！雄鳥是深藍色帶金屬光澤。"],
+  Y:["我是臺灣擬啄木鳥，又名五色鳥！","我全身翠綠，頭、眼、喉部有黑黃紅藍四種顏色，看起來就像披著彩衣。","我會啄枯木開鑿樹洞為巢。下面那個樹洞就是我鑿的！","我平日以果實為主食，但也會捕食昆蟲。"]
+};
+
+/* ============================================================
+   二、工具
+   ============================================================ */
+const $ = id => document.getElementById(id);
+const lsGet = (k,d) => { try{ const v=localStorage.getItem(k); return v===null?d:v; }catch(e){ return d; } };
+const lsSet = (k,v) => { try{ localStorage.setItem(k,v); }catch(e){} };
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const shuffle = a => { for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const pick = a => a[Math.floor(Math.random()*a.length)];
+const clamp = (v,a,b) => Math.max(a,Math.min(b,v));
+const FONT = '"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB","STKaiti",serif';
+const W = 960, H = 540, TS = 45, ROWS = 12, DT = 1/120;
+const GRAV = 2000, JUMP = 820, RUN = 265, GLIDE_RUN = 305, GLIDE_VY = 78, FALL_MAX = 900;
+const canvas = $("game"), ctx = canvas.getContext("2d");
+const TOUCH = matchMedia("(pointer: coarse)").matches || navigator.maxTouchPoints>0;
+let DPR = 1, UIS = 1;
+
+let diffKey = lsGet(LS.df,"easy"); if(!DIFFS[diffKey]) diffKey="easy";
+let D = DIFFS[diffKey];
+const urlLv = clamp(Number(new URLSearchParams(location.search).get("lv"))||1,1,4)-1;   // 老師測試用：?lv=3 直接從第三關開始
+
+/* ============================================================
+   三、狀態
+   ============================================================ */
+const G = { mode:"menu", phase:"idle", score:0, hi:0, playMs:0, why:"", recId:"", t:0, msgUntil:0,
+  lv:0, map:null, cols:0, cam:0, foods:[], foes:[], nets:[], npcs:[], signs:[], checks:[], nest:null, start:null, ckpt:null,
+  fx:[], texts:[], bubbles:[], amb:[], bumps:{}, lives:3, helpers:0, maxHelpers:0, lineDone:false, flyaway:[], hpos:[],
+  foodLv:0, foodAll:0, trash:0, fed:0, lost:0, lvMs:0, cleared:0, lastSafe:null, meet:{} };
+const P = { x:0, y:0, w:30, h:34, vx:0, vy:0, ground:false, face:1, glide:false, stam:1, inv:0, coyote:0, jbuf:0, walkT:0, prevBottom:0 };
+const QUIZ = { right:0, wrong:0, wrongList:[], deck:[], open:null };
+const KEY = { l:false, r:false, j:false };
+
+function addScore(n){
+  n=Math.round(n*D.mult); G.score+=n;
+  if(G.score>G.hi){ G.hi=G.score; lsSet(LS.hi+diffKey,String(G.hi)); }
+  updateBar(); return n;
+}
+function setQ(cls,text){ const b=$("qbar"), k="qbar"+(cls?" "+cls:""); if(b.className===k && b.textContent===text) return; b.className=k; b.textContent=text; }
+function flashMsg(cls,text,ms){ setQ(cls,text); G.msgUntil=performance.now()+ms; }
+function updateBar(){
+  $("sc").textContent=G.score; $("hi").textContent=G.hi;
+  $("st").textContent=Math.min(G.lv+1,LEVELS.length)+"/"+LEVELS.length;
+  $("rt").textContent=QUIZ.right+"/"+(QUIZ.right+QUIZ.wrong);
+  $("fd").textContent=G.foodAll;
+}
+
+/* ============================================================
+   四、地圖
+   ============================================================ */
+const SOLID = { "#":1, W:1, "?":1, U:1 };
+function tileAt(tx,ty){ if(ty<0 || ty>=ROWS) return "."; if(tx<0) return "#"; if(tx>=G.cols) return "#"; return G.map[ty][tx]; }
+const solid = (tx,ty) => !!SOLID[tileAt(tx,ty)];
+const oneway = (tx,ty) => tileAt(tx,ty)==="=";
+function loadLevel(i){
+  const src=MAPS[i];
+  G.lv=i; G.cols=src[0].length; buildTiles(i);
+  G.map=src.map(r => r.split(""));
+  G.foods=[]; G.foes=[]; G.nets=[]; G.npcs=[]; G.signs=[]; G.checks=[]; G.nest=null; G.bumps={};
+  G.fx=[]; G.texts=[]; G.bubbles=[]; G.flyaway=[]; G.hpos=[]; G.lineDone=false; G.foodLv=0; G.lvMs=0; G.meet={};
+  let hCount=0;
+  for(let y=0;y<ROWS;y++) for(let x=0;x<G.cols;x++){
+    const c=G.map[y][x], px=x*TS, py=y*TS;
+    if("#W?=".includes(c)) continue;
+    if(c!==".") G.map[y][x]=".";
+    if(FOODS[c]) G.foods.push({ x:px+TS/2, y:py+TS/2, k:c, ph:Math.random()*6 });
+    else if(c==="c" || (c==="C" && diffKey!=="easy")) G.foes.push({ k:"can", x:px+8, y:py+TS-28, w:26, h:28, vx:-60*D.spd, vy:0, ph:Math.random()*6, alive:true });
+    else if(c==="p" || (c==="P" && diffKey!=="easy")) G.foes.push({ k:"bag", x0:px+TS/2, y0:py+TS/2, x:0, y:0, w:30, h:30, ph:Math.random()*6, alive:true });
+    else if(c==="x" || (c==="X" && diffKey==="hard")) G.nets.push({ x:px+6, y:py-TS+8, w:TS-12, h:TS*2-8 });
+    else if(c==="K") G.checks.push({ x:px, col:x, row:y, on:false });
+    else if(c==="E") G.nest={ col:x, x:px, gy:(y+1)*TS };
+    else if(c==="S") G.start={ col:x, row:y };
+    else if(c===">") G.signs.push({ x:px+TS/2, gy:(y+1)*TS });
+    else if(c==="H"){ G.npcs.push({ k:"H", fem:hCount%2===1, x:px+TS/2, x0:px+TS/2, gy:(y+1)*TS, dir:1, say:0, id:"H"+x }); hCount++; }
+    else if(c==="Y") G.npcs.push({ k:"Y", x:px+TS/2, y:py+TS/2, say:0, id:"Y"+x });
+  }
+  G.ckpt=G.start;
+  placePlayer(G.start);
+  P.stam=1; P.inv=0;
+  scene=null; scene=buildScene(i); spawnAmbient();
+  G.cam=0;
+  QUIZ.deck=[];
+  updateBar();
+}
+function placePlayer(p){
+  P.x=p.col*TS+(TS-P.w)/2; P.y=(p.row+1)*TS-P.h; P.vx=0; P.vy=0; P.ground=false; P.glide=false;
+  G.lastSafe={ x:P.x, y:P.y };
+  G.hpos=[];
+}
+
+/* ============================================================
+   五、物理與碰撞
+   ============================================================ */
+function moveX(o,dx){
+  o.x+=dx;
+  const y0=Math.floor(o.y/TS), y1=Math.floor((o.y+o.h-0.01)/TS);
+  if(dx>0){ const tx=Math.floor((o.x+o.w-0.01)/TS); for(let ty=y0;ty<=y1;ty++) if(solid(tx,ty)){ o.x=tx*TS-o.w; o.vx=0; return true; } }
+  else if(dx<0){ const tx=Math.floor(o.x/TS); for(let ty=y0;ty<=y1;ty++) if(solid(tx,ty)){ o.x=(tx+1)*TS; o.vx=0; return true; } }
+  return false;
+}
+function moveY(o,dy,isPlayer){
+  const prevBottom=o.y+o.h; o.y+=dy;
+  const x0=Math.floor(o.x/TS), x1=Math.floor((o.x+o.w-0.01)/TS);
+  if(dy>0){
+    const ty=Math.floor((o.y+o.h-0.01)/TS);
+    for(let tx=x0;tx<=x1;tx++) if(solid(tx,ty) || (oneway(tx,ty) && prevBottom<=ty*TS+0.5)){ o.y=ty*TS-o.h; o.vy=0; o.ground=true; return; }
+  } else if(dy<0){
+    const ty=Math.floor(o.y/TS);
+    let hit=-1, best=1e9;
+    for(let tx=x0;tx<=x1;tx++) if(solid(tx,ty)){ const d=Math.abs(tx*TS+TS/2-(o.x+o.w/2)); if(d<best){ best=d; hit=tx; } }
+    if(hit>=0){ o.y=(ty+1)*TS; o.vy=0; if(isPlayer) headHit(hit,ty); }
+  }
+}
+function headHit(tx,ty){
+  const c=G.map[ty][tx];
+  G.bumps[tx+","+ty]=1;
+  if(c==="?"){ G.map[ty][tx]="U"; sfx("bump"); openHole(tx,ty); }
+  else sfx("knock");
+}
+function groundBelow(x,y){ const tx=Math.floor(x/TS); for(let ty=Math.max(0,Math.floor((y-1)/TS));ty<ROWS;ty++) if(solid(tx,ty) || oneway(tx,ty)) return ty*TS; return null; }
+const overlap = (a,b) => a.x<b.x+b.w && a.x+a.w>b.x && a.y<b.y+b.h && a.y+a.h>b.y;
+
+/* ============================================================
+   六、更新
+   ============================================================ */
+function stepPlayer(){
+  const dir=(KEY.r?1:0)-(KEY.l?1:0);
+  if(dir) P.face=dir;
+  const top=P.glide?GLIDE_RUN:RUN, acc=P.ground?2300:1500;
+  if(dir) P.vx+=clamp(dir*top-P.vx,-acc*DT,acc*DT);
+  else P.vx+=clamp(-P.vx,-(P.ground?2600:700)*DT,(P.ground?2600:700)*DT);
+  /* 跳躍：容許剛離開平台一下下（coyote）和提早按（緩衝） */
+  if(P.jbuf>0) P.jbuf-=DT;
+  if(P.coyote>0) P.coyote-=DT;
+  if(P.jbuf>0 && (P.ground || P.coyote>0)){ P.vy=-JUMP; P.ground=false; P.coyote=0; P.jbuf=0; sfx("jump"); }
+  if(!KEY.j && P.vy<-360) P.vy=-360;
+  P.vy=Math.min(FALL_MAX,P.vy+GRAV*DT);
+  /* 滑翔：往下掉時按住跳躍鍵 */
+  const want=!P.ground && KEY.j && P.vy>0 && P.stam>0;
+  if(want){ P.vy=Math.min(P.vy,GLIDE_VY); P.stam=Math.max(0,P.stam-DT/D.glide); if(!P.glide) sfx("glide"); }
+  P.glide=want;
+  const wasGround=P.ground; P.ground=false;
+  moveX(P,P.vx*DT);
+  moveY(P,P.vy*DT,true);
+  if(P.ground){
+    P.stam=Math.min(1,P.stam+DT*1.6); P.coyote=0.1;
+    const x0=Math.floor((P.x+2)/TS), x1=Math.floor((P.x+P.w-2)/TS), ty=Math.floor((P.y+P.h+2)/TS);
+    if(solid(x0,ty) && solid(x1,ty)) G.lastSafe={ x:P.x, y:P.y };
+    if(!wasGround && P.vy===0){ G.fx.push({ k:"dust", x:P.x+P.w/2, y:P.y+P.h, life:300, max:300 }); sfx("land"); }
+  }
+  if(P.x>G.cols*TS-P.w) P.x=G.cols*TS-P.w;
+}
+function update(dt){
+  const s=dt/1000;
+  G.playMs+=dt; G.lvMs+=dt;
+  if(P.inv>0) P.inv-=s;
+  if(G.phase==="play"){
+    G.acc=(G.acc||0)+Math.min(dt,50)/1000;
+    while(G.acc>=DT && G.phase==="play"){ G.acc-=DT; stepPlayer(); }
+    if(Math.abs(P.vx)>20 && P.ground) P.walkT+=dt;
+    /* 掉到山谷裡 */
+    if(P.y>H+20) fellDown();
+    /* 食物 */
+    for(const f of G.foods){
+      if(f.got) continue;
+      if(Math.abs(P.x+P.w/2-f.x)<24 && Math.abs(P.y+P.h/2-f.y)<26){
+        f.got=true; G.foodLv++; G.foodAll++;
+        const g=addScore(PTS.food); addText(f.x,f.y-14,FOODS[f.k]+" +"+g,"#fff7c2",17);
+        sparkle(f.x,f.y,"#ffe27a",10); sfx("food");
+      }
+    }
+    G.foods=G.foods.filter(f => !f.got);
+    /* 休息站 */
+    for(const c of G.checks) if(!c.on && P.x>c.x){ c.on=true; G.ckpt={ col:c.col, row:c.row }; sfx("check"); addText(c.x+TS/2,c.row*TS-30,"休息站","#ffffff",18); flashMsg("ok","到了休息站！之後少一條命時，會從這裡重新出發。",3500); }
+    /* 鳥巢 */
+    if(G.nest && P.x+P.w>G.nest.x-6) reachNest();
+  }
+  /* 垃圾 */
+  for(const e of G.foes){
+    if(!e.alive) continue;
+    if(e.k==="can"){
+      e.ground=false;
+      if(moveX(e,e.vx*s)) e.vx=-e.vx;
+      e.vy=Math.min(FALL_MAX,e.vy+GRAV*s); moveY(e,e.vy*s,false);
+      if(e.ground){
+        const ax=e.vx>0?e.x+e.w+2:e.x-2, ty=Math.floor((e.y+e.h+4)/TS), tx=Math.floor(ax/TS);
+        if(!solid(tx,ty) && !oneway(tx,ty)) e.vx=-e.vx;
+      }
+      if(e.y>H+60) e.alive=false;
+    } else {
+      e.x=e.x0+Math.sin(G.t*0.0008*D.spd+e.ph)*TS*1.25-e.w/2;
+      e.y=e.y0+Math.sin(G.t*0.0021+e.ph)*9-e.h/2;
+    }
+    if(G.phase==="play" && overlap(P,e)){
+      const fromTop=P.vy>0 && P.y+P.h-P.vy*DT*3<=e.y+12;
+      if(fromTop){
+        e.alive=false; G.trash++;
+        P.vy=KEY.j?-700:-500;
+        const g=addScore(PTS.trash);
+        addText(e.x+e.w/2,e.y-12,(e.k==="can"?"撿起空罐":"撿起塑膠袋")+" +"+g,"#c9f7c4",17);
+        sparkle(e.x+e.w/2,e.y+e.h/2,"#ffffff",14); sfx(e.k==="can"?"can":"bag");
+      } else hurt(e.k==="can"?"空罐":"塑膠袋");
+    }
+  }
+  G.foes=G.foes.filter(e => e.alive);
+  if(G.phase==="play") for(const n of G.nets) if(overlap(P,n)) hurt("捕鳥網");
+  /* 藍腹鷴、五色鳥 */
+  for(const n of G.npcs){
+    if(n.k==="H"){
+      n.x+=n.dir*28*s; if(Math.abs(n.x-n.x0)>80) n.dir=-n.dir;
+      n.y=n.gy;
+    }
+    if(n.say>0) n.say-=dt;
+    const ny=n.k==="H"?n.gy-30:n.y;
+    if(G.phase==="play" && n.say<=0 && Math.abs(P.x+P.w/2-n.x)<(n.k==="Y"?95:70) && Math.abs(P.y+P.h/2-ny)<(n.k==="Y"?170:60)){
+      const lines=NPC_SAY[n.k==="H"?(n.fem?"Hf":"H"):"Y"];
+      n.line=((n.line==null?-1:n.line)+1)%lines.length;
+      n.say=5200;
+      G.bubbles.push({ who:n, text:lines[n.line], life:5200 });
+      sfx(n.k==="Y"?"barbet":"pheasant");
+      if(!G.meet[n.id]){ G.meet[n.id]=1; const g=addScore(PTS.meet); addText(n.x,ny-60,(n.k==="H"?"認識藍腹鷴":"認識五色鳥")+" +"+g,"#fff7c2",16); say(n.k==="H"?"藍腹鷴":"五色鳥"); }
+    }
+  }
+  /* 鏡頭 */
+  const target=clamp(P.x+P.w/2-W*0.4,0,G.cols*TS-W);
+  G.cam+=(target-G.cam)*Math.min(1,dt/120);
+  if(G.phase==="nestfly"){
+    const n=G.nest, tx=n.x-58, ty=n.gy-6*TS-P.h+4;
+    P.x+=(tx-P.x)*Math.min(1,dt/260); P.y+=(ty-P.y)*Math.min(1,dt/260); P.glide=true; P.face=1;
+    G.flyT+=dt;
+    if(G.flyT>1100){ G.phase="nest"; openNest(); }
+  }
+  /* 跟在後面的哥哥姊姊：每一隻追著前面那一隻，排成一列 */
+  let lead={ x:P.x+P.w/2, y:P.y+P.h-6, f:P.face };
+  for(let i=0;i<G.helpers;i++){
+    const tx=lead.x-lead.f*36, ty=lead.y-7;
+    let h=G.hpos[i]; if(!h) h=G.hpos[i]={ x:tx, y:ty, f:lead.f };
+    const k=Math.min(1,dt/(110+i*25));
+    h.x+=(tx-h.x)*k; h.y+=(ty-h.y)*k;
+    if(Math.abs(tx-h.x)>3) h.f=tx>h.x?1:-1; else h.f=lead.f;
+    lead=h;
+  }
+  G.hpos.length=G.helpers;
+}
+function fellDown(){
+  if(G.helpers>0){
+    G.helpers--; flyAway(P.x+P.w/2,H-30);
+    P.x=G.lastSafe.x; P.y=G.lastSafe.y-6; P.vx=0; P.vy=0; P.inv=1.6; G.hpos=[];
+    flashMsg("warn","掉下去了！一隻哥哥姊姊把你送回來。",3200); sfx("hurt");
+    return;
+  }
+  loseLife("掉到山谷裡了");
+}
+function hurt(what){
+  if(P.inv>0 || G.phase!=="play") return;
+  if(G.helpers>0){
+    G.helpers--; flyAway(P.x+P.w/2,P.y);
+    P.inv=1.6; P.vy=-420; P.vx=-P.face*180;
+    flashMsg("warn","被"+what+"碰到了！一隻哥哥姊姊替你擋了下來。",3200); sfx("hurt");
+    for(let i=0;i<6;i++) feather(P.x+P.w/2,P.y+10);
+    return;
+  }
+  loseLife("被"+what+"碰到了");
+}
+function loseLife(why){
+  G.lives--; G.lost++;
+  for(let i=0;i<10;i++) feather(P.x+P.w/2,Math.min(P.y+10,H-20));
+  sfx("lose"); updateBar();
+  if(G.lives<=0){ finish("fail"); return; }
+  placePlayer(G.ckpt); P.inv=2;
+  G.cam=clamp(P.x+P.w/2-W*0.4,0,G.cols*TS-W);
+  flashMsg("warn",why+"！少了一條命，還剩 "+G.lives+" 條。",3500);
+}
+function flyAway(x,y){ G.flyaway.push({ x, y, vx:-60+Math.random()*120, vy:-260, life:1400, max:1400 }); }
+function gainHelper(){
+  if(G.helpers>=4) return false;
+  G.helpers++; G.maxHelpers=Math.max(G.maxHelpers,G.helpers);
+  if(G.helpers===4 && !G.lineDone){
+    G.lineDone=true;
+    const g=addScore(PTS.line);
+    addText(P.x+P.w/2,P.y-50,"長尾陣！ +"+g,"#ffe27a",26);
+    flashMsg("ok","五隻藍鵲排成一列——長尾陣！",3500); say("長尾陣"); sfx("line");
+  }
+  return true;
+}
+function sparkle(x,y,col,n){ for(let i=0;i<n;i++){ const a=Math.random()*Math.PI*2, v=60+Math.random()*120, l=400+Math.random()*300; G.fx.push({ k:"spark", x, y, vx:Math.cos(a)*v, vy:Math.sin(a)*v-40, col, life:l, max:l }); } }
+function feather(x,y){ const l=1200+Math.random()*700; G.fx.push({ k:"feather", x, y, vx:(Math.random()-0.5)*160, vy:-80-Math.random()*120, rot:Math.random()*6, vr:(Math.random()-0.5)*6, life:l, max:l }); }
+function addText(x,y,text,col,size){ G.texts.push({ x, y, text, col, size, life:1500, max:1500 }); }
+function updateFx(dt){
+  const s=dt/1000;
+  for(const f of G.fx){
+    f.life-=dt;
+    if(f.k==="spark"){ f.vy+=200*s; f.x+=f.vx*s; f.y+=f.vy*s; }
+    else if(f.k==="feather"){ f.vy=Math.min(60,f.vy+180*s); f.vx*=Math.pow(0.4,s); f.x+=(f.vx+Math.sin(f.life*0.006)*30)*s; f.y+=f.vy*s; f.rot+=f.vr*s; }
+    else if(f.k==="leaf"){ f.x+=(f.vx+Math.sin(f.life*0.002+f.ph)*25)*s; f.y+=f.vy*s; f.rot+=f.vr*s; }
+  }
+  G.fx=G.fx.filter(f => f.life>0);
+  for(const t of G.texts){ t.life-=dt; t.y-=28*s; }
+  G.texts=G.texts.filter(t => t.life>0);
+  for(const b of G.bubbles) b.life-=dt;
+  G.bubbles=G.bubbles.filter(b => b.life>0);
+  for(const f of G.flyaway){ f.life-=dt; f.vy-=30*s; f.x+=f.vx*s; f.y+=f.vy*s; }
+  G.flyaway=G.flyaway.filter(f => f.life>0);
+  for(const k in G.bumps){ G.bumps[k]-=dt/160; if(G.bumps[k]<=0) delete G.bumps[k]; }
+  /* 飄落的葉子 */
+  if((G.lv===0 || G.lv===3) && G.mode==="play" && Math.random()<dt/420){
+    const l=7000; G.fx.push({ k:"leaf", x:G.cam+Math.random()*W*1.2, y:-10, vx:-20-Math.random()*20, vy:35+Math.random()*25, rot:Math.random()*6, vr:(Math.random()-0.5)*3, ph:Math.random()*6, life:l, max:l, col:pick(["#7cc35a","#a6d36b","#e0b44a","#5aa33e"]) });
+  }
+}
+
+/* ============================================================
+   七、題目
+   ============================================================ */
+function vocabQ(lv){
+  const pool=WORDS.filter(w => w[5]===lv+1), w=pick(pool);
+  const others=shuffle(WORDS.filter(o => o[4]!==w[4]));
+  others.sort((a,b) => (b[5]===lv+1)-(a[5]===lv+1));
+  const distract=col => { const used=new Set([w[4]]), d=[]; for(const o of others){ if(!used.has(o[4])){ used.add(o[4]); d.push(o[col]); } if(d.length>=3) break; } return d; };
+  const kind=Math.random();
+  if(kind<0.4) return { k:"詞語", q:"「"+w[3]+"」是哪一個詞？", a:w[0], d:distract(0) };
+  if(kind<0.75) return { k:"詞語", q:"「"+w[0]+"」是什麼意思？", a:w[3], d:distract(3), zy:w[1]+"　"+w[2] };
+  return { k:"注音", q:"「"+w[1]+"」是哪一個詞？", a:w[0], d:distract(0) };
+}
+function buildDeck(lv){
+  const v=[]; for(let i=0;i<8;i++) v.push(vocabQ(lv));
+  return shuffle(QBANK[lv].slice().concat(v));
+}
+function drawQ(preferText){
+  if(!QUIZ.deck.length) QUIZ.deck=buildDeck(G.lv);
+  let idx=QUIZ.deck.length-1;
+  if(preferText){ const j=QUIZ.deck.findIndex(it => it.k==="課文"); if(j>=0) idx=j; }
+  const it=QUIZ.deck.splice(idx,1)[0];
+  const opts=shuffle([it.a,...shuffle(it.d.slice()).slice(0,D.opts-1)]);
+  return { k:it.k, q:it.q, a:it.a, zy:it.zy, py:it.py, opts, ans:opts.indexOf(it.a) };
+}
+function showModal(html){ $("card").innerHTML=html; $("modal").hidden=false; KEY.l=KEY.r=KEY.j=false; padReset(); }
+function hideModal(){ $("modal").hidden=true; $("card").innerHTML=""; }
+function quizHTML(c,head){
+  const hintT=TOUCH?"請按一個選項。":"按選項，或按鍵盤 1～"+c.opts.length+"。";
+  return head+'<p class="qq"><span class="tag">'+esc(c.k)+'</span>'+esc(c.q)+(c.zy?'<br><span class="zy">'+esc(c.zy)+'</span>':'')+'</p><div class="opts" id="opts">'+
+    c.opts.map((o,i) => '<button type="button" data-i="'+i+'"><b class="num" style="background:'+TAGC[i]+'">'+(i+1)+'</b><span>'+esc(o)+'</span></button>').join("")+
+    '</div><p class="fb" id="fb">'+hintT+'</p><div class="row" id="after"></div>';
+}
+function bindOpts(){ document.querySelectorAll("#opts button").forEach(b => b.addEventListener("click",() => answer(Number(b.dataset.i)))); }
+/* 撞到樹洞 */
+function openHole(tx,ty){
+  const c=drawQ(false);
+  QUIZ.open={ c, answered:false, where:"hole", tx, ty };
+  G.phase="quiz";
+  showModal(quizHTML(c,'<h2>樹洞裡有一題！</h2><p class="sub">答對了，會有一隻哥哥或姊姊飛來幫忙。'+(G.helpers>=4?'（長尾陣已經排滿了，答對改成加分）':'')+'</p>'));
+  bindOpts();
+}
+function answer(i){
+  const o=QUIZ.open;
+  if(!o || o.answered || !(i>=0 && i<o.c.opts.length)) return;
+  o.answered=true; initAudio();
+  const ok=i===o.c.ans, fb=$("fb");
+  document.querySelectorAll("#opts button").forEach((b,k) => { b.disabled=true; if(k===o.c.ans) b.classList.add("right"); else if(k===i) b.classList.add("miss"); });
+  if(ok){ QUIZ.right++; sfx("right"); }
+  else { QUIZ.wrong++; QUIZ.wrongList.push(o.c.q+" 答案："+o.c.a+"（選了 "+o.c.opts[i]+"）"); sfx("wrong"); }
+  if(/[一-鿿]/.test(o.c.a)) say(o.c.a.replace(/（.*）/,""));
+  updateBar();
+  let btn="繼續飛";
+  if(o.where==="hole"){
+    if(ok){
+      const g=addScore(PTS.quiz), got=gainHelper();
+      fb.className="fb ok"; fb.textContent="答對了！ +"+g+" 分　"+(got?"一隻哥哥姊姊飛來幫忙了！":"長尾陣已經排滿了！");
+      o.reward=got;
+    } else { fb.className="fb bad"; fb.textContent="正確答案是：「"+o.c.a+"」。樹洞裡空空的，繼續加油！"; }
+  } else {
+    G.nestQ.push(ok);
+    if(ok){ G.fed++; const g=addScore(PTS.feed); fb.className="fb ok"; fb.textContent="答對了！雛鳥吃飽了。 +"+g+" 分"; }
+    else { fb.className="fb bad"; fb.textContent="正確答案是：「"+o.c.a+"」。這隻雛鳥還在等……"; }
+    drawChicks();
+    btn=G.nestQ.length<3?"餵下一隻":"看這一關的成績";
+  }
+  $("after").innerHTML='<button class="go" id="btn-next" type="button">'+btn+'</button>';
+  $("btn-next").addEventListener("click",() => {
+    QUIZ.open=null;
+    if(o.where==="hole"){
+      hideModal(); G.phase="play";
+      if(o.reward){ G.fx.push({ k:"pop", x:o.tx*TS+TS/2, y:o.ty*TS, life:700, max:700 }); sfx("helper"); }
+    } else if(G.nestQ.length<3) nestQuestion();
+    else levelClear();
+  });
+  $("btn-next").focus({ preventScroll:true });
+}
+
+/* ============================================================
+   八、回巢
+   ============================================================ */
+function reachNest(){
+  if(G.phase!=="play") return;
+  G.phase="nestfly"; G.flyT=0; P.vx=0; P.vy=0; P.inv=0;
+  sfx("chirp"); setQ("ok","回到巢裡了！雛鳥張開嘴巴在等你。");
+}
+function openNest(){ G.nestQ=[]; nestQuestion(); }
+function nestQuestion(){
+  const c=drawQ(true), n=G.nestQ.length;
+  QUIZ.open={ c, answered:false, where:"nest" };
+  showModal(quizHTML(c,'<h2>餵雛鳥（'+(n+1)+'／3）</h2><p class="sub">先把食物吐一些給鳥媽媽，再一起餵雛鳥。答對一題，就有一隻雛鳥吃飽。</p><div class="chicks" id="chicks">'+
+    '<canvas width="168" height="132"></canvas><canvas width="168" height="132"></canvas><canvas width="168" height="132"></canvas></div>'));
+  bindOpts(); drawChicks(); sfx("chirp");
+}
+function drawChicks(){
+  const cvs=document.querySelectorAll("#chicks canvas");
+  cvs.forEach((cv,i) => {
+    const g=cv.getContext("2d"); g.setTransform(2,0,0,2,0,0); g.clearRect(0,0,84,66);
+    const st=i<G.nestQ.length?(G.nestQ[i]?"fed":"wait"):(i===G.nestQ.length?"now":"wait");
+    drawNestBowl(g,42,58,1.25);
+    drawChick(g,42,46,1.5,st==="fed"?"happy":"open",i*40);
+    if(st==="fed"){ g.font=`700 13px ${FONT}`; g.fillStyle="#2e7d43"; g.textAlign="center"; g.fillText("吃飽了",42,12); }
+    else if(st==="now"){ g.font=`700 13px ${FONT}`; g.fillStyle="#d9442f"; g.textAlign="center"; g.fillText("餓了！",42,12); }
+  });
+}
+function levelClear(){
+  const L=LEVELS[G.lv], sec=Math.round(G.lvMs/1000);
+  const tb=Math.min(PTS.timeMax,Math.max(0,PTS.timePar-sec)*PTS.perSec);
+  const g=addScore(PTS.nest+tb);
+  G.cleared++;
+  const last=G.lv>=LEVELS.length-1;
+  sfx("stage");
+  showModal('<h2>「'+esc(L.name)+'」過關！</h2>'+
+    '<p>帶回 '+G.foodLv+' 份食物，餵飽 '+G.nestQ.filter(x => x).length+' 隻雛鳥，用了 '+sec+' 秒。回巢獎勵 +'+g+' 分'+(tb?'（含時間獎勵 '+Math.round(tb*D.mult)+'）':'')+'。</p>'+
+    '<p class="culture">'+esc(L.clear)+'</p>'+
+    '<div class="row"><button class="go" id="btn-cont" type="button">'+(last?"看成績":"下一關")+'</button></div>');
+  $("btn-cont").addEventListener("click",() => { hideModal(); if(last){ finish("all"); return; } levelIntro(G.lv+1); });
+  $("btn-cont").focus({ preventScroll:true });
+}
+function levelIntro(i){
+  loadLevel(i);
+  G.phase="intro";
+  const L=LEVELS[i];
+  showModal('<h2>第'+"一二三四"[i]+'關　'+esc(L.name)+'</h2><p class="sub">課文'+esc(L.page)+'</p><p class="culture">'+esc(L.intro)+'</p>'+
+    '<p>生命 '+G.lives+'　哥哥姊姊 '+G.helpers+' 隻</p>'+
+    '<div class="row"><button class="go" id="btn-cont" type="button">出發</button></div>');
+  $("btn-cont").addEventListener("click",() => {
+    hideModal(); G.phase="play"; initAudio(); ambStart(i);
+    setQ("",i===1?"按住跳躍鍵就能滑翔，看滑翔力用多少！":(TOUCH?"◀ ▶ 移動，按「跳」跳起來，按住不放就滑翔。":"← → 移動，空白鍵跳，按住不放就滑翔。從下面撞「？」樹洞會出題。"));
+    G.msgUntil=performance.now()+6000;
+  });
+  $("btn-cont").focus({ preventScroll:true });
+}
+
+/* ============================================================
+   九、操作
+   ============================================================ */
+const KMAP = { ArrowLeft:"l", KeyA:"l", ArrowRight:"r", KeyD:"r", Space:"j", ArrowUp:"j", KeyW:"j", KeyZ:"j" };
+addEventListener("keydown",e => {
+  if(e.target && e.target.tagName==="INPUT") return;
+  if(QUIZ.open){
+    const m=/^(?:Digit|Numpad)([1-4])$/.exec(e.code);
+    if(m){ e.preventDefault(); answer(Number(m[1])-1); }
+    return;
+  }
+  if(G.mode==="play" && (e.code==="KeyP" || e.code==="Escape")){ e.preventDefault(); togglePause(); return; }
+  if(!$("modal").hidden || G.mode!=="play") return;
+  const k=KMAP[e.code]; if(!k) return;
+  e.preventDefault(); initAudio();
+  if(k==="j" && !KEY.j) P.jbuf=0.13;
+  KEY[k]=true;
+});
+addEventListener("keyup",e => { const k=KMAP[e.code]; if(k) KEY[k]=false; });
+addEventListener("blur",() => { KEY.l=KEY.r=KEY.j=false; padReset(); });
+function padBind(id,k){
+  const b=$(id);
+  const on=e => { e.preventDefault(); if(G.mode!=="play" || !$("modal").hidden) return; initAudio(); if(k==="j" && !KEY.j) P.jbuf=0.13; KEY[k]=true; b.classList.add("on"); try{ b.setPointerCapture(e.pointerId); }catch(_){} };
+  const off=() => { KEY[k]=false; b.classList.remove("on"); };
+  b.addEventListener("pointerdown",on);
+  for(const ev of ["pointerup","pointercancel","lostpointercapture"]) b.addEventListener(ev,off);
+  b.addEventListener("contextmenu",e => e.preventDefault());
+}
+padBind("b-l","l"); padBind("b-r","r"); padBind("b-j","j");
+function padReset(){ for(const id of ["b-l","b-r","b-j"]) $(id).classList.remove("on"); }
+function togglePause(){
+  if(G.phase==="paused"){ hideModal(); G.phase=G.prePause; if(actx) actx.resume(); return; }
+  if(G.phase!=="play") return;
+  G.prePause=G.phase; G.phase="paused"; if(actx) actx.suspend();
+  showModal('<h2>暫停</h2><p>休息一下，準備好再繼續飛。</p><div class="row"><button class="go" id="btn-res" type="button">繼續</button><button class="plain" id="btn-end" type="button">結束並送出成績</button></div>');
+  $("btn-res").addEventListener("click",togglePause);
+  $("btn-end").addEventListener("click",() => { hideModal(); finish("quit"); });
+  $("btn-res").focus({ preventScroll:true });
+}
+$("btn-pause").addEventListener("click",togglePause);
+
+/* ============================================================
+   十、繪圖工具
+   ============================================================ */
+function rngS(seed){ return () => (seed=(seed*16807)%2147483647)/2147483647; }
+function rr(x,y,w,h,r,g){ g=g||ctx; g.beginPath(); g.moveTo(x+r,y); g.arcTo(x+w,y,x+w,y+h,r); g.arcTo(x+w,y+h,x,y+h,r); g.arcTo(x,y+h,x,y,r); g.arcTo(x,y,x+w,y,r); g.closePath(); }
+const hexRGB = h => { const n=parseInt(h.slice(1),16); return [n>>16,(n>>8)&255,n&255]; };
+const shade = (h,k) => "rgb("+hexRGB(h).map(v => Math.round(k>=0?v+(255-v)*k:v*(1+k))).join(",")+")";
+function lg(g,x0,y0,x1,y1,st){ const gr=g.createLinearGradient(x0,y0,x1,y1); for(const [o,c] of st) gr.addColorStop(o,c); return gr; }
+function rg(g,x,y,r0,r1,st){ const gr=g.createRadialGradient(x,y,r0,x,y,r1); for(const [o,c] of st) gr.addColorStop(o,c); return gr; }
+function glow(g,x,y,r,c,a){ a=a==null?0.9:a; g.fillStyle=rg(g,x,y,0,r,[[0,`rgba(${c},${a})`],[0.3,`rgba(${c},${a*0.4})`],[1,`rgba(${c},0)`]]); g.fillRect(x-r,y-r,r*2,r*2); }
+function ell(g,x,y,rx,ry,rot){ g.beginPath(); g.ellipse(x,y,rx,ry,rot||0,0,Math.PI*2); }
+function cloud(g,x,y,s,a){
+  const P2=[[0,0,24],[22,-12,28],[50,-6,24],[72,4,17],[-22,5,17],[30,8,22]];
+  g.save(); g.globalAlpha=a==null?1:a;
+  g.fillStyle="rgba(130,160,200,.35)"; for(const [dx,dy,r] of P2){ g.beginPath(); g.arc(x+dx*s,y+(dy+7)*s,r*s,0,7); g.fill(); }
+  g.fillStyle=lg(g,0,y-40*s,0,y+26*s,[[0,"#ffffff"],[1,"#e6eef6"]]); for(const [dx,dy,r] of P2){ g.beginPath(); g.arc(x+dx*s,y+dy*s,r*s,0,7); g.fill(); }
+  g.restore();
+}
+
+/* ---------- 臺灣藍鵲（精緻版） ----------
+   原點在腳底中央，面向右邊。pose：stand、walk、jump、glide；vy 讓身體隨上升下降微微傾斜 */
+function tailFeather(g,len,w){
+  g.beginPath();
+  g.moveTo(0,-w*0.32);
+  g.bezierCurveTo(-len*0.3,-w*0.55,-len*0.78,-w*0.62,-len+3,-w*0.4);
+  g.quadraticCurveTo(-len-3,0,-len+3,w*0.4);
+  g.bezierCurveTo(-len*0.78,w*0.62,-len*0.3,w*0.55,0,w*0.32);
+  g.closePath();
+  g.save(); g.clip();
+  g.fillStyle=lg(g,0,-w,0,w,[[0,"#78aaf8"],[0.42,"#3e7ae4"],[1,"#1b47aa"]]); g.fillRect(-len-4,-w,len+6,w*2);
+  g.strokeStyle="rgba(255,255,255,.13)"; g.lineWidth=0.6;
+  for(let x=-5;x>-len+18;x-=3.5){ g.beginPath(); g.moveTo(x,0); g.lineTo(x-3,-w*0.55); g.moveTo(x,0); g.lineTo(x-3,w*0.55); g.stroke(); }
+  g.fillStyle="#0b1224"; g.fillRect(-len+10,-w,8.5,w*2);
+  g.fillStyle=lg(g,-len-3,0,-len+11,0,[[0,"#ffffff"],[1,"#e6edf8"]]); g.fillRect(-len-4,-w,14,w*2);
+  g.restore();
+  g.strokeStyle="rgba(12,28,70,.55)"; g.lineWidth=0.8; g.beginPath(); g.moveTo(-1,0); g.lineTo(-len+11,0); g.stroke();
+}
+function drawTail(g,x,y,ang,fan,t){
+  const sway=Math.sin(t*0.0035)*0.035;
+  for(let k=5;k>=0;k--){
+    const len=76-k*9.5, sp=k*(0.028+0.095*fan);
+    for(const s of k?[1,-1]:[0]){
+      g.save(); g.translate(x,y); g.rotate(-(ang+sway*(1+k*0.2)+s*sp*(s>0?1:0.6)));
+      tailFeather(g,len,7.6); g.restore();
+    }
+  }
+  /* 尾上覆羽 */
+  g.fillStyle=lg(g,x-10,y-5,x+2,y+5,[[0,"#3f78e0"],[1,"#2152b8"]]);
+  g.beginPath(); g.ellipse(x-3,y,9,4.6,-ang*0.6,0,7); g.fill();
+}
+function drawLegs(g,pose,walk,t,bob){
+  g.lineCap="round"; g.lineJoin="round";
+  if(pose==="glide" || pose==="jump"){
+    g.strokeStyle="#d8402a"; g.lineWidth=2.4;
+    g.beginPath(); g.moveTo(-1,-11); g.lineTo(-7,-8); g.lineTo(-11,-8.5); g.moveTo(3,-11); g.lineTo(-3,-7); g.lineTo(-7,-7); g.stroke();
+    return;
+  }
+  const a=walk?Math.sin(t*0.02)*4.5:0;
+  for(const [hx,sgn] of [[-3,1],[4,-1]]){
+    const fx=hx+a*sgn;
+    g.strokeStyle="#c9361f"; g.lineWidth=2.6;
+    g.beginPath(); g.moveTo(hx,-11+bob); g.lineTo(hx+(fx-hx)*0.5+1,-5); g.lineTo(fx,-0.8); g.stroke();
+    g.strokeStyle="#e5543a"; g.lineWidth=1.5;
+    g.beginPath(); g.moveTo(fx-4.5,0); g.lineTo(fx+5.5,0); g.moveTo(fx,0); g.lineTo(fx+4,-1.5); g.stroke();
+    g.fillStyle="#3a1a10"; g.beginPath(); g.arc(fx+6,0.2,0.7,0,7); g.arc(fx-5,0.2,0.7,0,7); g.fill();
+  }
+}
+function drawWingFolded(g){
+  g.save(); g.translate(2,-21);
+  for(let i=0;i<5;i++){
+    g.save(); g.translate(-5,1.5+i*0.7); g.rotate(-0.16-i*0.03);
+    g.beginPath(); g.moveTo(0,-2.7); g.quadraticCurveTo(-14,-3.5,-25+i*1.5,0); g.quadraticCurveTo(-14,3.3,0,2.7); g.closePath();
+    g.fillStyle=i%2?"#131f46":"#1a2c62"; g.fill();
+    g.fillStyle="#fff"; g.beginPath(); g.ellipse(-22+i*1.5,0.2,2.8,1.5,0,0,7); g.fill();
+    g.restore();
+  }
+  for(let i=0;i<4;i++){
+    g.save(); g.translate(-2-i*3.3,3.2+i*0.4); g.rotate(0.16);
+    rr(-10,-2.6,14,5.6,2.6,g); g.fillStyle=lg(g,0,-3,0,3,[[0,"#3268cf"],[1,"#163a8a"]]); g.fill();
+    g.fillStyle="rgba(255,255,255,.92)"; g.fillRect(-10,1.4,3.2,1.6);
+    g.restore();
+  }
+  g.beginPath(); g.moveTo(10,-6); g.bezierCurveTo(4,-9.5,-8,-7.5,-12,-1); g.bezierCurveTo(-6,3.2,4,4,11,1); g.closePath();
+  g.fillStyle=lg(g,0,-9,0,4,[[0,"#9cc4ff"],[0.45,"#4f8ef0"],[1,"#2a5cc4"]]); g.fill();
+  g.strokeStyle="rgba(18,48,128,.42)"; g.lineWidth=0.7;
+  for(let r=0;r<2;r++) for(let i=0;i<4;i++){ const cx=6-i*4.5-r*2, cy=-4+r*3.4; g.beginPath(); g.arc(cx,cy,2.4,0.2,Math.PI-0.2); g.stroke(); }
+  g.strokeStyle="rgba(255,255,255,.4)"; g.lineWidth=1; g.beginPath(); g.moveTo(8,-6); g.bezierCurveTo(2,-8.2,-6,-6.5,-9,-3); g.stroke();
+  g.restore();
+}
+/* 張開的翅膀：沿著 +x 伸出去，後緣朝身體後方 */
+function drawWingOpen(g,ox,oy,ang,len,dark){
+  g.save(); g.translate(ox,oy); g.rotate(ang); g.scale(1,-1);
+  for(let i=6;i>=0;i--){
+    const a=-0.3+i*0.12, L=len*(0.55-i*0.028);
+    g.save(); g.translate(len*0.56,0); g.rotate(a);
+    g.beginPath(); g.moveTo(0,-3); g.quadraticCurveTo(L*0.6,-4.4,L,-1); g.quadraticCurveTo(L+2.2,1.5,L-2,2.8); g.quadraticCurveTo(L*0.5,3.6,0,3); g.closePath();
+    g.fillStyle=dark?"#0c1636":"#17265a"; g.fill();
+    g.strokeStyle=dark?"rgba(0,0,0,.3)":"rgba(80,110,200,.35)"; g.lineWidth=0.6; g.beginPath(); g.moveTo(2,0); g.lineTo(L-4,0.4); g.stroke();
+    g.fillStyle=dark?"rgba(215,226,245,.85)":"#ffffff"; g.beginPath(); g.ellipse(L-3.6,0.7,3.6,2.1,0,0,7); g.fill();
+    g.restore();
+  }
+  for(let i=0;i<5;i++){
+    const x=len*0.06+i*len*0.1; g.save(); g.translate(x,3); g.rotate(0.22);
+    rr(-3.4,0,7.4,13,3.4,g); g.fillStyle=dark?"#163070":"#1f47a8"; g.fill();
+    g.fillStyle=dark?"rgba(215,226,245,.7)":"#fff"; g.fillRect(-3.4,10,7.4,2.6);
+    g.restore();
+  }
+  g.beginPath(); g.moveTo(0,-5); g.bezierCurveTo(len*0.25,-10.5,len*0.45,-9.5,len*0.63,-4); g.lineTo(len*0.6,5.5); g.bezierCurveTo(len*0.4,8.5,len*0.15,8.5,0,6.5); g.closePath();
+  g.fillStyle=dark?lg(g,0,-9,0,8,[[0,"#2d5bb8"],[1,"#163a85"]]):lg(g,0,-10,0,8,[[0,"#a6cbff"],[0.45,"#4f8ef0"],[1,"#2556c4"]]); g.fill();
+  g.strokeStyle=dark?"rgba(0,0,30,.3)":"rgba(20,50,130,.42)"; g.lineWidth=0.7;
+  for(let r=0;r<2;r++) for(let i=0;i<5;i++){ g.beginPath(); g.arc(len*0.08+i*len*0.1+r*3,-2+r*4,3,0.2,Math.PI-0.2); g.stroke(); }
+  if(!dark){ g.strokeStyle="rgba(255,255,255,.45)"; g.lineWidth=1.1; g.beginPath(); g.moveTo(2,-5); g.bezierCurveTo(len*0.25,-9.5,len*0.45,-8.5,len*0.6,-3.6); g.stroke(); }
+  g.restore();
+}
+function drawMagpie(g,x,y,s,face,pose,t,alpha,vy){
+  g.save(); g.translate(x,y); g.scale(face*s,s); if(alpha!=null) g.globalAlpha=alpha;
+  const walk=pose==="walk", bob=walk?-Math.abs(Math.sin(t*0.02))*2.2:(pose==="stand"?Math.sin(t*0.004)*0.6:0);
+  const fan=pose==="glide"?1:(pose==="jump"?0.5:0.1);
+  let tilt=0;
+  if(pose==="glide") tilt=-0.07; else if(pose==="jump") tilt=clamp((vy||0)/2600,-0.16,0.12);
+  g.translate(0,-18); g.rotate(tilt); g.translate(0,18);
+  const tailAng=pose==="glide"?-0.03:(pose==="jump"?0.16:0.34);
+  const flap=pose==="jump"?Math.sin(t*0.034):0;
+  /* 遠側翅膀 */
+  if(pose==="glide") drawWingOpen(g,3,-25,-2.62+Math.sin(t*0.005)*0.05,48,true);
+  else if(pose==="jump") drawWingOpen(g,3,-25,-2.05+flap*0.95,38,true);
+  drawTail(g,-12,-18+bob,tailAng,fan,t);
+  drawLegs(g,pose,walk,t,bob);
+  g.save(); g.translate(0,bob);
+  /* 身體 */
+  const body=() => { g.beginPath(); g.moveTo(17,-26); g.bezierCurveTo(21,-16,12,-9,2,-9); g.bezierCurveTo(-8,-9,-15,-12,-18,-17.5); g.bezierCurveTo(-14,-24.5,-4,-30.5,6,-31); g.bezierCurveTo(12,-31.5,16,-29.5,17,-26); g.closePath(); };
+  body(); g.fillStyle=lg(g,0,-32,0,-9,[[0,"#7fb0ff"],[0.3,"#3f7ae2"],[0.75,"#2152b8"],[1,"#163a8a"]]); g.fill();
+  g.save(); body(); g.clip();
+  g.fillStyle=lg(g,0,-18,0,-8,[[0,"rgba(175,200,240,0)"],[1,"rgba(175,200,240,.75)"]]); g.beginPath(); g.ellipse(3,-11,15,7,-0.05,0,7); g.fill();
+  g.strokeStyle="rgba(190,215,255,.28)"; g.lineWidth=0.8;
+  for(let r=0;r<3;r++) for(let i=0;i<5;i++){ g.beginPath(); g.arc(10-i*5-r*2,-27+r*4,2.6,0.25,Math.PI-0.25); g.stroke(); }
+  g.fillStyle="rgba(255,255,255,.18)"; g.beginPath(); g.ellipse(0,-27,10,2.6,-0.15,0,7); g.fill();
+  g.restore();
+  /* 黑色的頭、頸、胸 */
+  g.beginPath(); g.moveTo(3,-31.5); g.bezierCurveTo(4,-40.5,12,-44,17.5,-42); g.bezierCurveTo(23.5,-40,25.5,-35,24.5,-30.5);
+  g.bezierCurveTo(23.5,-24,21,-18.5,16,-14.5); g.bezierCurveTo(12,-18,8.5,-22.5,6,-26); g.bezierCurveTo(5,-28,3.5,-29.5,3,-31.5); g.closePath();
+  g.fillStyle=lg(g,8,-44,20,-14,[[0,"#1a2036"],[0.5,"#0b0f1c"],[1,"#05070e"]]); g.fill();
+  g.fillStyle=rg(g,13,-40,0,8,[[0,"rgba(110,140,230,.45)"],[1,"rgba(110,140,230,0)"]]); g.beginPath(); g.ellipse(13,-39,8,4,-0.3,0,7); g.fill();
+  /* 紅嘴 */
+  g.beginPath(); g.moveTo(21.5,-37); g.bezierCurveTo(27,-37.5,32,-35,34.5,-31.2); g.quadraticCurveTo(35.2,-29.4,33.6,-29.6); g.lineTo(23,-31.4); g.closePath();
+  g.fillStyle=lg(g,22,-37,34,-30,[[0,"#ff7a52"],[0.6,"#e8432a"],[1,"#c62e1a"]]); g.fill();
+  g.beginPath(); g.moveTo(23,-31.2); g.lineTo(32.5,-30.2); g.quadraticCurveTo(28,-28,23.2,-28.4); g.closePath(); g.fillStyle="#d73a24"; g.fill();
+  g.strokeStyle="rgba(255,220,200,.6)"; g.lineWidth=0.8; g.beginPath(); g.moveTo(23,-35.8); g.quadraticCurveTo(28,-35.6,31.5,-33); g.stroke();
+  g.fillStyle="rgba(90,15,5,.7)"; g.beginPath(); g.ellipse(25.2,-34.2,1.1,0.6,0.2,0,7); g.fill();
+  /* 黃眼睛（偶爾眨眼） */
+  const blink=(t+x*7)%4300<110;
+  if(blink){ g.strokeStyle="#0b0f1c"; g.lineWidth=1.4; g.beginPath(); g.moveTo(16,-36.4); g.lineTo(21,-36.4); g.stroke(); }
+  else {
+    g.fillStyle="#c78f00"; g.beginPath(); g.arc(18.6,-36.4,3.15,0,7); g.fill();
+    g.fillStyle=rg(g,18,-37,0,3,[[0,"#fff27a"],[1,"#ffc71f"]]); g.beginPath(); g.arc(18.6,-36.4,2.6,0,7); g.fill();
+    g.fillStyle="#111"; g.beginPath(); g.arc(19.1,-36.3,1.35,0,7); g.fill();
+    g.fillStyle="#fff"; g.beginPath(); g.arc(19.7,-37.1,0.6,0,7); g.fill();
+  }
+  /* 近側翅膀 */
+  if(pose==="glide") drawWingOpen(g,1,-24,-2.36+Math.sin(t*0.005)*0.06,56,false);
+  else if(pose==="jump") drawWingOpen(g,1,-24,-1.95+flap*1.05,42,false);
+  else drawWingFolded(g);
+  g.restore();
+  g.restore();
+}
+function poseOf(ground,glide,vx,vy){ return glide?"glide":(!ground?"jump":(Math.abs(vx)>20?"walk":"stand")); }
+
+/* ---------- 雛鳥與鳥巢 ---------- */
+function drawNestBowl(g,x,y,s){
+  g.save(); g.translate(x,y); g.scale(s,s);
+  g.fillStyle=lg(g,0,-12,0,6,[[0,"#a77a45"],[1,"#5e3d1c"]]);
+  g.beginPath(); g.moveTo(-28,-10); g.quadraticCurveTo(-26,8,0,8); g.quadraticCurveTo(26,8,28,-10); g.quadraticCurveTo(0,-4,-28,-10); g.fill();
+  g.strokeStyle="rgba(240,210,150,.7)"; g.lineWidth=1;
+  for(let i=0;i<14;i++){ const a=-26+i*4; g.beginPath(); g.moveTo(a,-8+Math.sin(i)*2); g.quadraticCurveTo(a+6,2,a+12,-6+Math.cos(i)*2); g.stroke(); }
+  g.restore();
+}
+function drawChick(g,x,y,s,mode,ph){
+  g.save(); g.translate(x,y); g.scale(s,s);
+  const bob=Math.sin((G.t+ (ph||0))*0.012)*1.5;
+  g.fillStyle=lg(g,0,-18,0,0,[[0,"#7f93b8"],[1,"#4c5f86"]]); g.beginPath(); g.ellipse(0,-6+bob,8,9,0,0,7); g.fill();
+  g.fillStyle="#3d4a66"; g.beginPath(); g.arc(0,-16+bob,6,0,7); g.fill();
+  if(mode==="open"){
+    g.fillStyle="#f0602a"; g.beginPath(); g.moveTo(3,-17+bob); g.lineTo(10,-23+bob); g.lineTo(11.5,-14.5+bob); g.closePath(); g.fill();
+    g.strokeStyle="#ffd23a"; g.lineWidth=2.2; g.lineCap="round";
+    g.beginPath(); g.moveTo(3,-18+bob); g.lineTo(10,-23+bob); g.moveTo(3,-15.5+bob); g.lineTo(11.5,-14.5+bob); g.stroke();
+  } else {
+    g.fillStyle="#ff9a3a"; g.beginPath(); g.moveTo(4,-18+bob); g.lineTo(10,-16+bob); g.lineTo(4,-14+bob); g.fill();
+    g.strokeStyle="#111"; g.lineWidth=1; g.beginPath(); g.arc(1,-17+bob,1.6,Math.PI*1.1,Math.PI*1.9); g.stroke();
+  }
+  if(mode==="open"){ g.fillStyle="#111"; g.beginPath(); g.arc(-1,-18+bob,1.2,0,7); g.fill(); }
+  g.restore();
+}
+
+/* ---------- 食物 ---------- */
+function drawFood(g,f,t){
+  const x=f.x, y=f.y+Math.sin(t*0.004+f.ph)*3;
+  g.save(); g.translate(x,y); g.scale(1.3,1.3);
+  glow(g,0,0,20,"255,250,200",0.45);
+  if(f.k==="i"){
+    g.strokeStyle="#2c4a1c"; g.lineWidth=1.3;
+    for(const s of [-1,1]) for(const k of [-4,0,4]){ g.beginPath(); g.moveTo(k,0); g.lineTo(k+s*1.5,s*8); g.stroke(); }
+    g.beginPath(); g.moveTo(8,-2); g.lineTo(13,-8); g.moveTo(8,1); g.lineTo(14,-3); g.stroke();
+    g.fillStyle=lg(g,0,-7,0,7,[[0,"#9be26a"],[1,"#3f8a2a"]]); ell(g,0,0,9,6); g.fill();
+    g.strokeStyle="rgba(20,60,10,.6)"; g.beginPath(); g.moveTo(-8,0); g.lineTo(6,0); g.stroke();
+    g.fillStyle="#26401a"; g.beginPath(); g.arc(8,-1,3,0,7); g.fill();
+  } else if(f.k==="m"){
+    g.strokeStyle="#9a8f95"; g.lineWidth=1.6; g.beginPath(); g.moveTo(-9,3); g.quadraticCurveTo(-16,4,-15,-4); g.stroke();
+    g.fillStyle=lg(g,0,-8,0,7,[[0,"#c9c3c9"],[1,"#7d767e"]]); ell(g,0,1,10,7); g.fill();
+    g.beginPath(); g.ellipse(8,-1,5.5,4.5,0.2,0,7); g.fill();
+    g.fillStyle="#f0b5c0"; g.beginPath(); g.arc(6,-6,3.2,0,7); g.fill();
+    g.fillStyle="#111"; g.beginPath(); g.arc(10,-2,1,0,7); g.fill();
+    g.fillStyle="#f08aa0"; g.beginPath(); g.arc(13.4,0,1.2,0,7); g.fill();
+  } else if(f.k==="l"){
+    g.strokeStyle="#5d6e2a"; g.lineWidth=1.6;
+    for(const [lx,s] of [[-5,1],[4,1],[-5,-1],[4,-1]]){ g.beginPath(); g.moveTo(lx,0); g.lineTo(lx+2,s*6); g.lineTo(lx+4,s*6); g.stroke(); }
+    g.fillStyle=lg(g,0,-4,0,4,[[0,"#b3c75a"],[1,"#6e7f2a"]]);
+    g.beginPath(); g.moveTo(14,0); g.quadraticCurveTo(10,-4,0,-3); g.quadraticCurveTo(-10,-3,-18,2); g.quadraticCurveTo(-10,1,0,3); g.quadraticCurveTo(10,4,14,0); g.fill();
+    g.fillStyle="#111"; g.beginPath(); g.arc(10,-1.4,0.9,0,7); g.fill();
+  } else if(f.k==="f"){
+    g.fillStyle=lg(g,0,-9,0,8,[[0,"#8fe07a"],[1,"#2f8a3a"]]);
+    g.beginPath(); g.ellipse(0,1,10,7,0,0,7); g.fill();
+    for(const s of [-1,1]){ g.beginPath(); g.ellipse(s*5,-6,3.6,3.6,0,0,7); g.fill(); g.fillStyle="#fff"; g.beginPath(); g.arc(s*5,-6.5,2.3,0,7); g.fill(); g.fillStyle="#111"; g.beginPath(); g.arc(s*5,-6.5,1.2,0,7); g.fill(); g.fillStyle="#5fbf5a"; }
+    g.strokeStyle="#1f5a26"; g.lineWidth=1; g.beginPath(); g.arc(0,1,4,0.2,Math.PI-0.2); g.stroke();
+    g.fillStyle="#3f9a46"; g.beginPath(); g.ellipse(-9,6,4,2,0.4,0,7); g.ellipse(9,6,4,2,-0.4,0,7); g.fill();
+  } else {
+    g.fillStyle="#3f8a2a"; g.beginPath(); g.ellipse(4,-9,6,2.6,-0.5,0,7); g.fill();
+    for(const [bx,by] of [[-4,0],[4,1],[0,-5],[0,5]]){
+      g.fillStyle=rg(g,bx-1.5,by-1.5,0,5,[[0,"#ff9a9a"],[0.5,"#d8263a"],[1,"#7a0c1a"]]); g.beginPath(); g.arc(bx,by,4.6,0,7); g.fill();
+    }
+  }
+  g.restore();
+}
+
+/* ---------- 垃圾、捕鳥網 ---------- */
+function drawCan(g,e,t){
+  g.save(); g.translate(e.x+e.w/2,e.y+e.h); g.rotate(Math.sin(t*0.012+e.ph)*0.12);
+  g.fillStyle=lg(g,-13,0,13,0,[[0,"#8a8f98"],[0.35,"#f2f4f7"],[0.6,"#b9bec7"],[1,"#5d626b"]]); rr(-12,-28,24,28,4,g); g.fill();
+  g.fillStyle=lg(g,-13,0,13,0,[[0,"#8f1d14"],[0.4,"#e8452f"],[1,"#7a170f"]]); g.fillRect(-12,-21,24,13);
+  g.fillStyle="#fff"; g.font=`700 9px ${FONT}`; g.textAlign="center"; g.textBaseline="middle"; g.fillText("汽水",0,-14.5);
+  g.fillStyle="#cfd3d9"; ell(g,0,-28,12,3); g.fill(); g.fillStyle="#8a8f98"; ell(g,2,-28.5,3.5,1.2); g.fill();
+  g.restore();
+}
+function drawBag(g,e,t){
+  const cx=e.x+e.w/2, cy=e.y+e.h/2, f=Math.sin(t*0.01+e.ph);
+  g.save(); g.translate(cx,cy); g.rotate(f*0.15);
+  g.fillStyle="rgba(250,250,255,.88)"; g.strokeStyle="rgba(140,150,170,.9)"; g.lineWidth=1.2;
+  g.beginPath(); g.moveTo(-13,-6); g.lineTo(-9,-15); g.lineTo(-5,-15); g.lineTo(-5,-8); g.lineTo(5,-8); g.lineTo(5,-15); g.lineTo(9,-15); g.lineTo(13,-6);
+  g.quadraticCurveTo(15+f*2,8,10,15); g.quadraticCurveTo(0,18+f*2,-10,15); g.quadraticCurveTo(-15-f*2,8,-13,-6); g.closePath(); g.fill(); g.stroke();
+  g.strokeStyle="rgba(160,170,190,.6)"; g.beginPath(); g.moveTo(-6,0); g.quadraticCurveTo(0,6,6,1); g.moveTo(-8,8); g.lineTo(-3,12); g.stroke();
+  g.restore();
+}
+function drawNet(g,n){
+  const x0=n.x, x1=n.x+n.w, y0=n.y, y1=n.y+n.h;
+  g.fillStyle=lg(g,0,0,4,0,[[0,"#5a4632"],[1,"#8a6c4c"]]); g.fillRect(x0-2,y0-6,4,y1-y0+6); g.fillRect(x1-2,y0-6,4,y1-y0+6);
+  g.save(); g.beginPath(); g.rect(x0,y0,n.w,n.h-6); g.clip();
+  g.strokeStyle="rgba(40,40,50,.6)"; g.lineWidth=1;
+  for(let k=-n.h;k<n.w+n.h;k+=7){ g.beginPath(); g.moveTo(x0+k,y0); g.lineTo(x0+k+n.h,y1); g.stroke(); g.beginPath(); g.moveTo(x0+k,y1); g.lineTo(x0+k+n.h,y0); g.stroke(); }
+  g.restore();
+  g.strokeStyle="#333"; g.lineWidth=1.5; g.beginPath(); g.moveTo(x0,y0); g.lineTo(x1,y0); g.stroke();
+  g.fillStyle="#e23b2a"; g.beginPath(); g.moveTo(x0+2,y0-6); g.lineTo(x0+14,y0-2); g.lineTo(x0+2,y0+2); g.fill();
+}
+
+/* ---------- 藍腹鷴、五色鳥 ---------- */
+function drawPheasant(g,n,t){
+  const dir=n.dir, step=Math.sin(t*0.012+n.x0)*3;
+  g.save(); g.translate(n.x,n.gy); g.scale(dir*1.25,1.25);
+  const fem=n.fem;
+  /* 尾巴 */
+  if(fem){ g.fillStyle=lg(g,-40,0,-10,0,[[0,"#5e3f22"],[1,"#8a6236"]]); g.beginPath(); g.moveTo(-10,-22); g.quadraticCurveTo(-30,-22,-40,-14); g.quadraticCurveTo(-28,-14,-10,-14); g.fill(); }
+  else {
+    g.fillStyle="#f6f8fb"; g.beginPath(); g.moveTo(-10,-24); g.quadraticCurveTo(-40,-34,-62,-18); g.quadraticCurveTo(-38,-22,-10,-16); g.fill();
+    g.strokeStyle="rgba(120,130,150,.6)"; g.lineWidth=0.8; g.beginPath(); g.moveTo(-12,-20); g.quadraticCurveTo(-38,-28,-60,-19); g.stroke();
+  }
+  /* 腳 */
+  g.strokeStyle="#c0392b"; g.lineWidth=2.2; g.lineCap="round";
+  g.beginPath(); g.moveTo(-2,-10); g.lineTo(-3+step,0); g.moveTo(5,-10); g.lineTo(5-step,0); g.stroke();
+  /* 身體 */
+  g.fillStyle=fem?lg(g,0,-32,0,-8,[[0,"#b08850"],[1,"#6e4a24"]]):lg(g,0,-32,0,-8,[[0,"#3b5cc8"],[0.5,"#1d2f78"],[1,"#0d1540"]]);
+  ell(g,0,-20,18,12,-0.08); g.fill();
+  if(fem){ g.strokeStyle="rgba(30,18,8,.65)"; g.lineWidth=1.4; for(let k=-12;k<=10;k+=4){ g.beginPath(); g.moveTo(k,-28); g.quadraticCurveTo(k+3,-20,k,-11); g.stroke(); } }
+  else { g.fillStyle="#c8283a"; g.beginPath(); g.ellipse(-4,-26,9,4,-0.2,0,7); g.fill();
+         g.fillStyle="rgba(120,200,255,.35)"; g.beginPath(); g.ellipse(2,-24,10,3,-0.3,0,7); g.fill(); }
+  /* 頭 */
+  g.fillStyle=fem?"#7a5530":"#152060"; g.beginPath(); g.arc(15,-32,6.5,0,7); g.fill();
+  g.fillStyle="#e2342a"; g.beginPath(); g.ellipse(17,-32,4,4.6,0,0,7); g.fill();
+  if(!fem){ g.fillStyle="#fff"; g.beginPath(); g.moveTo(10,-37); g.quadraticCurveTo(12,-46,18,-40); g.quadraticCurveTo(15,-38,10,-37); g.fill(); }
+  g.fillStyle="#111"; g.beginPath(); g.arc(18,-33,1.2,0,7); g.fill();
+  g.fillStyle="#e9e1c8"; g.beginPath(); g.moveTo(21,-32); g.lineTo(26,-30); g.lineTo(21,-29); g.fill();
+  g.restore();
+}
+function drawBarbet(g,n,t){
+  g.save(); g.translate(n.x+20,n.y+6); g.scale(1.5,1.5);
+  const peck=Math.max(0,Math.sin(t*0.006))*3;
+  g.fillStyle=lg(g,-8,0,8,0,[[0,"#2e8f3a"],[1,"#6ad25a"]]); ell(g,0,4,8,13,0.1); g.fill();
+  g.fillStyle="#2e7d32"; g.beginPath(); g.moveTo(-2,14); g.lineTo(-6,26); g.lineTo(3,16); g.fill();
+  g.fillStyle="#2f6fd0"; g.beginPath(); g.arc(-1-peck,-11,7,0,7); g.fill();
+  g.fillStyle="#ffd53d"; g.beginPath(); g.ellipse(-5-peck,-9,3.5,4,0,0,7); g.fill();
+  g.fillStyle="#111"; g.fillRect(-8-peck,-13,8,2);
+  g.fillStyle="#e2342a"; g.beginPath(); g.arc(-4-peck,-3,2.6,0,7); g.fill();
+  g.fillStyle="#111"; g.beginPath(); g.arc(-5-peck,-12,1.2,0,7); g.fill();
+  g.fillStyle="#333"; g.beginPath(); g.moveTo(-7-peck,-11); g.lineTo(-14-peck,-9); g.lineTo(-7-peck,-7.5); g.fill();
+  g.restore();
+}
+function bubble(g,x,y,text){
+  const max=11, lines=[]; for(let i=0;i<text.length;i+=max) lines.push(text.slice(i,i+max));
+  const fs=15*Math.min(UIS,1.5), lh=fs*1.3, w=Math.min(max,text.length)*fs+18, h=lines.length*lh+12;
+  let bx=clamp(x-w/2,G.cam+6,G.cam+W-w-6); const by=Math.max(6,y-h-14);
+  g.fillStyle="rgba(255,255,255,.96)"; g.strokeStyle="#2457b8"; g.lineWidth=2;
+  rr(bx,by,w,h,10,g); g.fill(); g.stroke();
+  g.beginPath(); g.moveTo(clamp(x,bx+12,bx+w-12)-7,by+h-1); g.lineTo(clamp(x,bx+12,bx+w-12),by+h+10); g.lineTo(clamp(x,bx+12,bx+w-12)+7,by+h-1); g.closePath(); g.fill();
+  g.fillStyle="#1d2a3a"; g.font=`700 ${fs}px ${FONT}`; g.textAlign="left"; g.textBaseline="top";
+  lines.forEach((l,i) => g.fillText(l,bx+9,by+6+i*lh));
+}
+
+/* ============================================================
+   十一、場景（每關的背景與地面樣式）
+   背景分成好幾層：天空、遠山、遠方樹林、近處大樹、前景（在角色前面），移動速度不同，產生景深。
+   ============================================================ */
+const THEMES = [
+  { sky:[[0,"#4f9fe6"],[0.5,"#a9d8f4"],[0.78,"#e3f3ea"],[1,"#f4f8e4"]], soil:["#7d5230","#3f2614"], top:"#5cb83f", edge:"#2c7a26", hi:"#b2ec7a", block:"log", flowers:["#ffffff","#ffe066","#ff9fc0"] },
+  { sky:[[0,"#5d8fd6"],[0.42,"#f0c3a2"],[0.7,"#fbe1c4"],[1,"#fff0dc"]], soil:["#86745f","#40362a"], top:"#7cbf4f", edge:"#3f7f2a", hi:"#cdf08e", block:"rock", flowers:["#ffd23a","#ffffff"] },
+  { sky:[[0,"#4a99e6"],[0.55,"#b9e0f8"],[1,"#eef7f2"]], soil:["#b48660","#5f412b"], top:"#68c048", edge:"#3a882b", hi:"#bdf080", block:"bench", pond:true, flowers:["#ff6b8a","#ffd23a","#ffffff","#b48cff"] },
+  { sky:[[0,"#244f45"],[0.45,"#6fae8c"],[0.8,"#bfe3c8"],[1,"#dff0dc"]], soil:["#4e3a26","#231910"], top:"#3d9444", edge:"#1d5523", hi:"#93d872", block:"moss", moss:true }
+];
+let scene=null;
+const LW=W*2;   // 背景每一層的寬度，左右接起來可以無限重複
+const SDPR = () => Math.min(DPR,1.5);   // 背景比較柔和，用低一點的解析度省記憶體
+function buildLayer(draw){
+  const c=document.createElement("canvas"); c.width=LW*SDPR(); c.height=H*SDPR();
+  const g=c.getContext("2d"); g.scale(SDPR(),SDPR()); draw(g); return c;
+}
+/* 靠近左右兩邊的東西也畫在另一邊，接縫才看不出來 */
+function wrap(x,m,fn){ fn(x); if(x<m) fn(x+LW); if(x>LW-m) fn(x-LW); }
+function ridge(g,base,amp,seed,top,bot,bumps,bumpCol){
+  const R=rngS(seed), p1=R()*6, p2=R()*6, p3=R()*6, f=(Math.PI*2)/LW, pts=[];
+  for(let x=0;x<=LW;x+=4){
+    const y=base-amp*(0.55+0.3*Math.sin(x*f*2+p1)+0.18*Math.sin(x*f*5+p2)+0.08*Math.sin(x*f*13+p3));
+    pts.push([x,y]);
+  }
+  const grad=lg(g,0,base-amp*1.1,0,base+60,[[0,top],[1,bot]]);
+  g.fillStyle=grad;
+  g.beginPath(); g.moveTo(0,H); for(const [x,y] of pts) g.lineTo(x,y+bumps*0.6); g.lineTo(LW,H); g.closePath(); g.fill();
+  /* 山脊上一棵棵樹的輪廓 */
+  if(bumps) for(let i=0;i<pts.length;i++){ const [x,y]=pts[i]; const r=bumps*(0.7+0.5*Math.abs(Math.sin(x*0.37+seed*1.7))); g.beginPath(); g.arc(x,y+r*0.6,r,Math.PI,0); g.fill(); }
+}
+function mistBand(g,y,h,a){ g.fillStyle=lg(g,0,y-h,0,y+h,[[0,"rgba(255,255,255,0)"],[0.5,`rgba(255,255,255,${a})`],[1,"rgba(255,255,255,0)"]]); g.fillRect(0,y-h,LW,h*2); }
+function seaOfClouds(g,y,a,seed){
+  const R=rngS(seed);
+  for(let i=0;i<120;i++){
+    const x=R()*LW, r=30+R()*50, yy=y+R()*30, al=a*(0.35+R()*0.4);
+    wrap(x,100,xx => { g.fillStyle=rg(g,xx,yy,0,r,[[0,`rgba(255,255,255,${al})`],[0.6,`rgba(255,255,255,${al*0.6})`],[1,"rgba(255,255,255,0)"]]); g.beginPath(); g.arc(xx,yy,r,0,7); g.fill(); });
+  }
+  g.fillStyle=lg(g,0,y,0,y+70,[[0,`rgba(255,255,255,${a*0.8})`],[1,"rgba(255,255,255,0)"]]); g.fillRect(0,y+10,LW,70);
+}
+/* 一棵闊葉樹：樹幹、分枝，加上一團一團有受光面和陰影面的樹冠 */
+function broadTree(g,x,gy,h,pal,R,opt){
+  opt=opt||{};
+  const tw=Math.max(5,h*0.07), cy=gy-h*0.62, cr=h*0.36;
+  g.fillStyle=lg(g,x-tw,0,x+tw,0,[[0,pal.trunk[1]],[0.35,pal.trunk[0]],[1,pal.trunk[1]]]);
+  g.beginPath(); g.moveTo(x-tw*1.5,gy); g.quadraticCurveTo(x-tw,gy-h*0.2,x-tw*0.7,cy); g.lineTo(x+tw*0.7,cy); g.quadraticCurveTo(x+tw,gy-h*0.2,x+tw*1.5,gy); g.closePath(); g.fill();
+  g.strokeStyle=pal.trunk[1]; g.lineCap="round";
+  for(const [dx,dy,lw] of [[-0.55,-0.95,0.45],[0.6,-0.85,0.4],[-0.15,-1.15,0.35]]){ g.lineWidth=tw*lw*2; g.beginPath(); g.moveTo(x,cy+h*0.12); g.quadraticCurveTo(x+dx*cr*0.4,cy,x+dx*cr*0.8,cy+dy*cr*0.5); g.stroke(); }
+  if(opt.moss){ g.fillStyle="rgba(120,180,80,.55)"; for(let k=0;k<6;k++){ g.beginPath(); g.ellipse(x-tw*0.6+R()*tw*1.2,gy-R()*h*0.35,tw*0.5,tw*0.25,0,0,7); g.fill(); } }
+  const n=opt.clumps||16, cl=[];
+  for(let i=0;i<n;i++){ const a=R()*Math.PI*2, d=Math.sqrt(R())*cr; cl.push([x+Math.cos(a)*d*1.25,cy+Math.sin(a)*d*0.8-cr*0.15,cr*(0.32+R()*0.22)]); }
+  cl.sort((a,b) => a[1]-b[1]);
+  for(const [cx,cyy,r] of cl){ g.fillStyle=pal.leaf[0]; g.beginPath(); g.arc(cx,cyy+r*0.12,r,0,7); g.fill(); }
+  for(const [cx,cyy,r] of cl){ g.fillStyle=pal.leaf[1]; g.beginPath(); g.arc(cx-r*0.12,cyy-r*0.05,r*0.82,0,7); g.fill(); }
+  for(const [cx,cyy,r] of cl){ g.fillStyle=pal.leaf[2]; g.beginPath(); g.arc(cx-r*0.32,cyy-r*0.3,r*0.48,0,7); g.fill(); }
+  if(!opt.flat) for(const [cx,cyy,r] of cl) for(let k=0;k<4;k++){ g.fillStyle=pal.leaf[3]; g.beginPath(); g.ellipse(cx-r*0.5+R()*r*0.6,cyy-r*0.55+R()*r*0.5,r*0.09,r*0.05,R()*3,0,7); g.fill(); }
+}
+function treeFern(g,x,gy,h,R){   /* 筆筒樹（臺灣山林常見的大型蕨類） */
+  g.strokeStyle="#4a3a26"; g.lineWidth=h*0.07; g.lineCap="round";
+  g.beginPath(); g.moveTo(x,gy); g.quadraticCurveTo(x+h*0.05,gy-h*0.5,x,gy-h); g.stroke();
+  g.strokeStyle="rgba(30,20,10,.5)"; g.lineWidth=1; for(let y=gy-6;y>gy-h;y-=7){ g.beginPath(); g.moveTo(x-h*0.03,y); g.lineTo(x+h*0.03,y-2); g.stroke(); }
+  for(let i=0;i<9;i++){
+    const a=-Math.PI/2+(i-4)*0.36, L=h*(0.55+R()*0.15);
+    g.save(); g.translate(x,gy-h); g.rotate(a);
+    g.strokeStyle="#3d7a34"; g.lineWidth=1.6; g.beginPath(); g.moveTo(0,0); g.quadraticCurveTo(L*0.5,-L*0.08,L,L*0.25); g.stroke();
+    for(let k=2;k<16;k++){ const u=k/16, px=L*u, py=L*0.25*u*u-L*0.08*u*(1-u)*2, s=(1-u)*L*0.14+2;
+      g.fillStyle=k%2?"#4f9a3e":"#5fae48"; g.beginPath(); g.ellipse(px,py-s*0.5,1.6,s,0.3,0,7); g.ellipse(px,py+s*0.5,1.6,s,-0.3,0,7); g.fill(); }
+    g.restore();
+  }
+}
+function fern(g,x,y,s,col,col2){
+  for(let i=0;i<5;i++){
+    const a=-Math.PI/2+(i-2)*0.42, L=s*(0.8+0.2*Math.cos(i));
+    g.save(); g.translate(x,y); g.rotate(a);
+    g.strokeStyle=col; g.lineWidth=1.3; g.beginPath(); g.moveTo(0,0); g.quadraticCurveTo(L*0.5,-L*0.1,L,L*0.2); g.stroke();
+    for(let k=1;k<10;k++){ const u=k/10, px=L*u, py=L*0.2*u*u-L*0.1*u*(1-u)*2, ls=(1-u)*s*0.18+1.5;
+      g.fillStyle=k%2?col:col2; g.beginPath(); g.ellipse(px,py-ls*0.45,1.3,ls,0.35,0,7); g.ellipse(px,py+ls*0.45,1.3,ls,-0.35,0,7); g.fill(); }
+    g.restore();
+  }
+}
+function bush(g,x,y,s,pal,R){
+  for(let k=0;k<7;k++){ const dx=(R()-0.5)*s*1.6, r=s*(0.35+R()*0.3); g.fillStyle=pal[0]; g.beginPath(); g.arc(x+dx,y-r*0.6,r,0,7); g.fill(); g.fillStyle=pal[1]; g.beginPath(); g.arc(x+dx-r*0.2,y-r*0.8,r*0.7,0,7); g.fill(); g.fillStyle=pal[2]; g.beginPath(); g.arc(x+dx-r*0.35,y-r,r*0.35,0,7); g.fill(); }
+}
+function sunRays(g,x,y,n,len,a,spread){
+  g.save(); g.globalCompositeOperation="lighter";
+  for(let i=0;i<n;i++){
+    const ang=Math.PI/2+(i-(n-1)/2)*spread, w=0.035+(i%3)*0.012;
+    g.fillStyle=lg(g,x,y,x+Math.cos(ang)*len,y+Math.sin(ang)*len,[[0,`rgba(255,250,215,${a})`],[1,"rgba(255,250,215,0)"]]);
+    g.beginPath(); g.moveTo(x,y); g.lineTo(x+Math.cos(ang-w)*len,y+Math.sin(ang-w)*len); g.lineTo(x+Math.cos(ang+w)*len,y+Math.sin(ang+w)*len); g.closePath(); g.fill();
+  }
+  g.restore();
+}
+function building(g,x,base,w,h,col,R){
+  g.fillStyle=lg(g,x,0,x+w,0,[[0,shade(col,.12)],[0.7,col],[1,shade(col,-.2)]]); g.fillRect(x,base-h,w,h+80);
+  g.fillStyle=shade(col,-.25); g.fillRect(x-2,base-h-4,w+4,5);
+  if(R()<0.4){ g.fillStyle=shade(col,-.15); g.fillRect(x+w*0.3,base-h-14,w*0.25,10); }
+  if(R()<0.25){ g.strokeStyle=shade(col,-.4); g.lineWidth=1.5; g.beginPath(); g.moveTo(x+w*0.7,base-h-4); g.lineTo(x+w*0.7,base-h-26); g.stroke(); }
+  for(let wy=base-h+8;wy<base-6;wy+=11) for(let wx=x+5;wx<x+w-6;wx+=9){
+    const lit=R(); g.fillStyle=lit<0.12?"rgba(255,236,170,.85)":(lit<0.75?"rgba(225,240,255,.6)":"rgba(80,100,130,.35)"); g.fillRect(wx,wy,5,6);
+  }
+}
+function pavilion(g,x,gy){   /* 公園裡的涼亭 */
+  g.fillStyle="#b23a2a"; for(const dx of [-34,-12,12,34]) g.fillRect(x+dx-2.5,gy-56,5,56);
+  g.fillStyle="#d9c9a4"; g.fillRect(x-44,gy-6,88,6);
+  g.fillStyle=lg(g,0,gy-90,0,gy-56,[[0,"#3f6f4f"],[1,"#1f4a33"]]);
+  g.beginPath(); g.moveTo(x-62,gy-56); g.quadraticCurveTo(x-40,gy-62,x-26,gy-84); g.lineTo(x+26,gy-84); g.quadraticCurveTo(x+40,gy-62,x+62,gy-56); g.quadraticCurveTo(x+66,gy-62,x+68,gy-66); g.quadraticCurveTo(x,gy-58,x-68,gy-66); g.quadraticCurveTo(x-66,gy-62,x-62,gy-56); g.fill();
+  g.fillStyle="#e0b24a"; g.beginPath(); g.arc(x,gy-90,5,0,7); g.fill(); g.fillRect(x-1.5,gy-90,3,8);
+}
+function lampPost(g,x,gy){
+  g.fillStyle="#2f3640"; g.fillRect(x-2,gy-118,4,118); g.fillRect(x-6,gy-6,12,6);
+  g.fillStyle=rg(g,x,gy-122,0,24,[[0,"rgba(255,246,200,.6)"],[1,"rgba(255,246,200,0)"]]); g.fillRect(x-24,gy-146,48,48);
+  g.fillStyle="#fff6c8"; g.beginPath(); g.arc(x,gy-122,7,0,7); g.fill(); g.fillStyle="#2f3640"; g.fillRect(x-8,gy-132,16,4);
+}
+function buildScene(i){
+  const T=THEMES[i];
+  const sky=document.createElement("canvas"); sky.width=W*DPR; sky.height=H*DPR;
+  const sg=sky.getContext("2d"); sg.scale(DPR,DPR);
+  sg.fillStyle=lg(sg,0,0,0,H,T.sky); sg.fillRect(0,0,W,H);
+  if(i===0){ glow(sg,790,92,260,"255,246,205"); sg.fillStyle=rg(sg,786,88,2,32,[[0,"#ffffff"],[1,"#fff2c0"]]); sg.beginPath(); sg.arc(790,92,30,0,7); sg.fill(); sunRays(sg,790,92,9,700,0.07,0.18); }
+  if(i===1){ glow(sg,190,232,330,"255,196,140"); sg.fillStyle=rg(sg,186,228,2,38,[[0,"#fffbe8"],[1,"#ffd59a"]]); sg.beginPath(); sg.arc(190,232,36,0,7); sg.fill(); sunRays(sg,190,232,11,800,0.06,0.17); }
+  if(i===2){ glow(sg,150,82,200,"255,250,222"); sg.fillStyle=rg(sg,146,78,2,28,[[0,"#ffffff"],[1,"#fff6d8"]]); sg.beginPath(); sg.arc(150,82,26,0,7); sg.fill(); }
+  if(i===3){ glow(sg,620,-40,420,"235,255,215",0.6); }
+  const far=buildLayer(g => {
+    const R=rngS(100+i);
+    if(i===0){
+      ridge(g,250,150,1,"#b3cde0","#9ab9cf",3,"#b3cde0"); mistBand(g,260,40,0.5);
+      ridge(g,320,120,2,"#8bb7a0","#73a38c",5,"#8bb7a0"); mistBand(g,330,30,0.45);
+      ridge(g,380,80,3,"#6fa274","#5a8e60",6,"#6fa274");
+    } else if(i===1){
+      ridge(g,230,190,4,"#bda9cf","#a796bd",2,"#bda9cf");
+      seaOfClouds(g,255,0.7,5);
+      ridge(g,300,150,6,"#9aa6c4","#7f8db0",3,"#9aa6c4");
+      seaOfClouds(g,320,0.75,7);
+      ridge(g,365,90,8,"#7c9a8e","#668576",5,"#7c9a8e");
+      /* 遠方的瀑布 */
+      for(const wx of [520,1460]){ g.fillStyle=lg(g,0,270,0,340,[[0,"rgba(255,255,255,.85)"],[1,"rgba(255,255,255,.2)"]]); g.fillRect(wx,272,7,70); g.fillStyle="rgba(255,255,255,.6)"; g.beginPath(); g.ellipse(wx+3.5,344,16,5,0,0,7); g.fill(); }
+    } else if(i===2){
+      ridge(g,290,90,9,"#bad2e4","#a5c3da",3,"#bad2e4");
+      mistBand(g,310,30,0.5);
+      const cols=["#8fa8c4","#9db3cc","#7f97b6","#a9bed4","#b7c4d4","#8ca0b8"];
+      for(let x=0;x<LW;){ const w=36+R()*46, h=90+R()*170; wrap(x,80,xx => building(g,xx,392,w,h,pick(cols),rngS(Math.floor(x)+3))); x+=w+4+R()*18; }
+      /* 一棟比較高的塔樓 */
+      for(const tx of [700,1650]){ g.fillStyle=lg(g,tx,0,tx+40,0,[[0,"#9ab4cc"],[1,"#7a94ae"]]); for(let k=0;k<7;k++){ const ww=40-k*3; g.fillRect(tx+20-ww/2,392-60-k*34,ww,36); } g.fillRect(tx+18,392-330,4,40); }
+      mistBand(g,380,26,0.35);
+    } else {
+      ridge(g,230,140,11,"#6d9e86","#5a8a72",5,"#6d9e86"); mistBand(g,250,40,0.4);
+      ridge(g,290,110,12,"#4e8466","#3f7055",7,"#4e8466"); mistBand(g,300,30,0.35);
+    }
+  });
+  const mid=buildLayer(g => {
+    const R=rngS(200+i);
+    if(i===0){
+      const pal={ trunk:["#6a5a4a","#3f3428"], leaf:["#4f8f5a","#64a56a","#86c07f","#9fd28f"] };
+      for(let x=10;x<LW;x+=70+R()*60){ const h=150+R()*90; wrap(x,120,xx => broadTree(g,xx,430,h,pal,rngS(Math.floor(x)),{ flat:true, clumps:12 })); }
+      mistBand(g,420,24,0.35);
+    } else if(i===1){
+      const pal={ trunk:["#6a5a4a","#3f3428"], leaf:["#5a8e5a","#6fa36a","#8dbb7e","#a5cf92"] };
+      ridge(g,430,70,21,"#7aa860","#5f8f4a",4,"#7aa860");
+      for(let x=30;x<LW;x+=110+R()*120){ const h=90+R()*60; wrap(x,90,xx => broadTree(g,xx,440-R()*30,h,pal,rngS(Math.floor(x)+5),{ flat:true, clumps:10 })); }
+      /* 竹叢 */
+      for(let x=80;x<LW;x+=260+R()*120) wrap(x,60,xx => { for(let k=0;k<7;k++){ const bx=xx+k*6-18, bh=120+((k*37)%40); g.strokeStyle=k%2?"#7fae54":"#6a9a44"; g.lineWidth=3; g.beginPath(); g.moveTo(bx,460); g.quadraticCurveTo(bx+6,460-bh*0.6,bx+14,460-bh); g.stroke();
+        g.fillStyle="#7fb85a"; for(let j=0;j<5;j++){ g.beginPath(); g.ellipse(bx+14-j*3,460-bh+j*18,12,3,-0.5+j*0.2,0,7); g.fill(); } } });
+    } else if(i===2){
+      const pal={ trunk:["#7a5a3a","#4a3420"], leaf:["#3f8a3a","#56a446","#78c25a","#9ad478"] };
+      for(let x=40;x<LW;x+=90+R()*70){ const h=130+R()*70; wrap(x,110,xx => broadTree(g,xx,452,h,pal,rngS(Math.floor(x)+9),{ clumps:13 })); }
+      for(const px of [380,1300]) pavilion(g,px,452);
+      for(let x=120;x<LW;x+=300) lampPost(g,x,452);
+    } else {
+      const pal={ trunk:["#4a3c2c","#241c12"], leaf:["#1f4f34","#2c6542","#3f7f52","#5a9a66"] };
+      for(let x=0;x<LW;x+=55+R()*45){ const h=200+R()*120; wrap(x,140,xx => broadTree(g,xx,452,h,pal,rngS(Math.floor(x)+13),{ clumps:14, moss:true })); }
+      for(let x=60;x<LW;x+=170+R()*90){ const h=130+R()*50; wrap(x,90,xx => treeFern(g,xx,452,h,rngS(Math.floor(x)+2))); }
+    }
+  });
+  /* 近景：在地面後面，比角色慢一點點移動的灌木和蕨類 */
+  const near=buildLayer(g => {
+    const R=rngS(300+i);
+    const bp=i===3?["#1f5a2c","#2f7a3a","#4f9a4a"]:(i===2?["#3a8a3a","#4fa64a","#7cc85e"]:["#3f8a34","#55a443","#7cc35a"]);
+    for(let x=0;x<LW;x+=40+R()*50) wrap(x,60,xx => bush(g,xx,470,26+R()*22,bp,rngS(Math.floor(x)+1)));
+    if(i!==2) for(let x=20;x<LW;x+=60+R()*70) wrap(x,50,xx => fern(g,xx,468,34+R()*24,i===3?"#2f6a34":"#3f8a34",i===3?"#3f8a40":"#5aa646"));
+    if(i===2) for(let x=30;x<LW;x+=90+R()*80){ wrap(x,40,xx => { for(let k=0;k<9;k++){ g.fillStyle=pick(T.flowers); g.beginPath(); g.arc(xx+(k%5)*7,456-Math.floor(k/5)*7+((k*13)%5),3,0,7); g.fill(); } }); }
+  });
+  /* 前景：畫在所有東西前面（上方垂下的樹葉、下方的草），只佔畫面邊緣 */
+  const fg=buildLayer(g => {
+    const R=rngS(400+i);
+    if(i===0 || i===3){
+      const leafC=i===3?["#14402a","#1f5a36","#2f7346"]:["#2f7a2f","#3f9a3a","#5ab84a"];
+      for(let x=0;x<LW;x+=150+R()*220){
+        wrap(x,120,xx => {
+          const n=6+Math.floor(R()*6);
+          for(let k=0;k<n;k++){ const lx=xx+(R()-0.5)*120, ly=R()*44-6, s=10+R()*16; g.save(); g.translate(lx,ly); g.rotate(R()*Math.PI*2); g.fillStyle=leafC[k%3]; g.beginPath(); g.ellipse(0,0,s,s*0.45,0,0,7); g.fill(); g.strokeStyle="rgba(0,0,0,.2)"; g.lineWidth=1; g.beginPath(); g.moveTo(-s,0); g.lineTo(s,0); g.stroke(); g.restore(); }
+          if(R()<0.6){ g.strokeStyle=i===3?"#2f5a30":"#4f7a3a"; g.lineWidth=2; const vl=40+R()*70; g.beginPath(); g.moveTo(xx,0); g.quadraticCurveTo(xx+10,vl*0.5,xx-4,vl); g.stroke();
+            for(let y=10;y<vl;y+=9){ g.fillStyle=leafC[(y/9|0)%3]; g.beginPath(); g.ellipse(xx+3+Math.sin(y)*4,y,5,2.5,0.6,0,7); g.fill(); } }
+        });
+      }
+    }
+    const grass=i===3?["#123d22","#1d5530"]:(i===1?["#3f6f2a","#55883a"]:["#2f6f2a","#3f8a34"]);
+    for(let x=0;x<LW;x+=90+R()*140){
+      wrap(x,60,xx => { for(let k=0;k<14;k++){ const bx=xx+k*3-20, bh=18+R()*26; g.strokeStyle=grass[k%2]; g.lineWidth=2.2; g.lineCap="round"; g.beginPath(); g.moveTo(bx,H+4); g.quadraticCurveTo(bx+2,H-bh*0.5,bx+(R()-0.3)*14,H-bh); g.stroke(); }
+        if(i!==1 && R()<0.5) fern(g,xx+10,H+6,40,grass[0],grass[1]); });
+    }
+  });
+  return { sky, far, mid, near, fg };
+}
+/* 地面方塊：每種做三個樣式輪流用，看起來比較不重複 */
+let tileCache=null;
+function buildTiles(i){
+  const T=THEMES[i], mk=(h,draw) => { const c=document.createElement("canvas"); c.width=TS*DPR; c.height=h*DPR; const g=c.getContext("2d"); g.scale(DPR,DPR); draw(g); return c; };
+  const soil=(g,v) => {
+    g.fillStyle=lg(g,0,0,0,TS,[[0,T.soil[0]],[1,T.soil[1]]]); g.fillRect(0,0,TS,TS);
+    const R=rngS(9+i*7+v*31);
+    g.strokeStyle="rgba(0,0,0,.12)"; g.lineWidth=2; for(let y=10;y<TS;y+=13){ g.beginPath(); g.moveTo(0,y+R()*3); g.bezierCurveTo(TS*0.3,y+R()*5-2,TS*0.7,y+R()*5-2,TS,y+R()*3); g.stroke(); }
+    for(let k=0;k<6;k++){ const x=R()*TS, y=R()*TS, s=1.5+R()*3;
+      g.fillStyle="rgba(0,0,0,.22)"; g.beginPath(); g.ellipse(x+0.6,y+1.2,s*1.3,s,0.3,0,7); g.fill();
+      g.fillStyle=lg(g,0,y-s,0,y+s,[[0,"rgba(255,255,255,.35)"],[1,"rgba(120,110,100,.2)"]]); g.beginPath(); g.ellipse(x,y,s*1.2,s*0.9,0.3,0,7); g.fill(); }
+    if(T.block==="log" || T.block==="moss"){ g.strokeStyle="rgba(60,35,15,.5)"; g.lineWidth=1.4; g.beginPath(); const rx=R()*TS; g.moveTo(rx,0); g.quadraticCurveTo(rx+6,TS*0.4,rx-4,TS*0.8); g.stroke(); }
+  };
+  const fills=[0,1,2].map(v => mk(TS,g => soil(g,v)));
+  const tops=[0,1,2].map(v => mk(TS+12,g => {
+    g.translate(0,12); soil(g,v);
+    const R=rngS(3+i*5+v*17);
+    g.fillStyle=lg(g,0,0,0,16,[[0,T.top],[0.7,T.edge],[1,"rgba(0,0,0,0)"]]); g.fillRect(0,0,TS,16);
+    g.fillStyle=T.top; g.beginPath(); g.moveTo(0,10); for(let x=0;x<=TS;x+=5) g.lineTo(x,8+R()*5); g.lineTo(TS,0); g.lineTo(0,0); g.fill();
+    g.fillStyle=T.hi; g.fillRect(0,0,TS,2.2);
+    for(let x=0;x<TS;x+=2.2){ const h=4+R()*9; g.strokeStyle=R()<0.5?T.top:(R()<0.5?T.hi:T.edge); g.lineWidth=1.3; g.beginPath(); g.moveTo(x,3); g.quadraticCurveTo(x+(R()-0.5)*2,-h*0.5,x+(R()-0.5)*5,-h); g.stroke(); }
+    if(T.moss){ for(let k=0;k<5;k++){ g.fillStyle="rgba(150,220,110,.6)"; g.beginPath(); g.ellipse(R()*TS,4+R()*6,4,1.6,0,0,7); g.fill(); } }
+    if(T.flowers && R()<0.75){ const fx=4+R()*(TS-8); g.strokeStyle="#3f8a2f"; g.lineWidth=1; g.beginPath(); g.moveTo(fx,2); g.lineTo(fx,-8); g.stroke();
+      const fc=T.flowers[Math.floor(R()*T.flowers.length)]; g.fillStyle=fc; for(let p=0;p<5;p++){ const a=p*1.257; g.beginPath(); g.arc(fx+Math.cos(a)*2.2,-9+Math.sin(a)*2.2,1.7,0,7); g.fill(); } g.fillStyle="#f2a900"; g.beginPath(); g.arc(fx,-9,1.1,0,7); g.fill(); }
+  }));
+  const block=mk(TS,g => {
+    if(T.block==="log" || T.block==="moss"){
+      g.fillStyle=lg(g,0,0,0,TS,[[0,"#b98048"],[0.5,"#8f5e32"],[1,"#5e3a1c"]]); rr(1,2,TS-2,TS-3,7,g); g.fill();
+      g.strokeStyle="rgba(50,25,8,.45)"; g.lineWidth=1.2; for(let y=9;y<TS;y+=8){ g.beginPath(); g.moveTo(5,y); g.quadraticCurveTo(TS/2,y+2.5,TS-5,y); g.stroke(); }
+      g.fillStyle="#c99a62"; g.beginPath(); g.ellipse(TS-7,TS/2,5,TS/2-4,0,0,7); g.fill();
+      g.strokeStyle="#8a5e32"; g.lineWidth=1; for(const r of [1.5,3,4.3]){ g.beginPath(); g.ellipse(TS-7,TS/2,r,r*3.5,0,0,7); g.stroke(); }
+      if(T.block==="moss"){ g.fillStyle="#4f9a3a"; g.beginPath(); g.moveTo(1,9); for(let x=0;x<=TS;x+=5) g.lineTo(x,5+Math.sin(x*1.7)*3); g.lineTo(TS,2); g.lineTo(1,2); g.fill(); g.fillStyle="#7cc35a"; g.fillRect(4,2,TS-10,2); }
+    } else if(T.block==="rock"){
+      g.fillStyle=lg(g,0,0,0,TS,[[0,"#c4bdb1"],[0.6,"#8f877b"],[1,"#5e574d"]]); rr(1,1,TS-2,TS-2,10,g); g.fill();
+      g.strokeStyle="rgba(40,35,30,.45)"; g.lineWidth=1.3; g.beginPath(); g.moveTo(8,14); g.lineTo(20,22); g.lineTo(18,34); g.moveTo(30,8); g.lineTo(34,20); g.lineTo(40,24); g.stroke();
+      g.fillStyle="rgba(255,255,255,.3)"; g.beginPath(); g.ellipse(14,9,10,3,-0.2,0,7); g.fill();
+      g.fillStyle="rgba(110,170,80,.7)"; g.beginPath(); g.ellipse(32,4,9,3,0,0,7); g.fill();
+    } else {
+      g.fillStyle="#3f3f46"; g.fillRect(5,22,4,23); g.fillRect(TS-9,22,4,23);
+      for(let k=0;k<3;k++){ g.fillStyle=lg(g,0,3+k*7,0,9+k*7,[[0,"#e2a466"],[1,"#9a6436"]]); rr(0,3+k*7,TS,6,2,g); g.fill(); g.fillStyle="rgba(255,255,255,.25)"; g.fillRect(2,3+k*7,TS-4,1); }
+      g.fillStyle=lg(g,0,25,0,30,[[0,"#d99a5c"],[1,"#8a5a30"]]); rr(0,25,TS,5,2,g); g.fill();
+    }
+  });
+  const hole=used => mk(TS,g => {
+    g.fillStyle=lg(g,0,0,TS,0,[[0,"#5e3a1c"],[0.45,"#a9743f"],[0.7,"#8f5e32"],[1,"#4e3016"]]); rr(1,1,TS-2,TS-2,7,g); g.fill();
+    g.strokeStyle="rgba(40,20,5,.5)"; g.lineWidth=1.2; for(let x=5;x<TS;x+=6){ g.beginPath(); g.moveTo(x,2); g.bezierCurveTo(x+2,TS*0.3,x-2,TS*0.7,x+1,TS-2); g.stroke(); }
+    g.fillStyle="rgba(120,180,80,.75)"; g.beginPath(); g.ellipse(9,4,8,3,0,0,7); g.fill(); g.beginPath(); g.ellipse(TS-8,TS-5,7,2.6,0,0,7); g.fill();
+    g.fillStyle="#6b4422"; g.beginPath(); g.ellipse(TS/2,TS/2+1,14,17,0,0,7); g.fill();
+    g.fillStyle=rg(g,TS/2,TS/2+4,2,15,used?[[0,"#2a1a0e"],[1,"#4a2e16"]]:[[0,"#070302"],[1,"#2a160a"]]); g.beginPath(); g.ellipse(TS/2,TS/2+1,11.5,14.5,0,0,7); g.fill();
+    g.strokeStyle="#d9a35c"; g.lineWidth=1.6; g.beginPath(); g.ellipse(TS/2,TS/2+1,12,15,0,Math.PI*1.1,Math.PI*1.9); g.stroke();
+    if(!used){ g.shadowColor="rgba(255,210,80,.9)"; g.shadowBlur=8; g.fillStyle="#ffd53d"; g.font=`700 22px ${FONT}`; g.textAlign="center"; g.textBaseline="middle"; g.fillText("？",TS/2+1,TS/2+2); g.shadowBlur=0; }
+  });
+  tileCache={ fills, tops, block, hole:hole(false), used:hole(true) };
+}
+function drawBranch(g,x,y,len,t){
+  g.fillStyle="rgba(0,0,0,.18)"; rr(x-2,y+9,len+4,5,3,g); g.fill();
+  g.fillStyle=lg(g,0,y,0,y+12,[[0,"#b98048"],[0.45,"#7a5028"],[1,"#4a2c12"]]);
+  g.beginPath(); g.moveTo(x-6,y+4); g.quadraticCurveTo(x+len*0.5,y-1,x+len+6,y+3); g.lineTo(x+len+4,y+11); g.quadraticCurveTo(x+len*0.5,y+13,x-6,y+12); g.closePath(); g.fill();
+  g.strokeStyle="rgba(40,20,5,.35)"; g.lineWidth=1; for(let k=0;k<3;k++){ g.beginPath(); g.moveTo(x,y+5+k*2.5); g.quadraticCurveTo(x+len*0.5,y+2+k*2.5,x+len,y+5+k*2.5); g.stroke(); }
+  g.fillStyle="rgba(255,230,190,.25)"; g.fillRect(x,y+3,len,1.5);
+  const R=rngS(Math.floor(x));
+  g.fillStyle="#6b4422"; g.beginPath(); g.ellipse(x+len*(0.3+R()*0.4),y+7,2.5,2,0,0,7); g.fill();
+  const cols=["#3f8a2f","#5aa646","#78c25a","#9ad478"];
+  for(let k=0;k<len/12;k++){
+    const lx=x+R()*len, sw=Math.sin(t*0.0022+lx*0.05)*0.18, up=R()<0.75;
+    for(let j=0;j<3;j++){
+      g.save(); g.translate(lx+j*4-4,y+(up?3:11)); g.rotate((up?-1:1)*(0.6+R()*0.9)*(j-1)+(up?0:Math.PI)+sw);
+      g.fillStyle=cols[Math.floor(R()*3)]; g.beginPath(); g.ellipse(0,-7,3.6,7.5,0,0,7); g.fill();
+      g.fillStyle=cols[3]; g.beginPath(); g.ellipse(-1,-8,1.2,4.5,0,0,7); g.fill();
+      g.restore();
+    }
+  }
+}
+function drawTree(g,x,gy,top,w){
+  g.fillStyle=lg(g,x-w/2,0,x+w/2,0,[[0,"#3e2610"],[0.35,"#8a5e34"],[0.6,"#6b4422"],[1,"#2e1a08"]]);
+  g.beginPath(); g.moveTo(x-w/2-10,gy); g.quadraticCurveTo(x-w/2,gy-14,x-w/2,gy-40); g.lineTo(x-w/2+3,top); g.lineTo(x+w/2-3,top); g.lineTo(x+w/2,gy-40); g.quadraticCurveTo(x+w/2,gy-14,x+w/2+10,gy); g.closePath(); g.fill();
+  g.strokeStyle="rgba(25,12,3,.4)"; g.lineWidth=1.3; for(let k=-w/2+4;k<w/2;k+=5){ g.beginPath(); g.moveTo(x+k,gy-4); g.bezierCurveTo(x+k+2,gy-(gy-top)*0.4,x+k-2,gy-(gy-top)*0.7,x+k+1,top+10); g.stroke(); }
+  g.fillStyle="rgba(120,180,80,.5)"; for(let k=0;k<5;k++){ g.beginPath(); g.ellipse(x-w/2+4+((k*7)%(w-8)),gy-20-k*37,5,3,0,0,7); g.fill(); }
+}
+/* 會動的環境小東西：光點、蝴蝶、螢火蟲 */
+function spawnAmbient(){
+  G.amb=[];
+  const n=G.lv===3?26:(G.lv===1?10:16);
+  for(let k=0;k<n;k++) G.amb.push({ k:"mote", x:Math.random()*W, y:60+Math.random()*360, ph:Math.random()*6, sp:0.4+Math.random()*0.8, glow:G.lv===3&&k%2===0 });
+  if(G.lv===0 || G.lv===2) for(let k=0;k<4;k++) G.amb.push({ k:"fly", x:Math.random()*W, y:200+Math.random()*180, ph:Math.random()*6, vx:(Math.random()<0.5?-1:1)*(18+Math.random()*20), col:pick(["#ffd23a","#ff9fc0","#ffffff","#7bdff2"]) });
+}
+function drawAmbient(t,cam){
+  ctx.save();
+  for(const a of G.amb){
+    if(a.k==="mote"){
+      const x=((a.x-cam*0.85)%W+W)%W+Math.sin(t*0.0007*a.sp+a.ph)*20, y=a.y+Math.sin(t*0.001*a.sp+a.ph*2)*14;
+      const al=0.35+0.35*Math.sin(t*0.002*a.sp+a.ph);
+      ctx.globalCompositeOperation="lighter";
+      ctx.fillStyle=rg(ctx,x,y,0,a.glow?9:5,[[0,a.glow?`rgba(220,255,140,${al})`:`rgba(255,250,215,${al})`],[1,"rgba(255,250,215,0)"]]);
+      ctx.beginPath(); ctx.arc(x,y,a.glow?9:5,0,7); ctx.fill();
+    } else {
+      a.x+=a.vx*0.016; if(a.x<-40) a.x=W+40; if(a.x>W+40) a.x=-40;
+      const x=((a.x-cam*0.9)%(W+80)+W+80)%(W+80)-40, y=a.y+Math.sin(t*0.002+a.ph)*30, f=Math.abs(Math.sin(t*0.025+a.ph));
+      ctx.globalCompositeOperation="source-over";
+      ctx.fillStyle=a.col; ctx.strokeStyle="rgba(40,30,20,.6)"; ctx.lineWidth=0.8;
+      for(const s of [-1,1]){ ctx.beginPath(); ctx.ellipse(x+s*4*f,y-2,4*f+0.6,5,s*0.4,0,7); ctx.fill(); ctx.stroke(); }
+      ctx.fillStyle="#3a2a1a"; ctx.fillRect(x-0.8,y-5,1.6,8);
+    }
+  }
+  ctx.restore();
+}
+/* ============================================================
+   十二、畫面
+   ============================================================ */
+function render(){
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  const cw=canvas.clientWidth||W; UIS=clamp(640/cw,1,2.1);
+  const t=G.t, cam=Math.round(G.cam);
+  if(!scene || !G.map){ ctx.fillStyle="#bfe3f7"; ctx.fillRect(0,0,W,H); return; }
+  ctx.drawImage(scene.sky,0,0,W,H);
+  if(G.lv!==3){ cloud(ctx,((-cam*0.05+t*0.006)%(W+300)+W+300)%(W+300)-150,80,0.8,0.9); cloud(ctx,((-cam*0.08+500+t*0.004)%(W+300)+W+300)%(W+300)-150,140,0.55,0.8); }
+  const par=(L,f) => { const off=((cam*f)%LW+LW)%LW; ctx.drawImage(L,-off,0,LW,H); ctx.drawImage(L,LW-off,0,LW,H); };
+  par(scene.far,0.12); par(scene.mid,0.35); par(scene.near,0.65);
+  drawAmbient(t,cam);
+  ctx.save(); ctx.translate(-cam,0);
+  const c0=Math.max(0,Math.floor(cam/TS)-1), c1=Math.min(G.cols-1,Math.ceil((cam+W)/TS)+1);
+  /* 五色鳥的樹、鳥巢的樹、提示牌、休息站 */
+  for(const n of G.npcs) if(n.k==="Y" && n.x>cam-80 && n.x<cam+W+80) drawTree(ctx,n.x,H-2*TS,n.y-60,32);
+  if(G.nest && G.nest.x>cam-200 && G.nest.x<cam+W+200){
+    const n=G.nest; drawTree(ctx,n.x+20,n.gy,60,44);
+    [[0,40,70,"#3f8a3a"],[-60,70,50,"#4f9f40"],[70,60,55,"#4a9a3c"],[20,0,50,"#5aa646"]].forEach(([dx,dy,r,c]) => { ctx.fillStyle=c; ctx.beginPath(); ctx.arc(n.x+20+dx,dy+30,r,0,7); ctx.fill(); });
+    const by=n.gy-6*TS; drawBranch(ctx,n.x-90,by,110,t);
+    for(let k=0;k<3;k++) drawChick(ctx,n.x-62+k*14,by-4,1,"open",k*50);
+    drawNestBowl(ctx,n.x-48,by+2,1.2);
+    ctx.fillStyle="#fff"; ctx.font=`700 ${Math.round(16*Math.min(UIS,1.5))}px ${FONT}`; ctx.textAlign="center"; ctx.lineWidth=4; ctx.strokeStyle="rgba(20,40,20,.7)";
+    ctx.strokeText(LEVELS[G.lv].nest,n.x-48,by-40); ctx.fillText(LEVELS[G.lv].nest,n.x-48,by-40);
+  }
+  for(const s of G.signs){
+    if(s.x<cam-60 || s.x>cam+W+60) continue;
+    ctx.fillStyle="#6b4a2a"; ctx.fillRect(s.x-3,s.gy-44,6,44);
+    ctx.fillStyle=lg(ctx,0,s.gy-80,0,s.gy-40,[[0,"#d8a868"],[1,"#a87a40"]]); rr(s.x-46,s.gy-82,92,40,6); ctx.fill();
+    ctx.strokeStyle="#5a3a1a"; ctx.lineWidth=2; ctx.stroke();
+    ctx.fillStyle="#3a2410"; ctx.font=`700 13px ${FONT}`; ctx.textAlign="center"; ctx.textBaseline="middle"; ctx.fillText("按住跳躍鍵",s.x,s.gy-70); ctx.fillText("就能滑翔 →",s.x,s.gy-53);
+  }
+  for(const c of G.checks){
+    if(c.x<cam-60 || c.x>cam+W+60) continue;
+    const gx=c.x+TS/2, gy=(c.row+1)*TS;
+    ctx.fillStyle="#6b4a2a"; ctx.fillRect(gx-2,gy-70,4,70);
+    const up=c.on?1:0.3, fy=gy-70+(1-up)*40;
+    ctx.fillStyle=c.on?"#2457b8":"#b8c0cc"; ctx.beginPath(); ctx.moveTo(gx+2,fy); ctx.lineTo(gx+30+Math.sin(t*0.006)*3,fy+8); ctx.lineTo(gx+2,fy+16); ctx.fill();
+    ctx.fillStyle="#fff"; ctx.font=`700 9px ${FONT}`; ctx.textAlign="center"; ctx.textBaseline="middle"; ctx.fillText("休息",gx+13,fy+8);
+  }
+  /* 池塘 */
+  if(THEMES[G.lv].pond){
+    for(let x=c0;x<=c1;x++) if(!solid(x,ROWS-1)){
+      ctx.fillStyle=lg(ctx,0,H-58,0,H,[[0,"#7fc4e6"],[1,"#2f7fb0"]]); ctx.fillRect(x*TS,H-56,TS,56);
+      ctx.strokeStyle="rgba(255,255,255,.7)"; ctx.lineWidth=1.5; ctx.beginPath(); ctx.moveTo(x*TS+6+Math.sin(t*0.003+x)*4,H-46); ctx.lineTo(x*TS+20+Math.sin(t*0.003+x)*4,H-46); ctx.stroke();
+    }
+  }
+  /* 地面 */
+  for(let y=0;y<ROWS;y++) for(let x=c0;x<=c1;x++){
+    const c=G.map[y][x], px=x*TS, py=y*TS;
+    if(c==="#"){
+      const v=(x*7+y*3)%3, open=!solid(x,y-1);
+      if(open) ctx.drawImage(tileCache.tops[v],px,py-12,TS,TS+12); else ctx.drawImage(tileCache.fills[v],px,py,TS,TS);
+      const oy=open?8:0;
+      if(!solid(x-1,y)){ ctx.fillStyle=lg(ctx,px,0,px+12,0,[[0,"rgba(0,0,0,.38)"],[1,"rgba(0,0,0,0)"]]); ctx.fillRect(px,py+oy,12,TS-oy); }
+      if(!solid(x+1,y)){ ctx.fillStyle=lg(ctx,px+TS,0,px+TS-12,0,[[0,"rgba(0,0,0,.38)"],[1,"rgba(0,0,0,0)"]]); ctx.fillRect(px+TS-12,py+oy,12,TS-oy); }
+    }
+    else if(c==="W") ctx.drawImage(tileCache.block,px,py,TS,TS);
+    else if(c==="?" || c==="U"){ const b=G.bumps[x+","+y]||0; ctx.drawImage(c==="?"?tileCache.hole:tileCache.used,px,py-Math.sin(b*Math.PI)*9,TS,TS);
+      if(c==="?"){ ctx.save(); ctx.globalCompositeOperation="lighter"; glow(ctx,px+TS/2,py+TS/2,30,"255,220,120",0.18+0.12*Math.sin(t*0.005)); ctx.restore(); } }
+  }
+  for(let y=0;y<ROWS;y++){ let s=-1; for(let x=c0;x<=c1+1;x++){ const on=x<=c1 && G.map[y][x]==="="; if(on && s<0) s=x; if(!on && s>=0){ drawBranch(ctx,s*TS,y*TS,(x-s)*TS,t); s=-1; } } }
+  for(const f of G.foods) if(f.x>cam-30 && f.x<cam+W+30) drawFood(ctx,f,t);
+  for(const n of G.nets) if(n.x>cam-60 && n.x<cam+W+60) drawNet(ctx,n);
+  for(const n of G.npcs){ if(n.x<cam-90 || n.x>cam+W+90) continue; if(n.k==="H") drawPheasant(ctx,n,t); else drawBarbet(ctx,n,t); }
+  for(const e of G.foes) if(e.x>cam-60 && e.x<cam+W+60){ if(e.k==="can") drawCan(ctx,e,t); else drawBag(ctx,e,t); }
+  /* 哥哥姊姊排成一列，跟在後面飛 */
+  for(let i=G.helpers-1;i>=0;i--){ const h=G.hpos[i]; if(h) drawMagpie(ctx,h.x,h.y+Math.sin(t*0.006+i*1.3)*3,0.66,h.f,"glide",t+i*200,0.95); }
+  for(const f of G.flyaway) drawMagpie(ctx,f.x,f.y,0.66,f.vx>0?1:-1,"jump",t,Math.min(1,f.life/400));
+  /* 主角和地上的影子 */
+  if(G.mode!=="menu"){
+    const sy=groundBelow(P.x+P.w/2,P.y+P.h);
+    if(sy!=null){ const d=sy-(P.y+P.h), a=clamp(0.32-d/700,0,0.32), r=20*clamp(1-d/600,0.45,1); ctx.fillStyle=`rgba(10,20,10,${a})`; ctx.beginPath(); ctx.ellipse(P.x+P.w/2-4*P.face,sy+1,r,r*0.24,0,0,7); ctx.fill(); }
+    if(!(P.inv>0 && Math.floor(t/90)%2===0)) drawMagpie(ctx,P.x+P.w/2,P.y+P.h,1.12,P.face,poseOf(P.ground,P.glide,P.vx,P.vy),t,null,P.vy);
+  }
+  /* 特效 */
+  for(const f of G.fx){
+    const p=1-f.life/f.max;
+    if(f.k==="spark"){ ctx.globalAlpha=1-p; ctx.fillStyle=f.col; ctx.beginPath(); ctx.arc(f.x,f.y,2.2*(1-p)+0.6,0,7); ctx.fill(); }
+    else if(f.k==="dust"){ ctx.globalAlpha=(1-p)*0.5; ctx.fillStyle="#efe4cc"; for(const s of [-1,1]){ ctx.beginPath(); ctx.arc(f.x+s*(6+p*16),f.y-3-p*4,4+p*4,0,7); ctx.fill(); } }
+    else if(f.k==="feather" || f.k==="leaf"){
+      ctx.globalAlpha=Math.min(1,(1-p)*3); ctx.save(); ctx.translate(f.x,f.y); ctx.rotate(f.rot);
+      ctx.fillStyle=f.k==="leaf"?f.col:"#3f78e0"; ctx.beginPath(); ctx.ellipse(0,0,f.k==="leaf"?6:7,f.k==="leaf"?3:2.2,0,0,7); ctx.fill();
+      if(f.k==="feather"){ ctx.fillStyle="#fff"; ctx.beginPath(); ctx.ellipse(-6,0,2,1.8,0,0,7); ctx.fill(); }
+      ctx.restore();
+    } else if(f.k==="pop"){ ctx.globalAlpha=1-p; drawMagpie(ctx,f.x,f.y-p*50,0.66,1,"jump",t); }
+  }
+  ctx.globalAlpha=1;
+  for(const b of G.bubbles){ const n=b.who; ctx.globalAlpha=Math.min(1,b.life/300); bubble(ctx,n.x,n.k==="H"?n.gy-50:n.y-26,b.text); }
+  ctx.globalAlpha=1;
+  for(const tx of G.texts){
+    ctx.globalAlpha=Math.min(1,tx.life/300);
+    ctx.font=`700 ${Math.round(tx.size*Math.min(UIS,1.6))}px ${FONT}`; ctx.textAlign="center"; ctx.textBaseline="middle"; ctx.lineJoin="round";
+    ctx.lineWidth=5; ctx.strokeStyle="#16305e"; ctx.strokeText(tx.text,tx.x,tx.y); ctx.fillStyle=tx.col; ctx.fillText(tx.text,tx.x,tx.y);
+  }
+  ctx.globalAlpha=1;
+  ctx.restore();
+  par(scene.fg,1.15);
+  drawHUD(t);
+}
+function drawHUD(t){
+  const s=Math.min(UIS,1.7);
+  ctx.save(); ctx.scale(s,s);
+  const w=W/s;
+  ctx.fillStyle="rgba(15,35,70,.55)"; rr(8,8,272,40,12); ctx.fill();
+  ctx.font=`700 17px ${FONT}`; ctx.textBaseline="middle"; ctx.textAlign="left";
+  for(let i=0;i<G.lives;i++){ const x=22+i*18, y=28; ctx.fillStyle="#ff5a6e"; ctx.beginPath(); ctx.moveTo(x,y+6); ctx.bezierCurveTo(x-10,y-2,x-6,y-10,x,y-4); ctx.bezierCurveTo(x+6,y-10,x+10,y-2,x,y+6); ctx.fill(); }
+  const hx=30+Math.max(G.lives,1)*18;
+  drawMagpie(ctx,hx+36,42,0.5,1,"stand",0);
+  ctx.fillStyle="#fff"; ctx.textAlign="left"; ctx.fillText("幫手 "+G.helpers+"/4",hx+52,28);
+  /* 滑翔力 */
+  const bx=w-178, by=14;
+  ctx.fillStyle="rgba(15,35,70,.55)"; rr(bx-6,by-6,176,34,12); ctx.fill();
+  ctx.fillStyle="#fff"; ctx.fillText("滑翔",bx+2,by+11);
+  ctx.fillStyle="rgba(255,255,255,.25)"; rr(bx+44,by+4,116,14,7); ctx.fill();
+  ctx.fillStyle=P.stam>0.3?lg(ctx,bx+44,0,bx+160,0,[[0,"#7bdff2"],[1,"#4d86e6"]]):"#ff9a6a"; rr(bx+44,by+4,Math.max(0.001,116*P.stam),14,7); ctx.fill();
+  ctx.font=`700 15px ${FONT}`; ctx.fillStyle="#fff"; ctx.textAlign="center";
+  ctx.lineWidth=4; ctx.strokeStyle="rgba(15,35,70,.6)";
+  const label="第"+"一二三四"[G.lv]+"關　"+LEVELS[G.lv].name;
+  ctx.strokeText(label,w/2,26); ctx.fillText(label,w/2,26);
+  /* 進度條 */
+  if(G.nest){ const k=clamp(P.x/(G.nest.x),0,1); ctx.fillStyle="rgba(15,35,70,.4)"; rr(w/2-90,40,180,6,3); ctx.fill(); ctx.fillStyle="#ffd53d"; rr(w/2-90,40,180*k,6,3); ctx.fill(); }
+  ctx.restore();
+}
+let last=performance.now();
+function frame(now){
+  const dt=Math.min(60,now-last); last=now; G.t+=dt;
+  if(G.mode==="play" && (G.phase==="play" || G.phase==="nestfly") && $("modal").hidden) update(dt);
+  if(G.mode!=="menu"){ updateFx(dt); render(); }
+  audioTick(dt);
+  if(G.mode==="play" && G.phase==="play" && performance.now()>G.msgUntil) setQ("",TOUCH?"往右飛，把食物帶回巢裡！":"往右飛，把食物帶回巢裡！撞「？」樹洞答題，哥哥姊姊會來幫忙。");
+  requestAnimationFrame(frame);
+}
+
+/* ============================================================
+   十三、流程
+   ============================================================ */
+function who(){ return { school:$("f-school").value.trim(), cls:$("f-class").value.trim(), name:$("f-name").value.trim() }; }
+function startGame(){
+  initAudio();
+  Object.assign(G,{ mode:"play", phase:"intro", score:0, hi:Number(lsGet(LS.hi+diffKey,"0"))||0, playMs:0, why:"", msgUntil:0,
+    recId:Date.now().toString(36)+Math.random().toString(36).slice(2,8),
+    lives:D.lives, helpers:0, maxHelpers:0, foodAll:0, trash:0, fed:0, lost:0, cleared:0 });
+  QUIZ.right=0; QUIZ.wrong=0; QUIZ.wrongList=[]; QUIZ.deck=[]; QUIZ.open=null;
+  $("setup").hidden=true; $("arena").hidden=false; $("btn-quit").hidden=false; $("btn-pause").hidden=false; setSync("","");
+  $("keys").textContent=TOUCH?"◀ ▶ 移動；按住「跳」不放就會滑翔":"← → 移動　空白鍵跳（按住滑翔）　P 暫停";
+  updateBar();
+  try{ $("arena").scrollIntoView({ block:"start" }); }catch(_){}
+  levelIntro(urlLv);
+}
+function finish(why){
+  if(G.mode==="over") return;
+  G.why=why; G.mode="over"; G.phase="done"; QUIZ.open=null; ambStop();
+  if(why==="all") addScore(PTS.all);
+  $("btn-quit").hidden=true; $("btn-pause").hidden=true;
+  const rec=buildRecord(), newHi=G.score>0 && G.score>=G.hi;
+  const title=why==="all"?"四關全過，回家囉！":(why==="fail"?"藍鵲累了，先休息一下":"遊戲結束");
+  const note=why==="all"?"你把〈臺灣藍鵲〉的課文都讀熟了！加 "+Math.round(PTS.all*D.mult)+" 分。":(why==="fail"?"多撞幾個樹洞答對題目，哥哥姊姊就會來保護你。再試一次！":"");
+  const wl=QUIZ.wrongList.length?('<details><summary>要再練習的題目（'+QUIZ.wrongList.length+'）</summary><div class="body"><ul class="wronglist">'+
+    QUIZ.wrongList.map(s => '<li>'+esc(s)+'</li>').join("")+'</ul></div></details>'):"";
+  setQ(why==="all"?"ok":"",title);
+  sfx(why==="all"?"stage":"lose");
+  showModal('<h2>'+title+'</h2>'+(note?'<p>'+note+'</p>':'')+
+    '<div class="row" style="margin-top:0"><span class="big">'+G.score+'</span><span>分'+(newHi?"　新的最高分！":"")+'</span></div>'+
+    '<table><tr><td>難易度</td><td class="n">'+D.label+'（分數 ×'+D.mult+'）</td></tr>'+
+    '<tr><td>答對題數</td><td class="n">'+rec.right+' / '+rec.total+(rec.total?'　'+rec.acc+'%':'')+'</td></tr>'+
+    '<tr><td>過了幾關</td><td class="n">'+G.cleared+' / '+LEVELS.length+'</td></tr>'+
+    '<tr><td>帶回的食物</td><td class="n">'+G.foodAll+' 份</td></tr>'+
+    '<tr><td>撿起的垃圾</td><td class="n">'+G.trash+' 個</td></tr>'+
+    '<tr><td>餵飽的雛鳥</td><td class="n">'+G.fed+' 隻</td></tr></table>'+wl+
+    '<div class="row"><button class="go" id="btn-again" type="button">再玩一次</button><button class="plain" id="btn-title" type="button">回到開頭</button></div>');
+  $("btn-again").addEventListener("click",() => { hideModal(); startGame(); });
+  $("btn-title").addEventListener("click",() => { hideModal(); toMenu(); });
+  $("btn-again").focus({ preventScroll:true });
+  submit(rec);
+}
+function toMenu(){
+  G.mode="menu"; QUIZ.open=null; ambStop();
+  $("arena").hidden=true; $("setup").hidden=false; $("btn-quit").hidden=true; $("btn-pause").hidden=true;
+  drawHero();
+}
+$("btn-quit").addEventListener("click",() => { if(G.mode==="play"){ hideModal(); finish("quit"); } });
+
+/* ============================================================
+   十四、音效與讀音
+   全部用程式即時合成，不需要另外下載聲音檔：
+   ‧ 環境音：風聲（會一陣一陣吹）、樹葉沙沙聲、公園的遠方車聲和池塘水聲
+   ‧ 鳥叫：每一關不同的鳥（小鳥顫音、口哨聲、白頭翁、藍鵲、大冠鷲、五色鳥、斑鳩、麻雀……），從左右不同方向傳來
+   ‧ 動作音效：腳步、拍翅、滑翔的風、落地、吃東西（連續吃音會越來越高）、撿罐子、撿塑膠袋、撞樹洞……
+   ============================================================ */
+let actx=null, master=null, sfxBus=null, ambBus=null, verbS=null, verbA=null, noiseBuf=null, brownBuf=null, glideG=null;
+function initAudio(){
+  if(!actx){
+    try{ actx=new (window.AudioContext||window.webkitAudioContext)(); }catch(_){ actx=null; return; }
+    const comp=actx.createDynamicsCompressor(); comp.threshold.value=-16; comp.ratio.value=3.5; comp.connect(actx.destination);
+    master=actx.createGain(); master.gain.value=0.85; master.connect(comp);
+    sfxBus=actx.createGain(); sfxBus.gain.value=$("o-sfx").checked?1:0; sfxBus.connect(master);
+    ambBus=actx.createGain(); ambBus.gain.value=$("o-amb").checked?0.8:0; ambBus.connect(master);
+    /* 樹林裡的回音 */
+    const len=Math.floor(actx.sampleRate*1.6), ir=actx.createBuffer(2,len,actx.sampleRate);
+    for(let ch=0;ch<2;ch++){ const d=ir.getChannelData(ch); for(let i=0;i<len;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.6); }
+    const mkVerb=bus => { const v=actx.createConvolver(); v.buffer=ir; const vg=actx.createGain(); vg.gain.value=0.35; v.connect(vg); vg.connect(bus); return v; };
+    verbS=mkVerb(sfxBus); verbA=mkVerb(ambBus);
+    const n=actx.sampleRate*2;
+    noiseBuf=actx.createBuffer(1,n,actx.sampleRate); brownBuf=actx.createBuffer(1,n,actx.sampleRate);
+    const d=noiseBuf.getChannelData(0), b=brownBuf.getChannelData(0); let last=0;
+    for(let i=0;i<n;i++){ d[i]=Math.random()*2-1; last=(last+0.02*d[i])/1.02; b[i]=last*3.5; }
+    /* 滑翔時一直有的風聲，用音量控制大小 */
+    const src=loopSrc(noiseBuf), f=actx.createBiquadFilter(); f.type="bandpass"; f.frequency.value=700; f.Q.value=0.6;
+    glideG=actx.createGain(); glideG.gain.value=0; src.connect(f); f.connect(glideG); glideG.connect(sfxBus); src.start();
+  }
+  if(actx.state==="suspended") actx.resume();
+}
+function loopSrc(buf){ const s=actx.createBufferSource(); s.buffer=buf; s.loop=true; s.loopStart=Math.random(); return s; }
+function out(bus,pan,wet){
+  const g=actx.createGain(); let node=g;
+  if(pan && actx.createStereoPanner){ const p=actx.createStereoPanner(); p.pan.value=clamp(pan,-1,1); g.connect(p); node=p; }
+  node.connect(bus||sfxBus);
+  if(wet){ const w=actx.createGain(); w.gain.value=wet; node.connect(w); w.connect(bus===ambBus?verbA:verbS); }
+  return g;
+}
+function tone(f1,f2,dur,type,vol,delay,o){
+  o=o||{};
+  const t=actx.currentTime+(delay||0), osc=actx.createOscillator(), g=actx.createGain();
+  osc.type=type; osc.frequency.setValueAtTime(f1,t); osc.frequency.exponentialRampToValueAtTime(Math.max(20,f2),t+dur);
+  if(o.vib){ const l=actx.createOscillator(), lg2=actx.createGain(); l.frequency.value=o.vib; lg2.gain.value=o.vibAmt||f1*0.03; l.connect(lg2); lg2.connect(osc.frequency); l.start(t); l.stop(t+dur+0.05); }
+  g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(vol,t+(o.atk||0.008)); g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+  osc.connect(g); g.connect(out(o.bus,o.pan,o.wet)); osc.start(t); osc.stop(t+dur+0.05);
+}
+function noise(vol,dur,freq,delay,type,o){
+  o=o||{};
+  const t=actx.currentTime+(delay||0), s=actx.createBufferSource(), f=actx.createBiquadFilter(), g=actx.createGain();
+  s.buffer=o.brown?brownBuf:noiseBuf; f.type=type||"bandpass"; f.frequency.setValueAtTime(freq,t); f.Q.value=o.q||1;
+  if(o.to) f.frequency.exponentialRampToValueAtTime(o.to,t+dur);
+  g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(vol,t+(o.atk||0.01)); g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+  s.connect(f); f.connect(g); g.connect(out(o.bus,o.pan,o.wet)); s.start(t,Math.random()*1.5); s.stop(t+dur+0.05);
+}
+
+/* ---------- 鳥叫 ---------- */
+const BIRD = {
+  trill(d,p,v){ const n=8+Math.floor(Math.random()*7), f0=3400+Math.random()*900, dir=Math.random()<0.5?-1:1;
+    for(let i=0;i<n;i++){ const f=f0+dir*i*60; tone(f,f*0.82,0.05,"sine",v*0.8,d+i*0.062,{ pan:p, wet:0.4, bus:ambBus }); } },
+  whistle(d,p,v){ const a=2100+Math.random()*500;
+    tone(a,a*1.28,0.2,"sine",v,d,{ pan:p, wet:0.45, bus:ambBus }); tone(a*0.92,a*0.92,0.1,"sine",v*0.8,d+0.26,{ pan:p, wet:0.45, bus:ambBus });
+    tone(a*1.2,a*0.85,0.28,"sine",v,d+0.42,{ pan:p, wet:0.45, bus:ambBus, vib:30, vibAmt:60 }); },
+  bulbul(d,p,v){ [2300,2700,2000,2900].forEach((f,i) => tone(f,f*(i%2?0.9:1.12),0.11,"sine",v,d+i*0.13,{ pan:p, wet:0.35, bus:ambBus, vib:40, vibAmt:80 })); },
+  magpie(d,p,v,near){ const n=4+Math.floor(Math.random()*3);
+    for(let i=0;i<n;i++){ const t0=d+i*0.15; tone(820,640,0.09,"sawtooth",v*0.45,t0,{ pan:p, wet:near?0.15:0.5, bus:near?sfxBus:ambBus }); noise(v*0.5,0.09,1500,t0,"bandpass",{ q:3, pan:p, wet:near?0.15:0.5, bus:near?sfxBus:ambBus }); } },
+  eagle(d,p,v){ tone(1600,2150,0.55,"sine",v,d,{ pan:p, wet:0.8, bus:ambBus, vib:7, vibAmt:40 }); tone(2100,1450,0.75,"sine",v,d+0.65,{ pan:p, wet:0.8, bus:ambBus, vib:7, vibAmt:50 }); },
+  barbet(d,p,v){ const n=7+Math.floor(Math.random()*6);
+    for(let i=0;i<n;i++){ const t0=d+i*0.33; tone(560,470,0.09,"triangle",v*1.2,t0,{ pan:p, wet:0.6, bus:ambBus }); tone(1120,940,0.05,"sine",v*0.3,t0,{ pan:p, wet:0.6, bus:ambBus }); } },
+  dove(d,p,v){ for(const t0 of [0,0.75]){ tone(380,460,0.18,"sine",v*1.3,d+t0,{ pan:p, wet:0.5, bus:ambBus }); tone(460,330,0.38,"sine",v*1.3,d+t0+0.2,{ pan:p, wet:0.5, bus:ambBus }); } },
+  sparrow(d,p,v){ const n=2+Math.floor(Math.random()*4); for(let i=0;i<n;i++) tone(3600,4600,0.06,"sine",v,d+i*0.14+Math.random()*0.04,{ pan:p, wet:0.25, bus:ambBus }); },
+  pheasant(d,p,v){ for(let i=0;i<3;i++) tone(330,260,0.12,"triangle",v*1.2,d+i*0.22,{ pan:p, wet:0.4, bus:ambBus }); },
+  chicks(d,p,v){ for(let i=0;i<6;i++){ const f=4200+Math.random()*1200; tone(f,f*1.25,0.07,"sine",v,d+i*0.11+Math.random()*0.03,{ pan:p, wet:0.2 }); } }
+};
+const LV_BIRDS = [
+  ["trill","whistle","bulbul","magpie","trill","sparrow"],
+  ["whistle","eagle","magpie","trill","eagle"],
+  ["sparrow","bulbul","dove","sparrow","bulbul","trill"],
+  ["barbet","trill","whistle","barbet","magpie","pheasant"]
+];
+function birdCall(kind,pan,vol,near){ if(!actx) return; (BIRD[kind]||BIRD.trill)(0,pan==null?(Math.random()*1.6-0.8):pan,vol||0.05,near); }
+
+/* ---------- 環境音 ---------- */
+const AMB={ nodes:[], timers:[], lv:-1, on:false };
+function ambStart(lv){
+  ambStop(); if(!actx) return;
+  AMB.lv=lv; AMB.on=true;
+  const t=actx.currentTime;
+  /* 風：低沉的雜訊，一陣一陣 */
+  const w=loopSrc(brownBuf), wf=actx.createBiquadFilter(); wf.type="lowpass"; wf.frequency.value=lv===1?650:420;
+  const wg=actx.createGain(); wg.gain.setValueAtTime(0.0001,t); w.connect(wf); wf.connect(wg); wg.connect(ambBus); w.start();
+  /* 樹葉沙沙 */
+  const l=loopSrc(noiseBuf), lf=actx.createBiquadFilter(); lf.type="bandpass"; lf.frequency.value=lv===2?2600:3800; lf.Q.value=0.5;
+  const lgn=actx.createGain(); lgn.gain.setValueAtTime(0.0001,t); l.connect(lf); lf.connect(lgn); lgn.connect(ambBus); l.start();
+  AMB.nodes.push(w,l);
+  if(lv===2){
+    /* 公園：遠方的車聲、池塘的水聲 */
+    const c=loopSrc(brownBuf), cf=actx.createBiquadFilter(); cf.type="lowpass"; cf.frequency.value=180;
+    const cg=actx.createGain(); cg.gain.value=0.05; c.connect(cf); cf.connect(cg); cg.connect(ambBus); c.start();
+    const p=loopSrc(noiseBuf), pf=actx.createBiquadFilter(); pf.type="bandpass"; pf.frequency.value=1100; pf.Q.value=2;
+    const pg=actx.createGain(); pg.gain.value=0.012; p.connect(pf); pf.connect(pg); pg.connect(ambBus); p.start();
+    AMB.nodes.push(c,p); AMB.pond=pg;
+  }
+  const base=lv===1?0.2:(lv===3?0.1:0.13);
+  const gust=() => {
+    if(!AMB.on) return;
+    const now=actx.currentTime, k=Math.random(), lvl=base*(0.35+k*1.1);
+    wg.gain.setTargetAtTime(lvl,now,0.9+Math.random()*1.2);
+    wf.frequency.setTargetAtTime((lv===1?500:320)+k*500,now,1.2);
+    lgn.gain.setTargetAtTime(0.004+k*k*(lv===3?0.025:0.035),now,0.6);
+    AMB.timers.push(setTimeout(gust,1600+Math.random()*3000));
+  };
+  const birds=() => {
+    if(!AMB.on) return;
+    if(G.phase==="play" || G.phase==="quiz" || G.phase==="nestfly"){
+      const list=LV_BIRDS[lv], kind=pick(list);
+      birdCall(kind,Math.random()*1.8-0.9,0.025+Math.random()*0.035);
+    }
+    AMB.timers.push(setTimeout(birds,1400+Math.random()*3800));
+  };
+  gust(); AMB.timers.push(setTimeout(birds,700));
+}
+function ambStop(){
+  AMB.on=false; AMB.timers.forEach(clearTimeout); AMB.timers=[];
+  for(const n of AMB.nodes){ try{ n.stop(); }catch(_){} }
+  AMB.nodes=[];
+}
+function setBus(bus,on,v){ if(actx && bus) bus.gain.setTargetAtTime(on?v:0,actx.currentTime,0.08); }
+/* 滑翔、腳步：每一格畫面呼叫一次 */
+let stepAcc=0, flapAcc=0, foodCombo=0, foodT=0;
+function audioTick(dt){
+  if(!actx) return;
+  const gl=G.mode==="play" && G.phase==="play" && P.glide;
+  glideG.gain.setTargetAtTime(gl?0.07:0,actx.currentTime,gl?0.12:0.06);
+  if(G.mode==="play" && G.phase==="play" && !P.ground && !P.glide && P.vy<0){ flapAcc+=dt; if(flapAcc>170){ flapAcc=0; sfx("flap"); } } else flapAcc=120;
+  if(G.mode==="play" && G.phase==="play" && P.ground && Math.abs(P.vx)>60){
+    stepAcc+=dt;
+    if(stepAcc>200){ stepAcc=0; sfx(G.lv===2?"stepPath":"step"); }
+  } else stepAcc=150;
+}
+function sfx(n){
+  if(!actx) return;
+  const p=G.map?clamp((P.x+P.w/2-G.cam)/W*1.6-0.8,-0.8,0.8):0;
+  switch(n){
+    case "jump":  noise(0.12,0.12,700,0,"bandpass",{ q:0.8, pan:p, to:1400 }); noise(0.09,0.1,800,0.11,"bandpass",{ q:0.8, pan:p, to:1500 }); tone(520,760,0.08,"sine",0.025,0,{ pan:p }); break;
+    case "flap":  noise(0.1,0.1,650,0,"bandpass",{ q:0.8, pan:p, to:1300 }); break;
+    case "land":  noise(0.12,0.08,300,0,"lowpass",{ brown:true, pan:p }); noise(0.05,0.06,2500,0,"highpass",{ pan:p }); break;
+    case "step":  noise(0.03,0.045,3200+Math.random()*1500,0,"bandpass",{ q:1.5, pan:p }); break;
+    case "stepPath": noise(0.035,0.035,1800+Math.random()*600,0,"bandpass",{ q:3, pan:p }); break;
+    case "glide": noise(0.05,0.5,500,0,"bandpass",{ q:0.6, pan:p, to:900, atk:0.15 }); break;
+    case "food": {
+      const now=performance.now(); foodCombo=now-foodT<1300?Math.min(foodCombo+1,7):0; foodT=now;
+      const f=[784,880,988,1047,1175,1319,1480,1568][foodCombo];
+      tone(f,f,0.07,"triangle",0.07,0,{ pan:p }); tone(f*1.5,f*1.5,0.16,"sine",0.05,0.06,{ pan:p, wet:0.3 }); noise(0.04,0.05,3000,0,"highpass",{ pan:p });
+      break; }
+    case "can":   [1240,1870,2630,3410].forEach((f,i) => tone(f,f*0.995,0.45-i*0.08,"sine",0.06-i*0.01,0,{ pan:p, wet:0.25 })); noise(0.1,0.08,1800,0,"bandpass",{ q:2, pan:p }); tone(500,1200,0.12,"sine",0.05,0.18,{ pan:p }); break;
+    case "bag":   for(let i=0;i<7;i++) noise(0.07,0.04,3500+Math.random()*3000,i*0.035+Math.random()*0.02,"bandpass",{ q:2, pan:p }); tone(500,1200,0.12,"sine",0.05,0.25,{ pan:p }); break;
+    case "bump":  tone(190,140,0.12,"triangle",0.14,0,{ pan:p }); noise(0.12,0.08,900,0,"bandpass",{ q:2, pan:p }); [1047,1319,1568,2093].forEach((f,i) => tone(f,f,0.18,"sine",0.04,0.08+i*0.06,{ pan:p, wet:0.5 })); break;
+    case "knock": tone(170,130,0.09,"triangle",0.1,0,{ pan:p }); noise(0.06,0.05,800,0,"bandpass",{ q:2, pan:p }); break;
+    case "hurt":  BIRD.magpie(0,p,0.09,true); noise(0.12,0.3,900,0,"bandpass",{ q:0.7, pan:p, to:300 }); break;
+    case "lose":  [523,440,349,262].forEach((f,i) => tone(f,f*0.97,0.22,"triangle",0.07,i*0.16,{ wet:0.3 })); noise(0.1,0.5,600,0,"bandpass",{ to:200 }); break;
+    case "check": [1047,1319,1568].forEach((f,i) => tone(f,f,0.5,"sine",0.05,i*0.09,{ wet:0.5 })); BIRD.whistle(0.3,p,0.04); break;
+    case "right": [784,988,1175,1568].forEach((f,i) => tone(f,f,0.22,"triangle",0.06,i*0.07,{ wet:0.35 })); break;
+    case "wrong": tone(330,247,0.32,"triangle",0.07); tone(262,196,0.4,"sine",0.05,0.12); break;
+    case "helper": BIRD.magpie(0.05,p-0.3,0.08,true); noise(0.1,0.3,600,0,"bandpass",{ q:0.7, to:1400, pan:p-0.3 }); break;
+    case "chirp": BIRD.chicks(0,0.2,0.035); break;
+    case "barbet": BIRD.barbet(0,p,0.07); break;
+    case "pheasant": BIRD.pheasant(0,p,0.06); break;
+    case "line":  [523,659,784,1047,1319,1568].forEach((f,i) => tone(f,f,0.2,"triangle",0.05,i*0.08,{ wet:0.4 })); BIRD.magpie(0.5,-0.4,0.07,true); BIRD.magpie(0.7,0.4,0.07,true); break;
+    case "stage": [523,659,784,1047,1319,1568,2093].forEach((f,i) => tone(f,f,0.24,"triangle",0.05,i*0.09,{ wet:0.4 })); BIRD.chicks(0.7,0,0.04); BIRD.trill(1.1,-0.5,0.04); break;
+  }
+}
+let zhVoice=null;
+function pickVoice(){
+  try{
+    const vs=speechSynthesis.getVoices();
+    zhVoice=vs.find(v => /zh[-_]TW/i.test(v.lang)) || vs.find(v => /zh[-_](HK|Hant)/i.test(v.lang)) || vs.find(v => /^zh/i.test(v.lang)) || null;
+  }catch(_){}
+}
+if("speechSynthesis" in window){ pickVoice(); try{ speechSynthesis.onvoiceschanged=pickVoice; }catch(_){} }
+function say(text){
+  if(!$("o-say").checked || !("speechSynthesis" in window) || /^[\x00-\x7F]+$/.test(text)) return;
+  try{ speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(text); u.lang="zh-TW"; if(zhVoice) u.voice=zhVoice; u.rate=0.85; speechSynthesis.speak(u); }catch(_){}
+}
+
+/* ============================================================
+   十五、開頭設定
+   ============================================================ */
+function drawHero(){
+  const cv=$("hero"), g=cv.getContext("2d");
+  g.setTransform(2,0,0,2,0,0); g.clearRect(0,0,240,150);
+  g.fillStyle=lg(g,0,0,0,150,[[0,"#8fc8f0"],[1,"#e9f6ee"]]); g.fillRect(0,0,240,150);
+  mountainRidgeSmall(g);
+  g.fillStyle="#7a5028"; rr(10,96,170,9,4,g); g.fill();
+  drawMagpie(g,165,96,1.35,1,"stand",G.t);
+  drawMagpie(g,78,46,0.72,1,"glide",G.t+300);
+}
+function mountainRidgeSmall(g){ g.fillStyle="#9cc4a0"; g.beginPath(); g.moveTo(0,150); for(let x=0;x<=240;x+=6) g.lineTo(x,110-Math.abs(Math.sin(x*0.02))*30); g.lineTo(240,150); g.fill(); }
+function segInit(id,obj,get,set,descFn){
+  const box=$(id);
+  box.innerHTML=Object.keys(obj).map(k => '<button type="button" role="radio" data-k="'+k+'" aria-checked="'+(k===get())+'">'+obj[k].label+'<small>分數 ×'+obj[k].mult+'</small></button>').join("");
+  box.querySelectorAll("button").forEach(btn => btn.addEventListener("click",() => {
+    set(btn.dataset.k);
+    box.querySelectorAll("button").forEach(o => o.setAttribute("aria-checked",String(o===btn)));
+    descFn();
+  }));
+}
+function showDesc(){ $("ddesc").textContent=D.desc; }
+segInit("diffs",DIFFS,() => diffKey,k => { diffKey=k; D=DIFFS[k]; lsSet(LS.df,k); },showDesc);
+showDesc();
+$("btn-go").addEventListener("click",() => {
+  const w=who();
+  if(!w.name){ $("go-msg").textContent="請先在上面輸入姓名。"; $("f-name").focus(); return; }
+  $("go-msg").textContent=""; lsSet(LS.sc,w.school); lsSet(LS.cl,w.cls); lsSet(LS.nm,w.name);
+  startGame();
+});
+$("o-sfx").checked=lsGet(LS.sfx,"1")==="1"; $("o-say").checked=lsGet(LS.say,"1")==="1"; $("o-amb").checked=lsGet(LS.amb,"1")==="1";
+$("o-sfx").addEventListener("change",e => { lsSet(LS.sfx,e.target.checked?"1":"0"); setBus(sfxBus,e.target.checked,1); });
+$("o-amb").addEventListener("change",e => { lsSet(LS.amb,e.target.checked?"1":"0"); setBus(ambBus,e.target.checked,0.8); });
+document.addEventListener("visibilitychange",() => { if(!actx) return; if(document.hidden) actx.suspend(); else if(G.phase!=="paused") actx.resume(); });
+$("o-say").addEventListener("change",e => lsSet(LS.say,e.target.checked?"1":"0"));
+
+/* ============================================================
+   十六、成績上傳與排行榜
+   ============================================================ */
+let IP="";
+try{ fetch("https://api.ipify.org?format=json").then(r => r.json()).then(o => { IP=(o&&o.ip)||""; }).catch(() => {}); }catch(e){}
+const endpoint = () => (ENDPOINT||"").trim();
+const withToken = (url,qs) => url+(url.indexOf("?")>=0?"&":"?")+qs+(TOKEN?"&token="+encodeURIComponent(TOKEN):"");
+function setSync(msg,cls){ const s=$("sync"); s.textContent=msg; s.className="sync"+(cls?" "+cls:""); }
+function getQueue(){ try{ const q=JSON.parse(lsGet(LS.q,"[]")); return Array.isArray(q)?q:[]; }catch(e){ return []; } }
+function setQueue(q){ lsSet(LS.q,JSON.stringify(q)); }
+function buildRecord(){
+  const w=who(), tot=QUIZ.right+QUIZ.wrong;
+  return { token:TOKEN, id:G.recId, school:w.school, cls:w.cls, name:w.name, ip:IP,
+    score:G.score, right:QUIZ.right, total:tot, acc:tot?Math.round(QUIZ.right/tot*100):0,
+    diff:D.label, mult:D.mult, seconds:Math.round(G.playMs/1000),
+    stages:G.cleared, food:G.foodAll, trash:G.trash, fed:G.fed, helpers:G.maxHelpers, lost:G.lost,
+    wrongCount:QUIZ.wrong, wrong:QUIZ.wrongList.join("；"),
+    reason:{ all:"四關全過", fail:"生命用完", quit:"中途結束" }[G.why]||"", lesson:LESSON, ua:navigator.userAgent.slice(0,150) };
+}
+/* text/plain 可以避開瀏覽器的預檢請求，Apps Script 才收得到 */
+function send(rec){
+  return fetch(endpoint(),{ method:"POST", headers:{ "Content-Type":"text/plain;charset=utf-8" }, body:JSON.stringify(rec) })
+    .then(r => r.json()).then(o => { if(!o||!o.ok) throw new Error((o&&o.error)||"寫入失敗"); return o; });
+}
+function submit(rec){
+  if(!endpoint()){ setSync("成績沒有上傳：老師還沒有在遊戲館的 config.js 設定試算表網址（ENDPOINT）。","bad"); return; }
+  setSync("成績上傳中…","");
+  send(rec).then(() => setSync("成績已上傳到試算表。","ok"),
+    () => { const q=getQueue(); q.push(rec); setQueue(q); setSync("上傳失敗，成績先存在這台裝置（待上傳 "+q.length+" 筆）。","bad"); });
+}
+$("btn-flush").addEventListener("click",() => {
+  const q=getQueue(), left=[]; let i=0;
+  if(!endpoint()){ setSync("尚未設定試算表網址，無法補傳。","bad"); return; }
+  if(!q.length){ setSync("沒有待上傳的成績。","ok"); return; }
+  setSync("補傳中…","");
+  (function next(){
+    if(i>=q.length){ setQueue(left); setSync(left.length?"仍有 "+left.length+" 筆補傳失敗。":"待上傳成績已全部補傳完成。",left.length?"bad":"ok"); return; }
+    const rec=q[i++]; send(rec).then(next,() => { left.push(rec); next(); });
+  })();
+});
+$("btn-test").addEventListener("click",() => {
+  if(!endpoint()){ setSync("尚未設定試算表網址：請老師在遊戲館的 config.js 填入 ENDPOINT。","bad"); return; }
+  setSync("測試中…","");
+  fetch(withToken(endpoint(),"top=1")).then(r => r.json()).then(o => {
+    if(o&&o.ok) setSync("連線成功，試算表裡目前有 "+o.count+" 筆紀錄。","ok");
+    else setSync("連上了，但試算表回覆："+((o&&o.error)||"未知錯誤"),"bad");
+  }).catch(() => setSync("連不上試算表。請確認網址正確，且部署時「誰可以存取」設為「任何人」。","bad"));
+});
+$("lb-box").addEventListener("toggle",() => {
+  if(!$("lb-box").open) return;
+  const url=endpoint(), msg=$("lb-msg"), tb=$("lb-table"); tb.innerHTML="";
+  if(!url){ msg.textContent="尚未設定試算表網址，無法讀取排行榜。"; return; }
+  msg.textContent="讀取中…";
+  fetch(withToken(url,"top=20")).then(r => r.json()).then(o => {
+    if(!o||!o.ok||!o.list) throw new Error("bad");
+    if(!o.list.length){ msg.textContent="試算表裡還沒有成績。"; return; }
+    msg.textContent="共 "+o.count+" 筆紀錄，以下為每個人的最高分。";
+    tb.innerHTML="<tr><th></th><th>姓名</th><th>班級</th><th>難度</th><th class='sc'>答對</th><th class='sc'>最高分</th></tr>"+
+      o.list.map((x,i) => "<tr><td>"+(i+1)+"</td><td>"+esc(x.name||"")+"</td><td>"+esc(x.cls||"")+"</td><td>"+esc(x.diff||"")+
+        "</td><td class='sc'>"+x.right+"/"+x.total+"</td><td class='sc'>"+x.score+"</td></tr>").join("");
+  }).catch(() => { msg.textContent="讀不到排行榜。請確認網址正確，且部署時「誰可以存取」設為「任何人」。"; });
+});
+
+/* ============================================================
+   十七、啟動
+   ============================================================ */
+$("f-school").value=lsGet(LS.sc,DEFAULT_SCHOOL)||DEFAULT_SCHOOL;
+$("f-class").value=lsGet(LS.cl,DEFAULT_CLASS)||DEFAULT_CLASS;
+$("f-name").value=lsGet(LS.nm,"");
+$("vocab-table").innerHTML="<tr><th></th><th>生詞</th><th>注音</th><th>拼音</th><th>英譯</th><th>關卡</th></tr>"+
+  WORDS.map((o,i) => "<tr><td>"+(i+1)+"</td><td class='w'>"+esc(o[0])+"</td><td>"+esc(o[1])+"</td><td>"+esc(o[2])+"</td><td>"+esc(o[3])+"</td><td class='lv'>第"+"一二三四"[o[5]-1]+"關</td></tr>").join("");
+function fitCanvas(){
+  DPR=Math.min(window.devicePixelRatio||1,2); canvas.width=W*DPR; canvas.height=H*DPR;
+  if(G.map){ scene=buildScene(G.lv); buildTiles(G.lv); }
+}
+fitCanvas();
+addEventListener("resize",() => { if(Math.min(window.devicePixelRatio||1,2)!==DPR) fitCanvas(); });
+let heroT=0;
+(function heroLoop(){ if(G.mode==="menu"){ G.t+=16; if(++heroT%2===0) drawHero(); } requestAnimationFrame(heroLoop); })();
+if(document.fonts && document.fonts.load) document.fonts.load('700 40px "LXGW WenKai TC"').then(() => { if(G.map) buildTiles(G.lv); }).catch(() => {});
+updateBar();
+window.__magpie={ G, P, QUIZ, KEY, AMB, sfx, birdCall, get actx(){ return actx; }, get D(){ return D; }, answer, drawMagpie, drawPheasant, drawBarbet, drawFood, drawChick, drawNestBowl, drawCan, drawBag, drawNet, loadLevel:i => loadLevel(i), levelIntro, MAPS, WORDS, QBANK };   // 測試用
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
