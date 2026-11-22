@@ -361,8 +361,7 @@ footer.note{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);
 
   <footer class="note">
     教材依據：僑務委員會《學華語向前走》第五冊（5A）第六課〈成果發表會（複習一）〉，課文、短文、補充生詞與句型均取自課本。<br>
-    本檔為單一純 HTML 檔案，除了查詢 IP 位址（api.ipify.org）和把成績送到老師指定的 Google 試算表以外不連任何外部資源，
-    直接放進 GitHub repo 或 GitHub Pages 即可執行。<br>
+    本檔將把成績送到老師指定的 Google 試算表以外不連任何外部資源。<br>
     Pac-Man 為 BANDAI NAMCO Entertainment Inc. 之商標，本檔僅為教學用的自製致敬作品。
   </footer>
 </div>
@@ -1815,7 +1814,7 @@ $("btn-speak").addEventListener("click", function(){
 });
 $("btn-test").addEventListener("click", function(){
   var url = endpoint();
-  if(!url){ setSync("還沒有設定試算表網址（請在遊戲館的 config.js 填入 ENDPOINT）。","bad"); return; }
+  if(!url){ setSync("還沒有設定試算表網址。","bad"); return; }
   setSync("測試連線中…","busy");
   fetch(withToken(url)).then(function(r){ return r.json(); }).then(function(o){
     if(o && o.ok) setSync("連線成功，試算表目前有 " + o.count + " 筆紀錄。","ok");
