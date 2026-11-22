@@ -264,8 +264,8 @@ footer{font-size:.85rem;color:var(--muted);background:var(--surface);border-radi
   <footer>
     教材依據：僑務委員會《學華語向前走》5B 臺灣文化單元〈臺灣藍鵲〉（撰文／王翠華，第 116～119 頁），生詞與題目取自課文內容。
     遊戲裡的藍鵲、藍腹鷴、五色鳥都是程式畫的插圖。<br>
-    本檔為單一 HTML 檔，可直接放進 GitHub Pages 或用瀏覽器離線開啟；電腦、平板、手機都能玩。
-    連網時會載入字型、查詢 IP 位址（api.ipify.org），並把成績送到老師的 Google 試算表。
+    可用瀏覽器離線開啟；電腦、平板、手機都能玩。
+    連網時會載入字型，並把成績送到老師的 Google 試算表。
   </footer>
 </div>
 
@@ -2076,7 +2076,7 @@ function send(rec){
     .then(r => r.json()).then(o => { if(!o||!o.ok) throw new Error((o&&o.error)||"寫入失敗"); return o; });
 }
 function submit(rec){
-  if(!endpoint()){ setSync("成績沒有上傳：老師還沒有在遊戲館的 config.js 設定試算表網址（ENDPOINT）。","bad"); return; }
+  if(!endpoint()){ setSync("成績沒有上傳。","bad"); return; }
   setSync("成績上傳中…","");
   send(rec).then(() => setSync("成績已上傳到試算表。","ok"),
     () => { const q=getQueue(); q.push(rec); setQueue(q); setSync("上傳失敗，成績先存在這台裝置（待上傳 "+q.length+" 筆）。","bad"); });
@@ -2092,7 +2092,7 @@ $("btn-flush").addEventListener("click",() => {
   })();
 });
 $("btn-test").addEventListener("click",() => {
-  if(!endpoint()){ setSync("尚未設定試算表網址：請老師在遊戲館的 config.js 填入 ENDPOINT。","bad"); return; }
+  if(!endpoint()){ setSync("尚未設定試算表網址。","bad"); return; }
   setSync("測試中…","");
   fetch(withToken(endpoint(),"top=1")).then(r => r.json()).then(o => {
     if(o&&o.ok) setSync("連線成功，試算表裡目前有 "+o.count+" 筆紀錄。","ok");
