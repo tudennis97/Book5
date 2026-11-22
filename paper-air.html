@@ -130,7 +130,7 @@ td.sc,th.sc{text-align:right}
         <b>觸控：</b>拖曳畫面移動，按住右下角「射擊」鈕才發射，上方小圓鈕是「迴旋」閃避。<br>
         <b>武器球：</b>擊落紅色補給機會掉出武器球，球上的字會輪流變：<b>雷</b>＝大口徑雷射、<b>電</b>＝廣域閃電、<b>彈</b>＝自動導引飛彈。看準了再去撿。<br>
         共 3 關，每關 8 題，最後有頭目：轟六、轟二十、遼寧號。打頭目時要回答「哪一個是紙做的」。每關結束還有一題句型題。<br>
-        連網時會查詢 IP 位址（api.ipify.org），並把成績送到老師的 Google 試算表。
+        連網時會把成績送到老師的 Google 試算表。
       </div>
     </div>
   </section>
@@ -1220,7 +1220,7 @@ $('btn-flush').addEventListener('click',()=>{
   })();
 });
 $('btn-test').addEventListener('click',()=>{
-  if(!endpoint()){setSync('尚未設定試算表網址：請老師在遊戲館的 config.js 填入 ENDPOINT。','bad');return}
+  if(!endpoint()){setSync('尚未設定試算表網址。','bad');return}
   setSync('測試中…','');
   fetch(withToken(endpoint(),'top=1')).then(r=>r.json()).then(o=>{
     if(o&&o.ok)setSync('連線成功，試算表裡目前有 '+o.count+' 筆紀錄。','ok');
